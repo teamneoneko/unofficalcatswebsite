@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cats Blender Plugin Unofficial</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="theme-switch">
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider"></span>
+        </label>
+        <span class="toggle-icon">
+          <i class="fas fa-sun"></i>
+          <span class="icon-separator">/</span>
+          <i class="fas fa-moon"></i>
+        </span>
+      </div>
+      <ul>
+        <li><a href="https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-">Unofficial GitHub</a></li>
+        <li><a href="https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/wiki">Unofficial Wiki</a></li>
+        <li><a href="https://github.com/absolute-quantum/cats-blender-plugin">Official GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Cats Blender Plugin</h1>
+    <h2>This website is run by the Unofficial Cats Blender Plugin team to make it easier for you to choose the correct version of Cats for your Blender version and to get help with your specific version of Cats. </h2>
+    <h2>Please select your Blender version from the dropdown menu below, and you will see instructions on how to download the appropriate Cats version for your Blender installation, as well as information on how to get support for your particular setup.</h2>
+    
+    <div class="selector">
+      <label for="version-select">Select Blender Version:</label>
+      <select id="version-select">
+        <option value="">Choose a version</option>
+      </select>
+    </div>
+    
+    <div id="result" class="result" style="display: none;">
+      <p></p>
+      <div id="unofficial-section" style="display: none;">
+        <h3>Unofficial Version</h3>
+        <div class="button-container">
+          <a id="unofficial-github-link" href="#" target="_blank" class="button">GitHub Link</a>
+          <a id="unofficial-download-link" href="#" target="_blank" class="button">Direct Download</a>
+          <a id="unofficial-wiki-link" href="#" target="_blank" class="button">Wiki</a>
+          <a id="unofficial-discord-link" href="#" target="_blank" class="button">Discord Server</a>
+        </div>
+      </div>
+      <div id="official-section" style="display: none;">
+        <h3>Official Version</h3>
+        <div class="button-container">
+          <a id="official-github-link" href="#" target="_blank" class="button">GitHub Link</a>
+          <a id="official-download-link" href="#" target="_blank" class="button">Direct Download</a>
+          <a id="official-wiki-link" href="#" target="_blank" class="button">Wiki</a>
+          <a id="official-discord-link" href="#" target="_blank" class="button">Discord Server</a>
+        </div>
+      </div>
+    </div>
+  
+  <script src="scripts/versionselector.js"></script>
+</body>
+</html>
