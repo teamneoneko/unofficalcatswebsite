@@ -1,6 +1,7 @@
 const versionSelect = document.getElementById('version-select');
 const resultDiv = document.getElementById('result');
 const themeToggle = document.getElementById('theme-toggle');
+const loadingDiv = document.getElementById('loading');
 
 // Fetch the list of JSON files from the 'versions.json' file
 fetch('./json/versions.json')
@@ -12,6 +13,9 @@ fetch('./json/versions.json')
     }
   })
   .then(files => {
+    // Sort versions in descending order
+    files.sort().reverse();
+
     const promises = files.map(file => {
       return fetch(`./json/${file}`)
         .then(response => {
@@ -47,6 +51,9 @@ versionSelect.addEventListener('change', function() {
   const selectedVersion = this.value;
   
   if (selectedVersion) {
+    // Show loading indicator
+    loadingDiv.style.display = 'block';
+
     fetch(`./json/${selectedVersion}`)
       .then(response => {
         if (response.ok) {
@@ -56,6 +63,8 @@ versionSelect.addEventListener('change', function() {
         }
       })
       .then(data => {
+        // Hide loading indicator and display result
+        loadingDiv.style.display = 'none';
         resultDiv.querySelector('p').textContent = data.description;
         
         if (data.unofficial) {

@@ -199,33 +199,41 @@ select {
   background-color: #0056b3;
 }
 
+/* Responsive Styles */
 @media screen and (max-width: 600px) {
   .container {
     padding: 20px;
   }
   
   h1 {
-    font-size: 28px;
+    font-size: 24px;
   }
   
   h2 {
-    font-size: 16px;
-  }
-  
-  label {
-    font-size: 16px;
-  }
-  
-  select {
     font-size: 14px;
   }
   
+  label {
+    font-size: 14px;
+  }
+  
+  select {
+    font-size: 12px;
+  }
+  
   .result p {
-    font-size: 16px;
+    font-size: 14px;
   }
   
   .button {
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 14px;
+    padding: 8px 16px;
   }
+}
+
+/* Loading Indicator */
+.loading {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
 }
