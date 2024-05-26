@@ -1,6 +1,7 @@
 const versionSelect = document.getElementById('version-select');
 const resultDiv = document.getElementById('result');
 const themeToggle = document.getElementById('theme-toggle');
+const loadingDiv = document.getElementById('loading');
 
 // Fetch the list of JSON files from the 'versions.json' file
 fetch('./json/versions.json')
@@ -12,27 +13,32 @@ fetch('./json/versions.json')
     }
   })
   .then(files => {
-    files.forEach(file => {
-      // Fetch the JSON file to get the version field
-      fetch(`./json/${file}`)
+    // Sort versions in descending order
+    files.sort().reverse();
+
+    const promises = files.map(file => {
+      return fetch(`./json/${file}`)
         .then(response => {
           if (response.ok) {
             return response.json();
           } else {
             throw new Error(`Failed to fetch ${file}`);
           }
-        })
-        .then(data => {
-          // Create an <option> element for each JSON file using the version field
-          const option = document.createElement('option');
-          option.value = file;
-          option.textContent = data.version;
-          versionSelect.appendChild(option);
-        })
-        .catch(error => {
-          console.error('Error:', error);
         });
     });
+
+    Promise.all(promises)
+      .then(dataArray => {
+        dataArray.forEach((data, index) => {
+          const option = document.createElement('option');
+          option.value = files[index];
+          option.textContent = data.version;
+          versionSelect.appendChild(option);
+        });
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
   })
   .catch(error => {
     console.error('Error:', error);
@@ -45,6 +51,9 @@ versionSelect.addEventListener('change', function() {
   const selectedVersion = this.value;
   
   if (selectedVersion) {
+    // Show loading indicator
+    loadingDiv.style.display = 'block';
+
     fetch(`./json/${selectedVersion}`)
       .then(response => {
         if (response.ok) {
@@ -54,6 +63,8 @@ versionSelect.addEventListener('change', function() {
         }
       })
       .then(data => {
+        // Hide loading indicator and display result
+        loadingDiv.style.display = 'none';
         resultDiv.querySelector('p').textContent = data.description;
         
         if (data.unofficial) {
