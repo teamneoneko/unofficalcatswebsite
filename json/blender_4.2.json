@@ -1,8 +1,10 @@
 {
-  "version": "4.2 Alpha",
-  "description": "Blender 4.2 (Alpha) is the next Blender Long Term Support (LTS) release. The Cats add-on is currently in Early Alpha Access for this version of Blender, and it DOES have known issues. We will not provide any support for this Cats version until we have made an official release, so please use it at your own risk. No support will be given on the unofficial Cats Discord server, and any issues opened on the GitHub repository will be closed until we release the first full version. It is important to note that you should not ask for help with the unofficial version in the official Cats Discord server, as no assistance will be provided there.",
+  "version": "4.2 Beta",
+  "description": "Blender 4.2 (Beta) is the next Blender Long Term Support (LTS) release. The Cats add-on is currently in Early Alpha Access for this version of Blender, and it DOES have known issues. Please use the Unoffical Cats discord for support unless it's a known issue. It is important to note that you should not ask for help with the unofficial version in the official Cats Discord server, as no assistance will be provided there.",
   "unofficial": {
-    "githubLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/tree/blender-42-dev",
-    "downloadLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/archive/refs/heads/blender-42-dev.zip"
+    "githubLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/releases/tag/4.2.0.0",
+    "downloadLink": "https://catsblenderplugin.xyz/downloads/Cats-Blender-Plugin-Unofficial4.2.0.0Alpha.zip",
+    "wikiLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/wiki",
+    "discordLink": "https://discord.catsblenderplugin.xyz/"
   }
 }

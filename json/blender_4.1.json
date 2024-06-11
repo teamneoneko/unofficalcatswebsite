@@ -3,7 +3,7 @@
   "description": "Blender 4.1 is the latest release supported by the unofficial Cats add-on. Its End-of-Life (EOL) date is set for August 16, 2024. This version will continue to receive fixes and updates until the EOL date, at which point it will be succeeded by the unofficial Cats add-on for Blender 4.2. If you require support for the unofficial Cats add-on for Blender 4.1, please seek assistance in the unofficial Cats Discord server. It is important to note that you should not ask for help with the unofficial version in the official Cats Discord server, as no support will be provided there.",
   "unofficial": {
     "githubLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/releases/tag/4.1.1.0",
-    "downloadLink": "https://catsblenderplugin.xyz/downloads/Cats-Blender-Plugin-Unofficial4.1.1.0.zip",
+    "downloadLink": "https://catsblenderplugin.xyz/downloads/Cats-Blender-Plugin-Unofficial4.1.1.2.zip",
     "wikiLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/wiki",
     "discordLink": "https://discord.catsblenderplugin.xyz/"
   }
