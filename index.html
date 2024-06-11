@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Cats Blender Plugin Unofficial</title>
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-</head>
+  <head>
+    <title>Cats Blender Plugin Unofficial</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  </head>
 <body>
   <header>
     <nav>
@@ -38,9 +38,12 @@
       
       <div class="selector">
         <label for="version-select">Select Blender Version:</label>
-        <select id="version-select">
-          <option value="">Choose a version</option>
-        </select>
+        <div class="select-wrapper">
+          <select id="version-select">
+            <option value="">Choose a version</option>
+          </select>
+          <i class="fas fa-chevron-down"></i>
+        </div>
       </div>
       
       <div id="loading" class="loading" style="display: none;">Loading...</div>

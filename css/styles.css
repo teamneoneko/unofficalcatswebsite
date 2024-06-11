@@ -159,13 +159,40 @@ label {
   font-size: 18px;
 }
 
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 400px;
+}
+
 select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   padding: 12px;
   font-size: 16px;
   border-radius: 5px;
   border: 1px solid #ccc;
   width: 100%;
-  max-width: 400px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+.select-wrapper i {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #666;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .result {
