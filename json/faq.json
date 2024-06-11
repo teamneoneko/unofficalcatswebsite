@@ -16,11 +16,11 @@
       "answer": "From Blender 4.1, the Unofficial Cats no longer supports the decimation feature. This was outdated and wasn't very good. We recommend using <a href='https://github.com/feilen/tuxedo-blender-plugin'>Tuxedo</a> instead."
     },
     {
-      "question": "Can you port your version to X version of Blender?",
-      "answer": "No, it is already hard enough to keep up with the changes between newer versions of Blender. We are not porting to older versions of Blender."
+      "question": "Github Test",
+      "answer": "Github Test."
     },
     {
-      "question": "Can you port your version to X version of Blender? 2",
+      "question": "Can you port your version to X version of Blender?",
       "answer": "No, it is already hard enough to keep up with the changes between newer versions of Blender. We are not porting to older versions of Blender."
     },
     {
