@@ -3,6 +3,13 @@ const resultDiv = document.getElementById('result');
 const themeToggle = document.getElementById('theme-toggle');
 const loadingDiv = document.getElementById('loading');
 
+// Check if theme preference exists in local storage
+const savedThemePreference = localStorage.getItem('themePreference');
+if (savedThemePreference === 'light-mode') {
+  document.body.classList.add('light-mode');
+  themeToggle.checked = true;
+}
+
 // Fetch the list of JSON files from the 'versions.json' file
 fetch('./json/versions.json')
   .then(response => {
@@ -38,13 +45,12 @@ fetch('./json/versions.json')
       })
       .catch(error => {
         console.error('Error:', error);
+        displayErrorMessage('Failed to load version information. Please try again later.');
       });
   })
   .catch(error => {
     console.error('Error:', error);
-    // Handle the error, display an error message, etc.
-    resultDiv.innerHTML = '<p>Failed to load version information. Please try again later.</p>';
-    resultDiv.style.display = 'block';
+    displayErrorMessage('Failed to load version information. Please try again later.');
   });
 
 versionSelect.addEventListener('change', function() {
@@ -115,8 +121,7 @@ versionSelect.addEventListener('change', function() {
       })
       .catch(error => {
         console.error('Error:', error);
-        resultDiv.innerHTML = '<p>Failed to load version information. Please try again later.</p>';
-        resultDiv.style.display = 'block';
+        displayErrorMessage('Failed to load version information. Please try again later.');
       });
   } else {
     resultDiv.style.display = 'none';
@@ -125,4 +130,24 @@ versionSelect.addEventListener('change', function() {
 
 themeToggle.addEventListener('change', function() {
   document.body.classList.toggle('light-mode');
+  
+  // Save theme preference to local storage
+  if (document.body.classList.contains('light-mode')) {
+    localStorage.setItem('themePreference', 'light-mode');
+  } else {
+    localStorage.setItem('themePreference', 'dark-mode');
+  }
 });
+
+function displayErrorMessage(message) {
+  resultDiv.innerHTML = `
+    <p>${message}</p>
+    <button id="retryButton" class="button">Retry</button>
+  `;
+  resultDiv.style.display = 'block';
+
+  const retryButton = document.getElementById('retryButton');
+  retryButton.addEventListener('click', () => {
+    location.reload();
+  });
+}
