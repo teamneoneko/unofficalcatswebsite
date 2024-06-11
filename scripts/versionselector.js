@@ -20,6 +20,9 @@ fetch('./json/versions.json')
     }
   })
   .then(files => {
+    // Show loading spinner
+    loadingDiv.style.display = 'block';
+
     // Sort versions in descending order
     files.sort().reverse();
 
@@ -42,14 +45,21 @@ fetch('./json/versions.json')
           option.textContent = data.version;
           versionSelect.appendChild(option);
         });
+
+        // Hide loading spinner
+        loadingDiv.style.display = 'none';
       })
       .catch(error => {
         console.error('Error:', error);
+        // Hide loading spinner and display error message
+        loadingDiv.style.display = 'none';
         displayErrorMessage('Failed to load version information. Please try again later.');
       });
   })
   .catch(error => {
     console.error('Error:', error);
+    // Hide loading spinner and display error message
+    loadingDiv.style.display = 'none';
     displayErrorMessage('Failed to load version information. Please try again later.');
   });
 
@@ -57,7 +67,7 @@ versionSelect.addEventListener('change', function() {
   const selectedVersion = this.value;
   
   if (selectedVersion) {
-    // Show loading indicator
+    // Show loading spinner
     loadingDiv.style.display = 'block';
 
     fetch(`./json/${selectedVersion}`)
@@ -69,7 +79,7 @@ versionSelect.addEventListener('change', function() {
         }
       })
       .then(data => {
-        // Hide loading indicator and display result
+        // Hide loading spinner and display result
         loadingDiv.style.display = 'none';
         resultDiv.querySelector('p').textContent = data.description;
         
@@ -121,9 +131,13 @@ versionSelect.addEventListener('change', function() {
       })
       .catch(error => {
         console.error('Error:', error);
+        // Hide loading spinner and display error message
+        loadingDiv.style.display = 'none';
         displayErrorMessage('Failed to load version information. Please try again later.');
       });
   } else {
+    // Hide loading spinner and result div
+    loadingDiv.style.display = 'none';
     resultDiv.style.display = 'none';
   }
 });
