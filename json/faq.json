@@ -24,6 +24,10 @@
       "answer": "No, it is already hard enough to keep up with the changes between newer versions of Blender. We are not porting to older versions of Blender."
     },
     {
+      "question": "Github Test 2",
+      "answer": "Github Test 2."
+    },
+    {
         "question": "Where has the bake and smart decimation features gone?",
         "answer": "Those where remove from the Official Cats a while ago you can find them in the <a href='https://github.com/feilen/tuxedo-blender-plugin'>Tuxedo</a> Plugin now."
     }
