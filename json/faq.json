@@ -1,0 +1,28 @@
+[
+    {
+      "question": "What is the Unofficial Cats Blender Plugin?",
+      "answer": "The Unofficial Cats Blender Plugin is a fork of the Official Cats Plugin which has fixes for Blender 3.6 and supports Blender 4.x. The Unofficial Cats Blender Plugin is maintained by the Neoneko Team, which currently has two members. Anyone who is interested in maintaining Cats can be part of the team, as we are more community-oriented. The aim of the team is to ensure mistakes of the past are not repeated and to ensure that even if one member leaves, the repositories the team maintains can still be updated by the other members."
+    },
+    {
+      "question": "Why isn't the Official Cats updated anymore?",
+      "answer": "Simply put, the original owner has vanished, and the community was maintaining it but can no longer do so. It's been a year since the last official response, so at this point, we can assume that Cats has been abandoned. Below is the official response on the Cats Discord server FAQ, which was posted on 05/04/2023:\n\nDue to problems beyond our control, we cannot give an estimate of when there will be an official update. This is due to many reasons, one of which is that the only reason why the add-on gets any support anyway is because of the community. Because the community doesn't own the project, we cannot do anything to release an update. We can push code and update development and sometimes master, but since the owner has kind of gone on a hiatus, we have no idea when or even if they will return. The owner is the only one capable of pushing a release, which everyone loves downloading. The code, thankfully, is able to work without being compiled, so that is a big reason why we can happily give people the latest version without the owner's involvement. The programmers, translators, and contributors to the plugin are in the same boat.\n\nWhat I can unveil is that negotiations are ongoing, and Hotox is working every day to gain the permissions to release updates and get the train rolling.\n\nSo sit back. Asking isn't gonna make it go any faster. Probably..."
+    },
+    {
+      "question": "I ran into an issue or an error when using Cats?",
+      "answer": "Make sure you are using the latest version of Cats for your Blender version. You can use our Blender selector to find the latest version <a href='index.html'>here</a>. If you are still having issues, you can also use the <a href='index.html'>version select</a> page to find the correct support links for your Blender version."
+    },
+    {
+      "question": "Where has decimation gone?",
+      "answer": "From Blender 4.1, the Unofficial Cats no longer supports the decimation feature. This was outdated and wasn't very good. We recommend using <a href='https://github.com/feilen/tuxedo-blender-plugin'>Tuxedo</a> instead."
+    },
+    {
+      "question": "Can you port your version to X version of Blender?",
+      "answer": "No, it is already hard enough to keep up with the changes between newer versions of Blender. We are not porting to older versions of Blender."
+    },
+    {
+        "question": "Where has the bake and smart decimation features gone?",
+        "answer": "Those where remove from the Official Cats a while ago you can find them in the <a href='https://github.com/feilen/tuxedo-blender-plugin'>Tuxedo</a> Plugin now."
+    }
+  ]
+
+  
