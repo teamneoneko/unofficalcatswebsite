@@ -228,6 +228,14 @@ select:focus {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.version-info {
+  margin-bottom: 20px;
+}
+
+.version-info p {
+  margin: 5px 0;
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 600px) {
   .container {
