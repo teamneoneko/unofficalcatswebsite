@@ -1,5 +1,8 @@
 {
   "version": "2.79",
+  "latestVersion": "Not Tracked",
+  "releaseDate": "Not Tracked",
+  "eolDate": "Offical Cats Project is Dead",
   "description": "Blender 2.79 is significantly outdated and should generally be avoided. Even the official Cats no longer supports this version and hasn't for a considerable time. However, if for some specific reason you require this version, we have provided a link to the last known working build compatible with Blender 2.79. Please note that neither the official or unofficial Cats do not support this version, and we strongly recommend upgrading to a newer version of Blender unless you have a compelling reason to use 2.79. Please note there is no wiki or support for this version even on the Offical Cats Discord, you are on your own.",
   "official": {
     "githubLink": "https://github.com/absolute-quantum/cats-blender-plugin/releases/tag/0.19.0",

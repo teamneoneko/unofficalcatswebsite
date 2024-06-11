@@ -83,6 +83,14 @@ versionSelect.addEventListener('change', function() {
         loadingDiv.style.display = 'none';
         resultDiv.querySelector('p').textContent = data.description;
         
+        document.getElementById('latest-version').textContent = data.latestVersion || 'N/A';
+        document.getElementById('release-date').textContent = data.releaseDate || 'N/A';
+        document.getElementById('eol-date').textContent = data.eolDate || 'N/A';
+        
+        const archiveLink = document.getElementById('archive-link');
+        archiveLink.style.display = data.archiveLink ? 'inline-block' : 'none';
+        if (data.archiveLink) archiveLink.href = data.archiveLink;
+        
         if (data.unofficial) {
           const unofficialSection = document.getElementById('unofficial-section');
           const unofficialGithubLink = document.getElementById('unofficial-github-link');
