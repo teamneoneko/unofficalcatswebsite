@@ -1,9 +1,9 @@
 {
   "version": "3.6",
-  "description": "For Blender 3.6, you have the option to use either the official Cats add-on or the unofficial Cats add-on. However, the unofficial Cats add-on is more stable and includes several improvements and bug fixes that are not present in the official version. Since the official Cats add-on is no longer being updated, we recommend using our unofficial version for the best experience. Ultimately, the choice is yours, and we have provided links to both versions below. Please note that the official Cats support channels will NOT provide assistance for the unofficial Cats add-on, and vice versa. To ensure you receive the appropriate support, please only ask for help in the correct support channels for the version you are using.",
+  "description": "For Blender 3.6, you have the option to use either the official Cats add-on or the unofficial Cats add-on. However, the unofficial Cats add-on is more stable and includes several improvements and bug fixes that are not present in the official version. Since the official Cats add-on is no longer being updated, we recommend using our unofficial version for the best experience. Ultimately, the choice is yours, and we have provided links to both versions below. Please note that the official Cats support channels will NOT provide assistance for the unofficial Cats add-on, and vice versa. To ensure you receive the appropriate support, please only ask for help in the correct support channels for the version you are using. Blender 3.6 EOL is set for 3 Months after Blender 4.2 release date, so the EOL date is 16th October 2024.",
   "unofficial": {
     "githubLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/releases/tag/3.6.7.1",
-    "downloadLink": "https://catsblenderplugin.xyz/downloads/Cats-Blender-Plugin-Unofficial3.6.7.1.zip",
+    "downloadLink": "https://catsblenderplugin.xyz/downloads/Cats-Blender-Plugin-Unofficial3.6.7.3.zip",
     "wikiLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/wiki",
     "discordLink": "https://discord.catsblenderplugin.xyz/"
   },
