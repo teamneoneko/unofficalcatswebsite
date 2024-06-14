@@ -10,7 +10,7 @@ if (savedThemePreference === 'light-mode') {
 }
 
 // Fetch the FAQ data from the JSON file
-fetch('./json/faq.json')
+fetch('https://raw.githubusercontent.com/unofficalcats/unofficalcatswebsite/main/json/faq.json')
   .then(response => {
     if (response.ok) {
       return response.json();
