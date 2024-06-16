@@ -35,6 +35,16 @@
     "category": "Official Cats Questions"
   },
   {
+    "question": "What is Avatar Toolkit?",
+    "answer": "Avatar Toolkit will be an more modern toolkit for your avatars needs. The idea is that Avatar Toolkit will replace Cats Blender Plugin from Blender 5.0+. We want to include most features of cats and more without the need for most 3rd Party Addons such as Material Combiner and MMD Tools you can follow the development <a href='https://github.com/unofficalcats/Avatar-Toolkit'>here</a>.",
+    "category": "Avatar Toolkit Questions"
+  },
+    {
+    "question": "Why are you making Avatar Toolkit?",
+    "answer": "After taking over Cats several months ago, we started to notice that relying on 3rd-party add-ons was getting harder and harder. Some add-ons are no longer updated or are very slow at getting updates. This was affecting our updates to Cats, and we were having to put warnings on the Blender 4.x version of Cats as some 3rd-party add-ons were not updated. This led to us also hotfixing stuff on these 3rd-party add-ons and more. Therefore, we decided it would be better for us to integrate most 3rd-party functions into a new plugin, fix the code, and make it better as well. That's where Avatar Toolkit was born.",
+    "category": "Avatar Toolkit Questions"
+  },
+  {
     "question": "Where has decimation feature gone in Blender 4.1+?",
     "answer": "From Blender 4.1, the Unofficial Cats no longer supports the decimation feature. This was outdated and wasn't very good. We recommend using <a href='https://github.com/feilen/tuxedo-blender-plugin'>Tuxedo</a> instead.",
     "category": "Blender 4.0+ Questions"
