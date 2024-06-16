@@ -295,12 +295,44 @@ select:focus {
 }
 
 /* FAQ Styles */
-.faq-container {
-  margin-top: 30px;
+.faq-container h2 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  padding: 20px;
+  background-color: #444;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.light-mode .faq-container h2 {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.faq-container h2.expanded {
+  background-color: #555;
+}
+
+.light-mode .faq-container h2.expanded {
+  background-color: #d8d8d8
+}
+
+.faq-container h2 i {
+  margin-left: 10px;
+  transition: transform 0.3s;
+}
+
+.faq-container h2.expanded i {
+  transform: rotate(180deg);
 }
 
 .faq-item {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   padding: 20px;
   background-color: #444;
   border-radius: 5px;
@@ -310,7 +342,7 @@ select:focus {
 }
 
 .light-mode .faq-item {
-  background-color: #f9f9f9;
+  background-color: #e0e0e0;
 }
 
 .faq-item.expanded {
@@ -318,7 +350,7 @@ select:focus {
 }
 
 .light-mode .faq-item.expanded {
-  background-color: #eee;
+  background-color: #d8d8d8;
 }
 
 .faq-item h3 {

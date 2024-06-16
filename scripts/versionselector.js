@@ -11,7 +11,7 @@ if (savedThemePreference === 'light-mode') {
 }
 
 // Fetch the list of JSON files from the 'versions.json' file
-fetch('./json/versions.json')
+fetch('./json/BlenderVersions/versions.json')
   .then(response => {
     if (response.ok) {
       return response.json();
@@ -27,7 +27,7 @@ fetch('./json/versions.json')
     files.sort().reverse();
 
     const promises = files.map(file => {
-      return fetch(`./json/${file}`)
+      return fetch(`./json/BlenderVersions/${file}`)
         .then(response => {
           if (response.ok) {
             return response.json();
@@ -70,7 +70,7 @@ versionSelect.addEventListener('change', function() {
     // Show loading spinner
     loadingDiv.style.display = 'block';
 
-    fetch(`./json/${selectedVersion}`)
+    fetch(`./json/BlenderVersions/${selectedVersion}`)
       .then(response => {
         if (response.ok) {
           return response.json();
