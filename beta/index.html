@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats Blender Plugin Unofficial</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-link">
+                <span class="logo">Cats</span>
+            </a>
+            <ul class="menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li class="has-submenu">
+                    <a href="#">GitHub</a>
+                    <ul class="submenu">
+                        <li><a href="https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-">Unofficial GitHub</a></li>
+                        <li><a href="https://github.com/absolute-quantum/cats-blender-plugin">Official GitHub</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/wiki">Unofficial Wiki</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="intro-container">
+            <span class="intro">Welcome to</span>
+            <h1 class="team-name">Cats Blender Plugin</h1>
+        </div>
+        <p>This website is maintained by The Neoneko team, who maintain the Unofficial Cats Plugin. Our aim is to make it easier for you to choose the correct version of Cats for your Blender version and to get help with your specific version of Cats.</p>
+
+        <div class="selector">
+            <label for="version-select">Select Blender Version:</label>
+            <div class="select-wrapper">
+                <select id="version-select">
+                    <option value="">Choose a version</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+        </div>
+
+        <div id="result" class="result" style="display: none;">
+            <p></p>
+            <div class="version-info">
+                <p><strong>Latest Version:</strong> <span id="latest-version"></span></p>
+                <p><strong>Release Date:</strong> <span id="release-date"></span></p>
+                <p><strong>End of Life Date:</strong> <span id="eol-date"></span></p>
+            </div>
+            <div class="button-container">
+                <a id="archive-link" href="#" target="_blank" class="button">Archive</a>
+            </div>
+            <div id="unofficial-section" style="display: none;">
+                <h3>Unofficial Version</h3>
+                <div class="button-container">
+                    <a id="unofficial-github-link" href="#" target="_blank" class="button">GitHub Link</a>
+                    <a id="unofficial-download-link" href="#" target="_blank" class="button">Direct Download</a>
+                    <a id="unofficial-wiki-link" href="#" target="_blank" class="button">Wiki</a>
+                    <a id="unofficial-discord-link" href="#" target="_blank" class="button">Discord Server</a>
+                </div>
+            </div>
+            <div id="official-section" style="display: none;">
+                <h3>Official Version</h3>
+                <div class="button-container">
+                    <a id="official-github-link" href="#" target="_blank" class="button">GitHub Link</a>
+                    <a id="official-download-link" href="#" target="_blank" class="button">Direct Download</a>
+                    <a id="official-wiki-link" href="#" target="_blank" class="button">Wiki</a>
+                    <a id="official-discord-link" href="#" target="_blank" class="button">Discord Server</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-">Unofficial GitHub</a></li>
+                <li><a href="https://github.com/absolute-quantum/cats-blender-plugin">Official GitHub</a></li>
+            </ul>
+            <p class="footer-text">
+                Cats Blender Plugin Unofficial and Avatar Toolkit are licensed under the 
+                <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank" rel="noopener noreferrer">GPLv3 License</a>. 
+                Blender is a registered trademark of the 
+                <a href="https://www.blender.org/about/foundation/" target="_blank" rel="noopener noreferrer">Blender Foundation</a>. 
+                Neoneko is not affiliated with the Blender Foundation. Neoneko is not affillated with the offlical cats developers and this website is an unofficial website.
+            </p>
+        </div>
+    </footer>
+
+    <script src="../scripts/versionselector.js"></script>
+</body>
+</html>
+
