@@ -171,6 +171,10 @@ footer {
     color: #45e6c0;
 }
 
+#error-container {
+    text-align: center;
+    margin-top: 2rem;
+}
 
 @media screen and (max-width: 768px) {
     .logo {

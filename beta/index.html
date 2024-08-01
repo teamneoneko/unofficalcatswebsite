@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Cats Blender Plugin Unofficial">
+    <meta property="og:description" content="Welcome to the unofficial Cats Blender Plugin website. Find the right version for your Blender and get support for your specific Cats version.">
+    <meta property="og:image" content="https://neoneko.xyz/images/logo.jpg">
+    <meta property="og:url" content="https://catsblenderplugin.xyz/"">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Cats Blender Plugin Unofficial</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
@@ -36,48 +42,67 @@
             <h1 class="team-name">Cats Blender Plugin</h1>
         </div>
         <p>This website is maintained by The Neoneko team, who maintain the Unofficial Cats Plugin. Our aim is to make it easier for you to choose the correct version of Cats for your Blender version and to get help with your specific version of Cats.</p>
+        <p>Select the Cats Blender Plugin version that best suits your needs. Please carefully read the descriptions for each version and ensure you use the appropriate support channels if you require assistance.</p>
+        
+        <div class="cats-type-selector">
+            <div class="cats-type-box">
+              <h2>Official Cats</h2>
+              <p>The Official Cats plugin supports Blender versions up to 3.6. However, it may have some issues on Blender 3.6 due to outdated MMD Tools. We recommend using the Official Cats plugin on Blender 3.5 and below.</p>
+              <button id="official-selector" class="button">Select Official Cats</button>
+            </div>
+            <div class="cats-type-box">
+              <h2>Unofficial Cats</h2>
+              <p>The Unofficial Cats plugin supports Blender versions 3.6 to 4.2. It features the latest MMD Tools and includes numerous fixes and improvements. This version is recommended for users of Blender 3.6 and above.</p>
+              <button id="unofficial-selector" class="button">Select Unofficial Cats</button>
+            </div>
+          </div>
 
-        <div class="selector">
+        <button id="back-button" class="button" style="display: none;">Back</button>
+        <div class="selector" style="display: none;">
             <label for="version-select">Select Blender Version:</label>
             <div class="select-wrapper">
-                <select id="version-select">
-                    <option value="">Choose a version</option>
-                </select>
+              <select id="version-select">
+                <option value="">Choose a version</option>
+              </select>
             </div>
-        </div>
+          </div>
 
         <div id="loading" class="loading">
             <div class="spinner"></div>
         </div>
 
         <div id="result" class="result" style="display: none;">
-            <p></p>
-            <div class="version-info">
-                <p><strong>Latest Version:</strong> <span id="latest-version"></span></p>
-                <p><strong>Release Date:</strong> <span id="release-date"></span></p>
-                <p><strong>End of Life Date:</strong> <span id="eol-date"></span></p>
-            </div>
-            <div class="button-container">
-                <a id="archive-link" href="#" target="_blank" class="button">Archive</a>
-            </div>
-            <div id="unofficial-section" style="display: none;">
-                <h3>Unofficial Version</h3>
-                <div class="button-container">
-                    <a id="unofficial-github-link" href="#" target="_blank" class="button">GitHub Link</a>
-                    <a id="unofficial-download-link" href="#" target="_blank" class="button">Direct Download</a>
-                    <a id="unofficial-wiki-link" href="#" target="_blank" class="button">Wiki</a>
-                    <a id="unofficial-discord-link" href="#" target="_blank" class="button">Discord Server</a>
+            <div class="result-container">
+              <div class="description-section">
+                <h3>Read Me:</h3>
+                <p id="version-description"></p>
+              </div>
+              <div class="info-box">
+                <h3>Additional Info:</h3>
+                <div class="version-info">
+                  <p><strong>Latest Version:</strong> <span id="latest-version"></span></p>
+                  <p><strong>Release Date:</strong> <span id="release-date"></span></p>
+                  <p><strong>End of Life Date:</strong> <span id="eol-date"></span></p>
                 </div>
-            </div>
-            <div id="official-section" style="display: none;">
-                <h3>Official Version</h3>
+                
+                <h3>Download Links:</h3>
                 <div class="button-container">
-                    <a id="official-github-link" href="#" target="_blank" class="button">GitHub Link</a>
-                    <a id="official-download-link" href="#" target="_blank" class="button">Direct Download</a>
-                    <a id="official-wiki-link" href="#" target="_blank" class="button">Wiki</a>
-                    <a id="official-discord-link" href="#" target="_blank" class="button">Discord Server</a>
+                  <a id="github-link" href="#" target="_blank" class="info-button">GitHub</a>
+                  <a id="download-link" href="#" target="_blank" class="info-button">Download</a>
                 </div>
-            </div>
+                
+                <div class="support-links">
+                  <h3>Support Links:</h3>
+                  <div class="button-container">
+                    <a id="wiki-link" href="#" target="_blank" class="info-button">Wiki</a>
+                    <a id="discord-link" href="#" target="_blank" class="info-button">Discord</a>
+                  </div>
+                </div>
+              </div>
+                            
+        <div id="error-container" style="display: none;">
+            <p id="errorMessage" class="error-message"></p>
+            <button id="retryButton" class="button">Retry</button>
         </div>
     </main>
 
@@ -99,7 +124,7 @@
         </div>
     </footer>
 
-    <script src="../scripts/versionselector.js"></script>
+    <script src="../beta/scripts/versionselector.js"></script>
 </body>
 </html>
 

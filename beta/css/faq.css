@@ -24,6 +24,7 @@
     background-color: #112240;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .faq-category h2 {
@@ -36,6 +37,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #1a2f5a;
+    border-radius: 8px;
     transition: background-color 0.3s ease;
 }
 
@@ -48,15 +50,7 @@
 }
 
 .faq-category h2.expanded {
-    background-color: #1e3666;
-}
-
-.faq-item.expanded h3 {
-    background-color: #2a4980;
-}
-
-.faq-item.expanded p {
-    display: block;
+    border-radius: 8px 8px 0 0;
 }
 
 .faq-category-content {
@@ -65,12 +59,15 @@
     transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
     opacity: 0;
     padding: 0 1rem;
+    background-color: #0f1b2d;
+    border-radius: 0 0 8px 8px;
 }
 
 .faq-category-content.expanded {
     max-height: 1000px;
     opacity: 1;
     padding: 1rem;
+    border-top: 1px solid #2a4980;
 }
 
 .faq-item {
