@@ -119,14 +119,21 @@ versionSelect.addEventListener('change', function() {
           'github-link': 'githubLink',
           'download-link': 'downloadLink',
           'wiki-link': 'wikiLink',
-          'discord-link': 'discordLink'
+          'discord-link': 'discordLink',
+          'archive-link': 'archiveLink'
         };
         
         let hasSupport = false;
         
         Object.entries(links).forEach(([elementId, dataKey]) => {
           const linkElement = document.getElementById(elementId);
-          const linkData = isOfficial ? data.official?.[dataKey] : data.unofficial?.[dataKey];
+          let linkData;
+
+          if (dataKey === 'archiveLink') {
+            linkData = data.archiveLink;
+          } else {
+            linkData = isOfficial ? data.official?.[dataKey] : data.unofficial?.[dataKey];
+          }
           
           if (linkElement && linkData) {
             linkElement.href = linkData;

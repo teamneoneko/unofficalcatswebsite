@@ -16,6 +16,9 @@ Promise.all([
 
     // Generate category containers dynamically
     categoriesData.forEach(category => {
+      const categoryContainer = document.createElement('div');
+      categoryContainer.classList.add('faq-category');
+
       const categoryHeading = document.createElement('h2');
       categoryHeading.textContent = category;
 
@@ -23,16 +26,17 @@ Promise.all([
       arrowIcon.classList.add('fas', 'fa-chevron-down');
       categoryHeading.appendChild(arrowIcon);
 
-      const categoryContainer = document.createElement('div');
-      categoryContainer.id = category.toLowerCase().replace(/\s+/g, '-');
-      categoryContainer.style.display = 'none';
+      const categoryContent = document.createElement('div');
+      categoryContent.classList.add('faq-category-content');
+      categoryContent.id = category.toLowerCase().replace(/\s+/g, '-');
 
-      faqContainer.appendChild(categoryHeading);
+      categoryContainer.appendChild(categoryHeading);
+      categoryContainer.appendChild(categoryContent);
       faqContainer.appendChild(categoryContainer);
 
       // Add click event listener to toggle category visibility
       categoryHeading.addEventListener('click', () => {
-        categoryContainer.style.display = categoryContainer.style.display === 'none' ? 'block' : 'none';
+        categoryContent.classList.toggle('expanded');
         categoryHeading.classList.toggle('expanded');
         arrowIcon.classList.toggle('fa-chevron-down');
         arrowIcon.classList.toggle('fa-chevron-up');
@@ -51,7 +55,7 @@ Promise.all([
 
     // Generate FAQ elements dynamically for each category
     Object.entries(categories).forEach(([category, faqs]) => {
-      const categoryContainer = document.getElementById(`${category.toLowerCase().replace(/\s+/g, '-')}`);
+      const categoryContent = document.getElementById(`${category.toLowerCase().replace(/\s+/g, '-')}`);
 
       faqs.forEach(faq => {
         const faqElement = document.createElement('div');
@@ -79,7 +83,7 @@ Promise.all([
           arrowIcon.classList.toggle('fa-chevron-up');
         });
 
-        categoryContainer.appendChild(faqElement);
+        categoryContent.appendChild(faqElement);
       });
     });
 

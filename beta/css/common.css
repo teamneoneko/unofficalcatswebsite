@@ -1,3 +1,20 @@
+:root {
+    --background-color: #0A192F;
+    --text-color: #e6f1ff;
+    --header-background: #0C1E3A;
+    --menu-hover-background: rgba(255, 255, 255, 0.1);
+    --menu-active-color: #64ffda;
+    --logo-gradient-start: #64ffda;
+    --logo-gradient-end: #00bcd4;
+    --button-background: #64ffda;
+    --button-color: #0A192F;
+    --button-hover-background: #45e6c0;
+    --link-color: #64ffda;
+    --link-hover-color: #45e6c0;
+    --border-color: #64ffda;
+    --footer-text-color: #a8b2d1;
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -6,16 +23,17 @@ html, body {
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #0A192F;
-    color: #e6f1ff;
+    background-color: var(--background-color);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 header {
-    background-color: #0C1E3A;
+    background-color: var(--header-background);
     padding: 1rem;
+    position: relative;
 }
 
 nav {
@@ -24,23 +42,26 @@ nav {
     align-items: center;
     max-width: 1400px;
     margin: 0 auto;
+    padding-left: 100px;
 }
 
 .logo {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 800;
     letter-spacing: 2px;
     text-transform: uppercase;
-    background: linear-gradient(45deg, #64ffda, #00bcd4);
+    background: linear-gradient(45deg, var(--logo-gradient-start), var(--logo-gradient-end));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo-link {
+    position: absolute;
     display: flex;
     align-items: center;
     text-decoration: none;
+    left: 200px;
 }
 
 .menu {
@@ -51,7 +72,7 @@ nav {
 }
 
 .menu a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 500;
@@ -61,12 +82,12 @@ nav {
 }
 
 .menu a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--menu-hover-background);
 }
 
 .menu a.active {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #64ffda;
+    background-color: var(--menu-hover-background);
+    color: var(--menu-active-color);
 }
 
 .menu .has-submenu > a::after {
@@ -84,7 +105,7 @@ nav {
     position: absolute;
     top: 140%;
     left: 0;
-    background-color: #0C1E3A;
+    background-color: var(--header-background);
     min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -99,7 +120,7 @@ nav {
 }
 
 .menu .submenu a {
-    color: #ffffff;
+    color: var(--text-color);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -107,7 +128,7 @@ nav {
 }
 
 .menu .submenu a:hover {
-    background-color: #0A192F;
+    background-color: var(--background-color);
 }
 
 main {
@@ -120,8 +141,37 @@ main {
     flex-direction: column;
 }
 
+.theme-selector {
+    position: relative;
+    margin-left: auto;
+    left: 150px;
+    margin-top: -8px;
+}
+
+#theme-select {
+    width: 150px;
+    padding: 0.5rem 2rem 0.5rem 0.7rem;
+    font-size: 1rem;
+    text-align: center;
+    background-color: var(--header-background);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    appearance: none;
+}
+
+.theme-selector::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 0.7rem;
+    transform: translateY(-50%);
+    color: var(--border-color);
+    pointer-events: none;
+}
+
 footer {
-    background-color: #0C1E3A;
+    background-color: var(--header-background);
     padding: 2rem 0;
     flex-shrink: 0;
 }
@@ -142,7 +192,7 @@ footer {
 }
 
 .footer-menu a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
@@ -150,25 +200,25 @@ footer {
 }
 
 .footer-menu a:hover {
-    color: #64ffda;
+    color: var(--link-color);
 }
 
 .footer-text {
     font-size: 0.9rem;
     text-align: center;
-    color: #a8b2d1;
+    color: var(--footer-text-color);
     line-height: 1.6;
     margin: 0;
 }
 
 .footer-text a {
-    color: #64ffda;
+    color: var(--link-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-text a:hover {
-    color: #45e6c0;
+    color: var(--link-hover-color);
 }
 
 #error-container {
@@ -176,42 +226,248 @@ footer {
     margin-top: 2rem;
 }
 
-@media screen and (max-width: 768px) {
-    .logo {
-        font-size: 2.5rem;
-    }
-    
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .menu {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 1rem;
-        margin-left: 0;
-    }
-    
-    .menu li {
-        margin-bottom: 0.5rem;
-    }
-    
-    main {
-        padding: 1rem;
-    }
+.gradient-text {
+  background: linear-gradient(45deg, var(--logo-gradient-start), var(--logo-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width: 480px) {
+.large-title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--button-background);
+  color: var(--button-color);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--button-hover-background);
+  transform: translateY(-2px);
+}
+
+.loading {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.spinner {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(100, 255, 218, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--border-color);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+select {
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  background-color: var(--header-background);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  appearance: none;
+}
+
+.select-wrapper::after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  color: var(--border-color);
+  pointer-events: none;
+}
+
+.error-message {
+  color: #ff6b6b;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+h2, h3 {
+  color: var(--menu-active-color);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.transition {
+  transition: all 0.3s ease;
+}
+
+.mobile-menu {
+    background-color: var(--header-background);
+    padding: 2rem;
+    height: 100vh;
+    overflow-y: auto;
+    display: none;
+}
+
+.mobile-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.mobile-menu li {
+    margin-bottom: 1rem;
+}
+
+.mobile-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+    color: var(--menu-active-color);
+}
+
+.mobile-menu .has-submenu > a::after {
+    content: ' ▼';
+    font-size: 0.7em;
+    vertical-align: middle;
+}
+
+.mobile-menu .submenu {
+    padding-left: 1rem;
+    display: none;
+}
+
+.mobile-menu .has-submenu.active .submenu {
+    display: block;
+}
+
+.mobile-menu-button {
+    display: none;
+}
+
+@media screen and (max-width: 1400px) {
     .logo {
-        font-size: 2rem;
+      font-size: 2.2rem;
+    }
+  }
+  
+  @media screen and (max-width: 1300px) {
+    .logo {
+      font-size: 2.0rem;
+    }
+  }
+  
+  @media screen and (max-width: 1280px) {
+    .logo {
+      font-size: 1.9rem;
+    }
+    .menu {
+        display: none;
     }
     
-    h1 {
-        font-size: 2.5rem;
+    .mobile-menu-button {
+        display: block;
     }
     
-    p {
-        font-size: 1rem;
+    .mobile-menu.active {
+        display: block;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    nav {
+      padding-left: 20px;
     }
+    .logo-link {
+      left: 20px;
+    }
+    .logo {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .logo {
+      font-size: 1.6rem;
+    }
+    nav {
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+    }
+    .logo-link {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      margin-bottom: 1rem;
+      z-index: 10;
+    }
+    .menu {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      gap: 0.8rem;
+      padding-top: 4rem;
+      z-index: 5;
+    }
+    .menu li {
+      width: 100%;
+      text-align: center;
+    }
+    .menu a {
+      font-size: 1rem;
+    }
+    .theme-selector {
+      position: static;
+      margin-top: 1rem;
+    }
+    main {
+      padding: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 1.5rem;
+    }
+    main {
+      padding: 1rem;
+    }
+    .button {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+    .footer-menu {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
 }
