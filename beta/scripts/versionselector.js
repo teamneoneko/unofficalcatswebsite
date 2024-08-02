@@ -122,6 +122,8 @@ versionSelect.addEventListener('change', function() {
           'discord-link': 'discordLink'
         };
         
+        let hasSupport = false;
+        
         Object.entries(links).forEach(([elementId, dataKey]) => {
           const linkElement = document.getElementById(elementId);
           const linkData = isOfficial ? data.official?.[dataKey] : data.unofficial?.[dataKey];
@@ -129,10 +131,20 @@ versionSelect.addEventListener('change', function() {
           if (linkElement && linkData) {
             linkElement.href = linkData;
             linkElement.style.display = 'inline-block';
+            if (dataKey === 'wikiLink' || dataKey === 'discordLink') {
+              hasSupport = true;
+            }
           } else if (linkElement) {
             linkElement.style.display = 'none';
           }
         });
+        
+        const unsupportedMessage = document.getElementById('unsupported-message');
+        if (hasSupport) {
+          unsupportedMessage.style.display = 'none';
+        } else {
+          unsupportedMessage.style.display = 'block';
+        }
         
         resultDiv.style.display = 'block';
       })
