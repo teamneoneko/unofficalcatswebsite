@@ -9,8 +9,7 @@
     <meta property="og:image" content="https://neoneko.xyz/images/logo.jpg">
     <meta property="og:url" content="https://catsblenderplugin.xyz/faq.html">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="twitter:card" content="summary_large_image">
     <title>Cats Blender Plugin Unofficial FAQ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,37 +17,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/mobile.css">
 </head>
 <body>
-    
     <header>
-      <nav>
-          <a href="index.html" class="logo-link">
-              <span class="logo">Cats Blender Plugin</span>
-          </a>
-          <ul class="menu">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="faq.html" class="active">FAQ</a></li>
-              <li class="has-submenu">
-                  <a href="#">GitHub</a>
-                  <ul class="submenu">
-                      <li><a href="https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-">Unofficial GitHub</a></li>
-                      <li><a href="https://github.com/absolute-quantum/cats-blender-plugin">Official GitHub</a></li>
-                  </ul>
-              </li>
-              <li><a href="https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/wiki">Unofficial Wiki</a></li>
-              <li class="theme-selector">
-                <select id="theme-select">
-                    <option data-theme="default">Default Theme</option>
-                    <option data-theme="light">Light Theme</option>
-                    <option data-theme="dark">Dark Theme</option>
-                    <option data-theme="cyberpunk">Cyberpunk Theme</option>
-                    <option data-theme="highcontrast">High Contrast Theme</option>
-                </select>
-            </li>            
-          </ul>
-      </nav>
-  </header>
+        <nav>
+            <a href="index.html" class="logo-link">
+                <span class="logo">Cats Blender Plugin</span>
+            </a>
+            <button id="mobile-menu-button" class="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
+                <li class="has-submenu">
+                    <a href="#">GitHub</a>
+                    <ul class="submenu">
+                        <li><a href="https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-">Unofficial GitHub</a></li>
+                        <li><a href="https://github.com/absolute-quantum/cats-blender-plugin">Official GitHub</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/wiki">Unofficial Wiki</a></li>
+                <li class="theme-selector">
+                    <select id="theme-select">
+                        <option data-theme="default">Default Theme</option>
+                        <option data-theme="light">Light Theme</option>
+                        <option data-theme="dark">Dark Theme</option>
+                        <option data-theme="cyberpunk">Cyberpunk Theme</option>
+                        <option data-theme="highcontrast">High Contrast Theme</option>
+                    </select>
+                </li>            
+            </ul>
+        </nav>
+    </header>
     
     <main>
         <h1 class="page-title">Frequently Asked Questions</h1>
@@ -80,5 +82,7 @@
 
     <script src="../beta/scripts/faq.js"></script>
     <script src="../beta/scripts/themeSelector.js"></script>
+    <script src="../beta/scripts/mobile.js"></script>
+    <script src="../beta/scripts/maintenance.js"></script>
 </body>
 </html>

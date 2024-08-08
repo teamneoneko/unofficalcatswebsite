@@ -77,19 +77,12 @@ p {
   gap: 2rem;
 }
 
-.description-box, .details-box {
+.description-box {
   flex: 1;
   padding: 1.5rem;
   border: 1px solid var(--border-color);
   border-radius: 4px;
-}
-
-.description-box {
   background-color: rgba(100, 255, 218, 0.1);
-}
-
-.details-box {
-  background-color: rgba(100, 255, 218, 0.05);
 }
 
 #version-description {
@@ -188,23 +181,4 @@ p {
   font-size: 0.9em;
   color: #ff6b6b;
   margin-top: 10px;
-}
-
-@media screen and (max-width: 768px) {
-  .cats-type-selector {
-    flex-direction: column;
-  }
-  
-  .cats-type-box {
-    width: 100%;
-    margin: 0 0 1rem 0;
-  }
-  
-  .result-container {
-    flex-direction: column;
-  }
-  
-  .description-section, .info-box {
-    width: 100%;
-  }
 }

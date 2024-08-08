@@ -9,45 +9,45 @@
     <meta property="og:url" content="https://catsblenderplugin.xyz/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cats Blender Plugin Unofficial</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
     <header>
-      <nav>
-          <a href="index.html" class="logo-link">
-              <span class="logo">Cats Blender Plugin</span>
-          </a>
-          <button id="mobile-menu-button" class="mobile-menu-button">
-              <i class="fas fa-bars"></i>
-          </button>
-          <ul class="menu">
-              <li><a href="index.html" class="active">Home</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li class="has-submenu">
-                  <a href="#">GitHub</a>
-                  <ul class="submenu">
-                      <li><a href="https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-">Unofficial GitHub</a></li>
-                      <li><a href="https://github.com/absolute-quantum/cats-blender-plugin">Official GitHub</a></li>
-                  </ul>
-              </li>
-              <li><a href="https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/wiki">Unofficial Wiki</a></li>
-              <li class="theme-selector">
-                  <select id="theme-select">
-                      <option data-theme="default">Default Theme</option>
-                      <option data-theme="light">Light Theme</option>
-                      <option data-theme="dark">Dark Theme</option>
-                      <option data-theme="cyberpunk">Cyberpunk Theme</option>
-                      <option data-theme="highcontrast">High Contrast Theme</option>
-                  </select>
-              </li>            
-          </ul>
-      </nav>
-  </header>
+        <nav>
+            <a href="index.html" class="logo-link">
+                <span class="logo">Cats Blender Plugin</span>
+            </a>
+            <button id="mobile-menu-button" class="mobile-menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li class="has-submenu">
+                    <a href="#">GitHub</a>
+                    <ul class="submenu">
+                        <li><a href="https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-">Unofficial GitHub</a></li>
+                        <li><a href="https://github.com/absolute-quantum/cats-blender-plugin">Official GitHub</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/wiki">Unofficial Wiki</a></li>
+                <li class="theme-selector">
+                    <select id="theme-select">
+                        <option data-theme="default">Default Theme</option>
+                        <option data-theme="light">Light Theme</option>
+                        <option data-theme="dark">Dark Theme</option>
+                        <option data-theme="cyberpunk">Cyberpunk Theme</option>
+                        <option data-theme="highcontrast">High Contrast Theme</option>
+                    </select>
+                </li>            
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <div class="intro-container">
@@ -59,26 +59,28 @@
         
         <div class="cats-type-selector">
             <div class="cats-type-box">
-              <h2>Official Cats</h2>
-              <p>The Official Cats plugin supports Blender versions up to 3.6. However, it may have some issues on Blender 3.6 due to outdated MMD Tools. We recommend using the Official Cats plugin on Blender 3.5 and below.</p>
-              <button id="official-selector" class="button">Select Official Cats</button>
+                <h2>Official Cats</h2>
+                <h3>Recommended for Blender 3.5 and Below</h3>
+                <p>The Official Cats plugin supports Blender versions up to 3.6. However, it may have some issues on Blender 3.6 due to outdated MMD Tools. We recommend using the Official Cats plugin on Blender 3.5 and below.</p>
+                <button id="official-selector" class="button">Select Official Cats</button>
             </div>
             <div class="cats-type-box">
-              <h2>Unofficial Cats</h2>
-              <p>The Unofficial Cats plugin supports Blender versions 3.6 to 4.2. It features the latest MMD Tools and includes numerous fixes and improvements. This version is recommended for users of Blender 3.6 and above.</p>
-              <button id="unofficial-selector" class="button">Select Unofficial Cats</button>
+                <h2>Unofficial Cats</h2>
+                <h3>Recommended for Blender 3.6 and Above</h3>
+                <p>The Unofficial Cats plugin supports Blender versions 3.6 to 4.2. It features the latest MMD Tools and includes numerous fixes and improvements. This version is recommended for users of Blender 3.6 and above.</p>
+                <button id="unofficial-selector" class="button">Select Unofficial Cats</button>
             </div>
-          </div>
+        </div>
 
         <button id="back-button" class="button" style="display: none;">Back</button>
         <div class="selector" style="display: none;">
             <label for="version-select">Select Blender Version:</label>
             <div class="select-wrapper">
-              <select id="version-select">
-                <option value="">Choose a version</option>
-              </select>
+                <select id="version-select">
+                    <option value="">Choose a version</option>
+                </select>
             </div>
-          </div>
+        </div>
 
         <div id="loading" class="loading">
             <div class="spinner"></div>
@@ -86,35 +88,38 @@
 
         <div id="result" class="result" style="display: none;">
             <div class="result-container">
-              <div class="description-section">
-                <h3>Read Me:</h3>
-                <p id="version-description"></p>
-              </div>
-              <div class="info-box">
-                <h3>Additional Info:</h3>
-                <div class="version-info">
-                  <p><strong>Latest Version:</strong> <span id="latest-version"></span></p>
-                  <p><strong>Release Date:</strong> <span id="release-date"></span></p>
-                  <p><strong>End of Life Date:</strong> <span id="eol-date"></span></p>
+                <div class="description-section">
+                    <h3>Read Me:</h3>
+                    <p id="version-description"></p>
                 </div>
-                
-                <h3>Download Links:</h3>
-                <div class="button-container">
-                  <a id="github-link" href="#" target="_blank" class="info-button">GitHub</a>
-                  <a id="download-link" href="#" target="_blank" class="info-button">Download</a>
-                  <a id="archive-link" href="#" target="_blank" class="info-button">Archive</a>
+                <div class="info-box">
+                    <h3>Additional Info:</h3>
+                    <div class="version-info">
+                        <p><strong>Latest Version:</strong> <span id="latest-version"></span></p>
+                        <p><strong>Release Date:</strong> <span id="release-date"></span></p>
+                        <p><strong>End of Life Date:</strong> <span id="eol-date"></span></p>
+                    </div>
+                    
+                    <h3>Download Links:</h3>
+                    <div class="button-container">
+                        <a id="github-link" href="#" target="_blank" class="info-button">GitHub</a>
+                        <a id="download-link" href="#" target="_blank" class="info-button">Download</a>
+                        <a id="archive-link" href="#" target="_blank" class="info-button">Archive</a>
+                    </div>
+                    
+                    <div class="support-links">
+                        <h3>Support Links:</h3>
+                        <div class="button-container">
+                            <a id="wiki-link" href="#" target="_blank" class="info-button">Wiki</a>
+                            <a id="discord-link" href="#" target="_blank" class="info-button">Discord</a>
+                        </div>
+                        <div id="unsupported-message" class="unsupported-message" style="display: none;">
+                            <p>This version is no longer supported. Please don't ask for help in either Discord.</p>
+                        </div>                  
+                    </div>              
                 </div>
-                
-                <div class="support-links">
-                  <h3>Support Links:</h3>
-                  <div class="button-container">
-                    <a id="wiki-link" href="#" target="_blank" class="info-button">Wiki</a>
-                    <a id="discord-link" href="#" target="_blank" class="info-button">Discord</a>
-                  </div>
-                  <div id="unsupported-message" class="unsupported-message" style="display: none;">
-                    <p>This version is no longer supported. Please don't ask for help in either Discord.</p>
-                  </div>                  
-              </div>              
+            </div>
+        </div>
                             
         <div id="error-container" style="display: none;">
             <p id="errorMessage" class="error-message"></p>
@@ -122,7 +127,7 @@
         </div>
     </main>
 
-      <footer>
+    <footer>
         <div class="footer-content">
             <ul class="footer-menu">
                 <li><a href="index.html">Home</a></li>
@@ -139,10 +144,10 @@
             </p>
         </div>
     </footer>
-  
 
     <script src="../beta/scripts/versionselector.js"></script>
     <script src="../beta/scripts/themeSelector.js"></script>
     <script src="../beta/scripts/mobile.js"></script>
+    <script src="../beta/scripts/maintenance.js"></script>
 </body>
 </html>
