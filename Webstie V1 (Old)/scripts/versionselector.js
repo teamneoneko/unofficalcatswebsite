@@ -10,8 +10,8 @@ if (savedThemePreference === 'light-mode') {
   themeToggle.checked = true;
 }
 
-// Fetch the list of JSON files from the 'versions.json' file on GitHub
-fetch('https://raw.githubusercontent.com/unofficalcats/unofficalcatswebsite/main/json/BlenderVersions/versions.json')
+// Fetch the list of JSON files from the 'versions.json' file
+fetch('./json/BlenderVersions/versions.json')
   .then(response => {
     if (response.ok) {
       return response.json();
@@ -27,7 +27,7 @@ fetch('https://raw.githubusercontent.com/unofficalcats/unofficalcatswebsite/main
     files.sort().reverse();
 
     const promises = files.map(file => {
-      return fetch(`https://raw.githubusercontent.com/unofficalcats/unofficalcatswebsite/main/json/BlenderVersions/${file}`)
+      return fetch(`./json/BlenderVersions/${file}`)
         .then(response => {
           if (response.ok) {
             return response.json();
@@ -70,7 +70,7 @@ versionSelect.addEventListener('change', function() {
     // Show loading spinner
     loadingDiv.style.display = 'block';
 
-    fetch(`https://raw.githubusercontent.com/unofficalcats/unofficalcatswebsite/main/json/BlenderVersions/${selectedVersion}`)
+    fetch(`./json/BlenderVersions/${selectedVersion}`)
       .then(response => {
         if (response.ok) {
           return response.json();
@@ -173,4 +173,3 @@ function displayErrorMessage(message) {
     location.reload();
   });
 }
-
