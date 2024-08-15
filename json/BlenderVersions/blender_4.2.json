@@ -4,7 +4,7 @@
   "releaseDate": "2024-07-29",
   "eolDate": "Not Set",
   "archiveLink": "https://cdn.neoneko.xyz/catsblenderplugin/blender4.2/",
-  "description": "Blender 4.2 is the next Blender Long Term Support (LTS) release. The unofficial Cats add-on fully supports this version. For support, please use the Unofficial Cats Discord unless it's a known issue. It's important to note that you should not ask for help with the unofficial version in the official Cats Discord server, as no assistance will be provided there. We don't recommend trying to use the Official Cats add-on for Blender 4.2, as it is severely outdated and essentially broken at this point.",
+  "description": "Note to steam users: If your blender is crashing while using cats, please download blender from blenders website, for some reason the steam version has some werid issues. Blender 4.2 is the next Blender Long Term Support (LTS) release. The unofficial Cats add-on fully supports this version. For support, please use the Unofficial Cats Discord unless it's a known issue. It's important to note that you should not ask for help with the unofficial version in the official Cats Discord server, as no assistance will be provided there. We don't recommend trying to use the Official Cats add-on for Blender 4.2, as it is severely outdated and essentially broken at this point.",
   "unofficial": {
     "githubLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/releases/tag/4.2.1.2",
     "downloadLink": "https://cdn.neoneko.xyz/catsblenderplugin/blender4.2/CatsBlenderPlugin4.2Latest.zip",
