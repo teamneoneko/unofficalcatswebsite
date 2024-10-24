@@ -1,12 +1,12 @@
 {
   "version": "4.2",
-  "latestVersion": "4.2.1.3",
-  "releaseDate": "2024-09-10",
+  "latestVersion": "4.2.1.4",
+  "releaseDate": "2024-10-24",
   "eolDate": "Not Set",
   "archiveLink": "https://cdn.neoneko.xyz/catsblenderplugin/blender4.2/",
   "description": "WE DO NOT RECOMEND BLENDER 4.2 CURRENTLY, IT IS VERY UNSTABLE, FOR THE TIME BEING PLEASE USE BLENDER 4.1 OR 3.6. Blender 4.2 is the next Blender Long Term Support (LTS) release. The unofficial Cats add-on fully supports this version. For support, please use the Unofficial Cats Discord unless it's a known issue. It's important to note that you should not ask for help with the unofficial version in the official Cats Discord server, as no assistance will be provided there. We don't recommend trying to use the Official Cats add-on for Blender 4.2, as it is severely outdated and essentially broken at this point.",
   "unofficial": {
-    "githubLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/releases/tag/4.2.1.3",
+    "githubLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/releases/tag/4.2.1.4",
     "downloadLink": "https://cdn.neoneko.xyz/catsblenderplugin/blender4.2/CatsBlenderPlugin4.2Latest.zip",
     "wikiLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/wiki",
     "discordLink": "https://discord.catsblenderplugin.xyz/"
