@@ -7,7 +7,7 @@
   "description": "WE DO NOT RECOMEND BLENDER 4.3 CURRENTLY, AS IT'S IN BETA, FOR THE TIME BEING PLEASE USE BLENDER 4.1 OR 3.6. Blender 4.3 is the latest release for Blender. The unofficial Cats add-on fully supports this version. For support, please use the Unofficial Cats Discord unless it's a known issue. It's important to note that you should not ask for help with the unofficial version in the official Cats Discord server, as no assistance will be provided there. We don't recommend trying to use the Official Cats add-on for Blender 4.3, as it is severely outdated and essentially broken at this point.",
   "unofficial": {
     "githubLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/releases/tag/4.3.0.0",
-    "downloadLink": "https://cdn.neoneko.xyz/catsblenderplugin/blender4.2/CatsBlenderPlugin4.3Latest.zip",
+    "downloadLink": "https://cdn.neoneko.xyz/catsblenderplugin/blender4.3/CatsBlenderPlugin4.3Latest.zip",
     "wikiLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/wiki",
     "discordLink": "https://discord.catsblenderplugin.xyz/"
   }
