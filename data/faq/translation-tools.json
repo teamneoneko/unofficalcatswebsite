@@ -1,0 +1,14 @@
+{
+    "faqs": [
+      {
+        "id": 70,
+        "category": "Translation Tools",
+        "question": "How do I use the translation features?",
+        "answer": "[image]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/assets/104736380/ad61a042-7bbb-42e8-b9b8-e3b25460dc63[/image]\n\n### Features:\n- Export Translations to CSV (optional)\n- Custom CSV Export Location\n- Translate shape keys, bones, materials, and meshes\n- Uses internal dictionary and Google Translate\n\nCSV format: mesh/object,original,translated",
+        "keywords": ["translation", "csv", "export", "japanese", "english"],
+        "version": "1.0",
+        "lastUpdated": "2024-01-20"
+      }
+    ]
+  }
+  

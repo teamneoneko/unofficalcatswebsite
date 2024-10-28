@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let categoriesData = [];
 
     // GitHub URLs
-    const baseUrl = 'https://raw.githubusercontent.com/teamneoneko/neonekowebsite/main/data';
+    const baseUrl = 'https://raw.githubusercontent.com/teamneoneko/unofficalcatswebsite/main/data';
     const categoriesUrl = `${baseUrl}/categories.json`;
     const faqBaseUrl = `${baseUrl}/faq`;
 

@@ -1,0 +1,14 @@
+{
+    "faqs": [
+      {
+        "id": 50,
+        "category": "Shape Keys",
+        "question": "What shape key management tools are available?",
+        "answer": "[image]https://i.imgur.com/wAaXsqF.png[/image]\n\n### Features:\n- Remove Shapekeys: Removes insignificant shape keys\n- Repair Shape Keys: Fixes broken shape keys\n- Optimise Shape Keys: Improves GPU performance\n- Apply Shape Key as Basis: Creates new basis from selected shape key\n\n[image]https://i.imgur.com/zEnr1KA.png[/image]",
+        "keywords": ["shape keys", "basis", "repair", "optimize"],
+        "version": "1.0",
+        "lastUpdated": "2024-01-20"
+      }
+    ]
+  }
+  

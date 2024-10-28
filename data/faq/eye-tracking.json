@@ -1,0 +1,23 @@
+{
+    "faqs": [
+      {
+        "id": 60,
+        "category": "Eye Tracking",
+        "question": "How do I set up eye tracking for VRChat SDK3?",
+        "answer": "[image]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/assets/104736380/23d4bdcb-9266-4320-805b-3803f9af819b[/image]\n\n[info]Rotates eye bones straight up with zero roll for VRChat Unity setup[/info]\n\n[image]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/assets/104736380/fec7cc47-a4ff-44cf-91ad-94a51937f73f[/image]",
+        "keywords": ["eye tracking", "vrchat", "sdk3"],
+        "version": "1.0",
+        "lastUpdated": "2024-01-20"
+      },
+      {
+        "id": 61,
+        "category": "Eye Tracking",
+        "question": "How does Legacy Eye Tracking work?",
+        "answer": "[image]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/assets/104736380/32c6b7d7-3df1-429a-a315-8fe858ad09f0[/image]\n\n### Features:\n- Disable Eye Blinking\n- Disable Eye Movement\n- Configurable Eye Movement Speed\n\n[note]For games like ChilloutVR or other platforms requiring legacy eye tracking[/note]",
+        "keywords": ["legacy eye tracking", "chilloutVR", "blinking", "movement"],
+        "version": "1.0",
+        "lastUpdated": "2024-01-20"
+      }
+    ]
+  }
+  
