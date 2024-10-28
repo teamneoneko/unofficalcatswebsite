@@ -1,0 +1,21 @@
+{
+    "faqs": [
+      {
+        "id": 5,
+        "category": "Installation",
+        "question": "How do I install Cats Blender Plugin?",
+        "answer": "[warning]Note to steam users: If you are having crashing issues on Blender 4.2 with Cats, please use blender.org version, I am unsure why but the steam version is causes some issues for some users.[/warning]\n\n1. Download the plugin for your version of blender: [link]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/releases|Cats Blender Plugin[/link]\n\n[info]The releases page will contain different versions of the plugin for different versions of blender, ensure you download the correct one for your version of blender.[/info]\n\n[warning]**Important:** Do NOT extract the downloaded zip! You will need the zip file during installation![/warning]\n\n2. Install the addon in blender:\n   - In Blender 4.2+ go to Edit > Preferences > Add-ons > Top Right Down arrow > Install From Disk\n   - You MUST restart blender first for all functions to work\n\n[image]https://i.imgur.com/0QLsmt9.png[/image]\n[image]https://i.imgur.com/5WJTv84.png[/image]\n\nIf installed correctly you should see cat's in your 3D View on your side bar (This appears when pressing the N Key on your keyboard).\n\n[image]https://i.imgur.com/NK57oHJ.png[/image]",
+        "keywords": ["installation", "setup", "install guide"],
+        "version": "1.0",
+        "lastUpdated": "2024-01-20",
+        "history": [
+          {
+            "version": "1.0",
+            "date": "2024-01-20",
+            "changes": "Initial installation guide"
+          }
+        ]
+      }
+    ]
+  }
+  

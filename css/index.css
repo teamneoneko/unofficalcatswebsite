@@ -465,3 +465,194 @@
     background: rgba(255, 107, 107, 0.1);
     color: #ff6b6b;
 }
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 1400px) {
+    .content {
+        max-width: 1200px;
+        padding: 0 2rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .cats-type-box {
+        max-width: 500px;
+        padding: 1.8rem;
+    }
+    .content-wrapper {
+        gap: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .cats-type-box {
+        max-width: 450px;
+        padding: 1.6rem;
+    }
+    .version-selector {
+        max-width: 700px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .content-wrapper {
+        gap: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .cats-type-box {
+        max-width: 400px;
+        padding: 1.4rem;
+    }
+    .content-wrapper {
+        gap: 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .team-name {
+        font-size: 2.5rem;
+    }
+    .version-selector {
+        max-width: 600px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .selector select {
+        font-size: 1rem;
+        padding: 0.9rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        padding: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .cats-type-selector {
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1.5rem 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .cats-type-box {
+        max-width: 100%;
+        padding: 1.2rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .content-wrapper {
+        flex-direction: column;
+        padding: 0.8rem;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+    .description-section,
+    .links-section {
+        flex: 1;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0.5rem 0;
+    }
+    .version-selector {
+        width: 90%;
+        padding: 1rem;
+        margin: 1rem auto;
+        box-sizing: border-box;
+    }
+    .button-container {
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .info-button {
+        width: 100%;
+        padding: 0.8rem;
+        box-sizing: border-box;
+    }
+    .modal-content {
+        margin: 10vh 1rem;
+        padding: 1.5rem;
+        width: 90%;
+        box-sizing: border-box;
+    }
+    .version-info {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .info-box {
+        padding: 1.2rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .support-links {
+        margin-top: 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .team-name {
+        font-size: 2.2rem;
+    }
+    .selector {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content {
+        padding: 0.8rem;
+    }
+    .version-selector {
+        width: 95%;
+        padding: 0.8rem;
+    }
+    .version-info p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    .description-section h3 {
+        font-size: 1.2rem;
+    }
+    #version-description {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    .modal-button {
+        min-width: 200px;
+        padding: 0.8rem;
+    }
+    .team-name {
+        font-size: 2rem;
+    }
+    .intro {
+        font-size: 1.1rem;
+    }
+    .cats-type-box h2 {
+        font-size: 1.4rem;
+    }
+    .cats-type-box h3 {
+        font-size: 1rem;
+    }
+    .selector label {
+        font-size: 1rem;
+    }
+    .selector select {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+    .info-box {
+        padding: 1rem;
+    }
+    .button {
+        padding: 0.8rem 1.6rem;
+        font-size: 1rem;
+    }
+}

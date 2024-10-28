@@ -18,6 +18,7 @@ class VersionSelector {
         this.modalCloseButton = document.querySelector('.modal-close');
         this.proceedButton = document.getElementById('proceed-download');
         this.latestVersion = document.getElementById('latest-version');
+        this.developmentStatus = document.getElementById('development-status');
         this.releaseDate = document.getElementById('release-date');
         this.eolDate = document.getElementById('eol-date');
         this.description = document.getElementById('version-description');
@@ -97,6 +98,7 @@ class VersionSelector {
 
     resetDisplayFields() {
         this.latestVersion.textContent = '-';
+        this.developmentStatus.textContent = '-';
         this.releaseDate.textContent = '-';
         this.eolDate.textContent = '-';
         this.description.innerHTML = '';
