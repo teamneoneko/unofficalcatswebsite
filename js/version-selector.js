@@ -15,6 +15,7 @@ class VersionSelector {
         this.select = document.getElementById('blender-version-select');
         this.downloadButton = document.getElementById('download-button');
         this.modal = document.getElementById('unofficial-warning');
+        this.modalCloseButton = document.querySelector('.modal-close');
         this.proceedButton = document.getElementById('proceed-download');
         this.latestVersion = document.getElementById('latest-version');
         this.releaseDate = document.getElementById('release-date');
@@ -30,6 +31,12 @@ class VersionSelector {
         this.select.addEventListener('change', () => this.handleVersionChange());
         this.downloadButton.addEventListener('click', () => this.handleDownload());
         this.proceedButton.addEventListener('click', () => this.proceedWithDownload());
+        this.modalCloseButton.addEventListener('click', () => this.closeModal());
+        this.modal.addEventListener('click', (e) => {
+            if (e.target === this.modal) {
+                this.closeModal();
+            }
+        });
     }
 
     showVersionSelector(type) {
@@ -92,7 +99,7 @@ class VersionSelector {
         this.latestVersion.textContent = '-';
         this.releaseDate.textContent = '-';
         this.eolDate.textContent = '-';
-        this.description.innerHTML = data.description || '';
+        this.description.innerHTML = '';
         this.resultContainer.style.display = 'none';
     }
 
@@ -114,13 +121,12 @@ class VersionSelector {
             
             const versionData = this.currentType === 'unofficial' ? data.unofficial : data.official;
 
-            // Update version info
             this.latestVersion.textContent = data.latestVersion || 'N/A';
+            this.developmentStatus.textContent = data.developmentStatus || 'N/A';
             this.releaseDate.textContent = data.releaseDate || 'N/A';
             this.eolDate.textContent = data.eolDate || 'N/A';
             this.description.innerHTML = data.description || '';
 
-            // Update links
             const links = {
                 'github-link': versionData?.githubLink,
                 'download-link': versionData?.downloadLink,
@@ -143,7 +149,6 @@ class VersionSelector {
                 }
             });
 
-            // Show/hide unsupported message
             const unsupportedMessage = document.getElementById('unsupported-message');
             unsupportedMessage.style.display = hasSupport ? 'none' : 'block';
 
@@ -171,6 +176,10 @@ class VersionSelector {
         if (this.currentDownloadUrl) {
             window.location.href = this.currentDownloadUrl;
         }
+        this.closeModal();
+    }
+
+    closeModal() {
         this.modal.style.display = 'none';
     }
 }
