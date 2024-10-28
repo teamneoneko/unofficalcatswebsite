@@ -1,0 +1,14 @@
+{
+  "version": "4.1",
+  "latestVersion": "4.1.2.3",
+  "releaseDate": "2024-10-24",
+  "eolDate": "Once 4.2 is more stable",
+  "archiveLink": "https://cdn.neoneko.xyz/catsblenderplugin/blender4.1/",
+  "description": "Blender 4.1 is the current recommended version due to 4.2 being buggy! For Blender 4.1, we recommend using the unofficial Cats add-on instead of the official version. The official Cats add-on hasn't been updated to support the API changes introduced in Blender 4.x, and its bundled MMD Tools remain outdated. However, scord link has been removed. Please refrain from asking for help with the unofficial version in the official Cats Discord server.",
+  "unofficial": {
+    "githubLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/releases/tag/4.1.2.3",
+    "downloadLink": "https://cdn.neoneko.xyz/catsblenderplugin/blender4.1/Cats-Blender-Plugin-Unofficial4.1.2.3.zip",
+    "wikiLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/wiki",
+    "discordLink": "https://discord.catsblenderplugin.xyz/"
+  }
+}
