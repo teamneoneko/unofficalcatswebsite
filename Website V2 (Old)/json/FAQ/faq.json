@@ -1,0 +1,112 @@
+[
+  {
+    "question": "What is the Unofficial Cats Blender Plugin?",
+    "answer": "The Unofficial Cats Blender Plugin is a fork of the Official Cats Plugin which has fixes for Blender 3.6 and supports Blender 4.x. The Unofficial Cats Blender Plugin is maintained by the Neoneko Team, which currently has two members. Anyone who is interested in maintaining Cats can be part of the team, as we are more community-oriented. The aim of the team is to ensure mistakes of the past are not repeated and to ensure that even if one member leaves, the repositories the team maintains can still be updated by the other members.",
+    "category": "Unofficial Cats Questions"
+  },
+  {
+    "question": "I found a bug in the Unoffical Cats, how do I report it?",
+    "answer": "You can either start an issue on our <a href='https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/issues'>Github</a> or you can join our Discord server <a href='https://discord.catsblenderplugin.xyz/'>here</a>.",
+    "category": "Unofficial Cats Questions"
+  },
+  {
+    "question": "I need some help, where can I find it?",
+    "answer": "Please first read the Wiki <a href='https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/wiki'>here</a> if you are still struggling join our Discord server <a href='https://discord.catsblenderplugin.xyz/'>here</a>.",
+    "category": "Unofficial Cats Questions"
+  },
+  {
+    "question": "Can I use a custom version of MMD tools?",
+    "answer": "No, we removed the abilty to use a custom version of MMD Tools as it was causing more issues then it was worth, the version which is bundled with Cats has been tested fully, newer versions may break the plugin.",
+    "category": "Unofficial Cats Questions"
+  },
+  {
+    "question": "How long do you support a Blender version?",
+    "answer": "You can view the Blender Support Polcies<a href='https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/wiki/Blender-Version-Support-Policies'>here</a>.",
+    "category": "Unofficial Cats Questions"
+  },
+  {
+    "question": "Why isn't the Official Cats updated anymore?",
+    "answer": "Simply put, the original owner has vanished, and the community was maintaining it but can no longer do so. It's been a year since the last official response, so at this point, we can assume that Cats has been abandoned. Below is the official response on the Cats Discord server FAQ, which was posted on 05/04/2023:\n\nDue to problems beyond our control, we cannot give an estimate of when there will be an official update. This is due to many reasons, one of which is that the only reason why the add-on gets any support anyway is because of the community. Because the community doesn't own the project, we cannot do anything to release an update. We can push code and update development and sometimes master, but since the owner has kind of gone on a hiatus, we have no idea when or even if they will return. The owner is the only one capable of pushing a release, which everyone loves downloading. The code, thankfully, is able to work without being compiled, so that is a big reason why we can happily give people the latest version without the owner's involvement. The programmers, translators, and contributors to the plugin are in the same boat.\n\nWhat I can unveil is that negotiations are ongoing, and Hotox is working every day to gain the permissions to release updates and get the train rolling.\n\nSo sit back. Asking isn't gonna make it go any faster. Probably...",
+    "category": "Official Cats Questions"
+  },
+  {
+    "question": "How do I get support for the Offical Cats?",
+    "answer": "The Offical Cats Github is no longer monitorered the best place to get help with the Offical Cats is there Discord server <a href='https://officialcats.catsblenderplugin.xyz/'>here</a>.",
+    "category": "Official Cats Questions"
+  },
+  {
+    "question": "I need to use the Offical Cats on Blender 4.0+, how do I do that?",
+    "answer": "We would massively advise not to use the Offical Cats on Blender 4.0+ but if you MUST use it then see this GitHub issue <a href='https://github.com/absolute-quantum/cats-blender-plugin/issues/684'>here</a>.",
+    "category": "Official Cats Questions"
+  },
+  {
+    "question": "Where has decimation feature gone in Blender 4.1+?",
+    "answer": "From Blender 4.1, the Unofficial Cats no longer supports the decimation feature. This was outdated and wasn't very good. We recommend using <a href='https://github.com/feilen/tuxedo-blender-plugin'>Tuxedo</a> instead.",
+    "category": "Blender 4.x Questions"
+  },
+  {
+    "question": "Where has the bake and smart decimation features gone?",
+    "answer": "Those where remove from the Official Cats a while ago you can find them in the <a href='https://github.com/feilen/tuxedo-blender-plugin'>Tuxedo</a> Plugin now.",
+    "category": "Blender 4.x Questions"
+  },
+  {
+    "question": "Material Combiner keep asking to restart after I install Pillow?",
+    "answer": "Please ensure you install the latest version of Material Combiner, older versions of Material Combiner does this and will cause issues, please also ensure you are not on a VPN and your not using the Windows Store version of Blender.",
+    "category": "Materials Combiner Questions"
+  },
+  {
+    "question": "After clicking Save atlas to.. the materials are simply merged or the atlas image does not have all the textures?",
+    "answer": "Textures are packaged in a .blend file. You need to save the .blend somewhere and click File > External data > Unpack All Into Files (to any directory of your choice).\n\nYour version of Blender is not in English, in this case the nodes will be named differently, their names are strictly written in the script. You need to manually rename the nodes to their own names, or switch the blender version to English and regenerate the nodes by re-importing the model.\n\nYou are using an unsupported shader (Surface property of material). You can view the file utils/materials.py to see what shaders are supported or what node names should be.",
+    "category": "Materials Combiner Questions"
+  },
+  {
+    "question": "Should I bake my models via Tuxedo?",
+    "answer": "Yes, Resonite users should use Tuxedo to bake because VRC optimizations apply to Resonite. If your materials are not set up like Tuxedo sets them up, then the mats won't auto appear in Resonite anyway. Blender needs the materials in Tuxedo's format to export to an FBX to auto appear textures in Resonite.",
+    "category": "Resonite Users Questions"
+  },
+  {
+    "question": "Should I pack my textures?",
+    "answer": "Please pack your textures for Resonite. VRC exports for the same model should not have packed textures, since it uses a massively different system that doesn't care if textures are packed. unless you are saving the raw file to your inventory. Also pack textures if you are giving an FBX to a friend or ally over Resonite.",
+    "category": "Resonite Users Questions"
+  },
+  {
+    "question": "What about eye tracking?",
+    "answer": "Don't set up eye tracking in Cats. Resonite has the eye manager component please use that",
+    "category": "Resonite Users Questions"
+  },
+  {
+    "question": "What is Avatar Toolkit?",
+    "answer": "Avatar Toolkit will be an more modern toolkit for your avatars needs. The idea is that Avatar Toolkit will replace Cats Blender Plugin from Blender 5.0+. We want to include most features of cats and more without the need for most 3rd Party Addons such as Material Combiner and MMD Tools you can follow the development <a href='https://github.com/unofficalcats/Avatar-Toolkit'>here</a>.",
+    "category": "Avatar Toolkit Questions"
+  },
+  {
+    "question": "Why are you making Avatar Toolkit?",
+    "answer": "After taking over Cats several months ago, we started to notice that relying on 3rd-party add-ons was getting harder and harder. Some add-ons are no longer updated or are very slow at getting updates. This was affecting our updates to Cats, and we were having to put warnings on the Blender 4.x version of Cats as some 3rd-party add-ons were not updated. This led to us also hotfixing stuff on these 3rd-party add-ons and more. Therefore, we decided it would be better for us to integrate most 3rd-party functions into a new plugin, fix the code, and make it better as well. That's where Avatar Toolkit was born.",
+    "category": "Avatar Toolkit Questions"
+  },
+  {
+    "question": "Why can't I edit my material's textures in unity?",
+    "answer": "You should NEVER expect (and should NEVER try) to have textures exported with the model when importing into unity. Blenders materials do not translate into Unity and should never translate to Unity Automatically. This will also rocket your file size and can cause performance issues and can prevent you from uploading.",
+    "category": "Other Questions"
+  },
+  {
+    "question": "My Materials go black/ white when using the fix materials function?",
+    "answer": "This is because you haven't assigned an texture to the material, when you use the fix materials function cats will automatically assign a white color to your materials if haven't assigned one. if your having other issues other then this then please do the following:\n\nMake sure you are using the recommended version of Blender.\nMake sure you cat's is up to date.\n\nIf you have done the above you can also try:\n\nEnsure you have textures assigned to all you materials, even if it's just a simple white texture.\nYou can downgrade to version 2.15.26 of the VRM Addon <a href='https://github.com/saturday06/VRM-Addon-for-Blender/releases/download/2_15_26/VRM_Addon_for_Blender-2_15_26.zip'>here</a>",
+    "category": "Other Questions"
+  },
+  {
+    "question": "Can you port your version to X version of Blender?",
+    "answer": "No, it is already hard enough to keep up with the changes between newer versions of Blender. We are not porting to older versions of Blender.",
+    "category": "Other Questions"
+  },
+  {
+    "question": "Where is the Fix Model Button?",
+    "answer": "This has now been moved to the MMD Options and renamed to Fix MMD Model. This should not be used on models already setup for Unity and VRChat, This should only be used on MMD and VRM models which are not already setup for Unity and VRChat",
+    "category": "Other Questions"
+  },
+  {
+    "question": "I ran into an issue or an error when using Cats?",
+    "answer": "Make sure you are using the latest version of Cats for your Blender version. You can use our Blender selector to find the latest version <a href='index.html'>here</a>. If you are still having issues, you can also use the <a href='index.html'>version select</a> page to find the correct support links for your Blender version.",
+    "category": "Other Questions"
+  }
+]

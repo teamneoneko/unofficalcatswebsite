@@ -1,0 +1,57 @@
+{
+    "faqs": [
+      {
+        "id": 1,
+        "category": "Showcase",
+        "question": "This is an example FAQ, this will show what the FAQ can do",
+        "answer": "# Welcome to our FAQ System!\n\n[info]Our FAQ system supports rich formatting, interactive elements, and version tracking![/info]\n\n## Core Features\n\n1. Rich text formatting with **bold**, *italic*, and ~~strikethrough~~\n2. Code blocks with `inline code` and ```larger code blocks```\n3. Interactive elements and collapsible sections\n4. Version history tracking\n5. Smart search functionality\n\n## Callout Types\n[info]Information callouts for helpful tips[/info]\n[warning]Warning callouts for important notices[/warning]\n[note]Note callouts for additional context[/note]\n\n## Interactive Elements\n[details]Click to see hidden content|• Lists and formatting inside collapsible sections\n• [color:blue]Colored text highlights[/color]\n• Nested formatting support\n• And much more!\n[/details]\n\n## Image Support\nDefault image:\n[image]https://neoneko.xyz/images/logo.jpg[/image]\n\nCustom size (200x200):\n[image:200:200]https://neoneko.xyz/images/logo.jpg[/image]\n\n## Links\n[link]https://neoneko.xyz|Custom link format[/link]\nor [Markdown style](https://neoneko.xyz)\n\n> Blockquotes for highlighting important information or quotes\n\n## Data Tables\n|Feature|Description|\n|Formatting|Rich text support|\n|Images|Size control|\n|Search|Keyword-based|\n|History|Version tracking|",
+        "keywords": ["example", "showcase", "features", "formatting", "demo"],
+        "version": "1.2",
+        "lastUpdated": "2024-01-20T10:00:00Z",
+        "history": [
+          {
+            "version": "1.0",
+            "date": "2023-12-15T08:00:00Z",
+            "changes": "Initial version"
+          },
+          {
+            "version": "1.1",
+            "date": "2024-01-10T09:30:00Z",
+            "changes": "Added interactive elements"
+          },
+          {
+            "version": "1.2",
+            "date": "2024-01-20T10:00:00Z",
+            "changes": "Updated examples and added version tracking"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "category": "Showcase",
+        "question": "Can I see more formatting examples?",
+        "answer": "# Advanced Formatting Guide\n\n## Text Styling\n• Regular text for normal content\n• **Bold text** for strong emphasis\n• *Italic text* for subtle emphasis\n• ~~Strikethrough~~ for outdated content\n• [color:red]Red text[/color] for attention\n• [color:#64ffda]Custom color[/color] using hex codes\n\n## Code Examples\n`inline code` for short snippets\n```\nfunction example() {\n    return 'larger code blocks';\n}\n```\n\n## Lists\n1. Ordered lists\n2. With automatic numbering\n3. And proper spacing\n\n• Unordered lists\n• Using bullet points\n• For better organization\n\n## Blockquotes\n> Single line quotes look like this\n\n> Multi-line blockquotes\n> Can span multiple lines\n> With proper formatting\n\n## Advanced Tables\n|Header 1|Header 2|Header 3|\n|Left|Center|Right|\n|Data|More|Content|\n\n## Interactive Sections\n[details]Advanced Features|Inside collapsible sections you can use:\n• All formatting options\n• [color:blue]Colored text[/color]\n• Lists and tables\n• Even nested details!\n[/details]\n\n## Callout Variations\n[info]Information callouts support\n• Multiple lines\n• Formatting\n• And more[/info]\n\n[warning]Warning callouts\nWith multiple lines\nAnd proper spacing[/warning]\n\n[note]Notes can include:\n• Important details\n• Additional context\n• Key information[/note]",
+        "keywords": ["formatting", "advanced", "examples", "styling", "complete", "guide"],
+        "version": "2.1",
+        "lastUpdated": "2024-01-21T15:30:00Z",
+        "history": [
+          {
+            "version": "1.0",
+            "date": "2023-12-20T14:00:00Z",
+            "changes": "Initial formatting guide"
+          },
+          {
+            "version": "2.0",
+            "date": "2024-01-15T11:00:00Z",
+            "changes": "Added advanced formatting examples"
+          },
+          {
+            "version": "2.1",
+            "date": "2024-01-21T15:30:00Z",
+            "changes": "Enhanced examples with nested features"
+          }
+        ]
+      }
+    ]
+  }
+  
