@@ -3,7 +3,7 @@
   "latestVersion": "0.19.1 Dev",
   "releaseDate": "2021-06-27",
   "eolDate": "Offical Cats project is no longer maintained.",
-  "description": "Blender versions 3.1 to 3.5 work best with the development (dev) version of the Cats add-on. If you plan to use a Blender version in the 3.x series, we highly recommend using either Blender 3.3 or 3.6, as these are Long Term Support (LTS) versions that offer the most stability when used with the Cats add-on. For Blender versions 3.1 to 3.5, you can find support and assistance on the official Cats add-on Discord server if you encounter any issues or need help.",
+  "description": "<div class='highlight-info'>Blender versions 3.1 to 3.5 work best with the development (dev) version of the Cats add-on.</div><br><div class='highlight-note'>If you plan to use a Blender version in the 3.x series, we highly recommend using either Blender 3.3 or 3.6, as these are Long Term Support (LTS) versions.</div><br><div class='highlight-info'>Support and assistance are available on the official Cats add-on Discord server.</div>",
   "official": {
     "githubLink": "https://github.com/absolute-quantum/cats-blender-plugin/tree/development",
     "downloadLink": "https://cdn.neoneko.xyz/catsblenderplugin/cats-blender-plugin-development.zip",
