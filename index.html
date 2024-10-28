@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Neoneko - Home of Cats Blender Plugin and Avatar Toolkit. Tools and resources for 3D modeling and avatar creation.">
+    <meta name="description" content="Home of Cats Blender Plugin for Blender. an tool designed to shorten steps needed to import and optimize models into VRChat.">
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Neoneko Website">
-    <meta property="og:description" content="Home of Cats Blender Plugin and Avatar Toolkit. Tools and resources for 3D modeling and avatar creation.">
+    <meta property="og:title" content="Cats Blender Plugin">
+    <meta property="og:description" content="Home of Cats Blender Plugin for Blender. an tool designed to shorten steps needed to import and optimize models into VRChat.">
     <meta property="og:image" content="https://neoneko.xyz/images/logo.jpg">
     <meta property="og:url" content="https://neoneko.xyz">
     <meta property="og:type" content="website">
@@ -76,9 +76,50 @@
     </header>
 
     <main id="main-content" role="main">
-        <!-- Add your main content here -->
+        <div class="version-selector-container">
+            <h1>Select Your Blender Version</h1>
+            <div class="version-tabs">
+                <button class="tab-button active" data-type="official">Official Cats</button>
+                <button class="tab-button" data-type="unofficial">Unofficial Cats</button>
+            </div>
+            
+            <div class="version-content">
+                <div class="version-description">
+                    <p id="version-type-description"></p>
+                </div>
+                
+                <div class="version-select-wrapper">
+                    <select id="blender-version-select">
+                        <option value="">Choose your Blender version</option>
+                    </select>
+                </div>
+    
+                <div class="download-section">
+                    <button id="download-button" class="primary-button">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                    <div class="version-info">
+                        <p><strong>Latest Version:</strong> <span id="latest-version">-</span></p>
+                        <p><strong>Release Date:</strong> <span id="release-date">-</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="unofficial-warning" class="modal">
+            <div class="modal-content">
+                <h2>⚠️ Unofficial Version Notice</h2>
+                <p>You are downloading the unofficial version of Cats Blender Plugin.</p>
+                <p><strong>Important:</strong> DO NOT ask for support in the Official Cats Discord Server.</p>
+                <div class="modal-buttons">
+                    <a href="wiki.html" class="modal-button">Check Wiki First</a>
+                    <a href="https://discord.neoneko.xyz" class="modal-button">Join Neoneko Discord</a>
+                    <button id="proceed-download" class="modal-button">Proceed to Download</button>
+                </div>
+            </div>
+        </div>
     </main>
-
+    
     <footer role="contentinfo">
         <div class="footer-content">
             <ul class="footer-menu" role="menu">
