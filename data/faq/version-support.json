@@ -31,6 +31,22 @@
             "changes": "Initial LTS policy documentation"
           }
         ]
+      },
+      {
+        "id": 7,
+        "category": "Version Support",
+        "question": "What are the legacy/unsupported Blender versions?",
+        "answer": "[warning]Do not report issues for these versions as they are no longer supported.[/warning]\n\n|Version|Policy|\n|--|--|\n|4.0|No longer supported, the last version to support this version of blender was [link]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/releases/tag/4.0.5.2|4.0.5.2[/link]|\n|3.3, 3.4 and 3.5|No longer supported, the last version to support these versions of blender is [link]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/releases/tag/0.40.0|0.40.0[/link]|\n|3.2 and below|No longer supported, the last version to support these versions is [link]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/releases/tag/0.30.0|0.30.0[/link] however this may have issues on 2.8, please use the official version of cats for 2.8.|\n|2.79|Even the official cats has not worked on this version of Blender properly for a long time, we do not support this version, please use an older version of the official cats for this version of blender.|",
+        "keywords": ["legacy", "old versions", "unsupported", "discontinued", "2.79", "3.2", "3.3", "3.4", "3.5", "4.0"],
+        "version": "1.0",
+        "lastUpdated": "2024-01-20",
+        "history": [
+          {
+            "version": "1.0",
+            "date": "2024-01-20",
+            "changes": "Initial legacy version documentation"
+          }
+        ]
       }
     ]
   }
