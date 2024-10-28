@@ -13,16 +13,19 @@
     
     <!-- Preload critical assets -->
     <link rel="preload" href="css/common.css" as="style">
+    <link rel="preload" href="css/index.css" as="style">
     <link rel="preload" href="css/mobile.css" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
     
-    <title>Neoneko Website</title>
+    <title>Cats Blender Plugin</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="js/version-selector.js" defer></script>
     <script src="js/mobile-menu.js" defer></script>
     <script src="js/theme-selector.js" defer></script>
 </head>
@@ -76,36 +79,79 @@
     </header>
 
     <main id="main-content" role="main">
-        <div class="version-selector-container">
-            <h1>Select Your Blender Version</h1>
-            <div class="version-tabs">
-                <button class="tab-button active" data-type="official">Official Cats</button>
-                <button class="tab-button" data-type="unofficial">Unofficial Cats</button>
+        <div class="intro-container">
+            <span class="intro">Welcome to</span>
+            <h1 class="team-name">Cats Blender Plugin</h1>
+            <p>Select the Cats Blender Plugin version that best suits your needs. Please carefully read the descriptions for each version and ensure you use the appropriate support channels if you require assistance.</p>
+        </div>
+        
+        <div class="cats-type-selector">
+            <div class="cats-type-box">
+                <h2>Official Cats</h2>
+                <h3>Recommended for Blender 3.5 and Below</h3>
+                <p>The Official Cats plugin supports Blender versions up to 3.6. However, it may have some issues on Blender 3.6 due to outdated MMD Tools. We recommend using the Official Cats plugin on Blender 3.5 and below.</p>
+                <button id="official-selector" class="button">Select Official Cats</button>
             </div>
-            
-            <div class="version-content">
-                <div class="version-description">
-                    <p id="version-type-description"></p>
-                </div>
-                
-                <div class="version-select-wrapper">
-                    <select id="blender-version-select">
-                        <option value="">Choose your Blender version</option>
-                    </select>
-                </div>
-    
-                <div class="download-section">
-                    <button id="download-button" class="primary-button">
-                        <i class="fas fa-download"></i> Download
-                    </button>
+            <div class="cats-type-box">
+                <h2>Unofficial Cats</h2>
+                <h3>Recommended for Blender 3.6 and Above</h3>
+                <p>The Unofficial Cats plugin supports Blender versions 3.6 to 4.2. It features the latest MMD Tools and includes numerous fixes and improvements. This version is recommended for users of Blender 3.6 and above.</p>
+                <button id="unofficial-selector" class="button">Select Unofficial Cats</button>
+            </div>
+        </div>
+
+        <button id="back-button" class="button" style="display: none;">Back</button>
+        
+        <div class="version-selector" style="display: none;">
+            <div class="selector">
+                <label for="blender-version-select">Select Blender Version:</label>
+                <select id="blender-version-select">
+                    <option value="">Choose your Blender version</option>
+                </select>
+            </div>
+
+            <div class="result-container">
+                <div class="info-box">
                     <div class="version-info">
                         <p><strong>Latest Version:</strong> <span id="latest-version">-</span></p>
                         <p><strong>Release Date:</strong> <span id="release-date">-</span></p>
+                        <p><strong>End of Life Date:</strong> <span id="eol-date">-</span></p>
+                    </div>
+                    <button id="download-button" class="primary-button">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                </div>
+            
+                <div class="content-wrapper">
+                    <div class="description-section">
+                        <h3>Read Me:</h3>
+                        <p id="version-description"></p>
+                    </div>
+            
+                    <div class="links-section">
+                        <div class="info-box">
+                            <h3>Links:</h3>
+                            <div class="button-container">
+                                <a id="github-link" href="#" target="_blank" class="info-button">GitHub</a>
+                                <a id="archive-link" href="#" target="_blank" class="info-button">Archive</a>
+                            </div>
+                            
+                            <div class="support-links">
+                                <h3>Support:</h3>
+                                <div class="button-container">
+                                    <a id="wiki-link" href="#" target="_blank" class="info-button">Wiki</a>
+                                    <a id="discord-link" href="#" target="_blank" class="info-button">Discord</a>
+                                </div>
+                                <div id="unsupported-message" class="unsupported-message" style="display: none;">
+                                    <p>This version is no longer supported. Please don't ask for help in either Discord.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    
+            
         <div id="unofficial-warning" class="modal">
             <div class="modal-content">
                 <h2>⚠️ Unofficial Version Notice</h2>
@@ -118,7 +164,7 @@
                 </div>
             </div>
         </div>
-    </main>
+    </main>     
     
     <footer role="contentinfo">
         <div class="footer-content">

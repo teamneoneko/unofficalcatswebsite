@@ -4,7 +4,7 @@
   "releaseDate": "2024-07-29",
   "eolDate": "2024-08-16",
   "archiveLink": "https://cdn.neoneko.xyz/catsblenderplugin/blender4.1/",
-  "description": "For Blender 4.1, we recommend using the unofficial Cats add-on instead of the official version. The official Cats add-on hasn't been updated to support the API changes introduced in Blender 4.x, and its bundled MMD Tools remain outdated. The unofficial Cats add-on for Blender 4.1 will continue to receive fixes and updates until its End-of-Life (EOL) date on August 16, 2024. After this date, it will be succeeded by the unofficial Cats add-on for Blender 4.2. For support with the unofficial Cats add-on for Blender 4.1, please seek assistance in the unofficial Cats Discord server. Remember not to ask for help with the unofficial version in the official Cats Discord server, as no support will be provided there.",
+  "description": "<div class='highlight-info'>The unofficial Cats add-on for Blender 4.1 provides full compatibility and enhanced features for your avatar creation needs.</div><br>Key Features:<br>- Updated MMD Tools compatibility<br>- Fixed mesh optimization issues<br>- Improved VRChat avatar export<br><br><div class='highlight-warning'>End of Life Notice: This version will reach end-of-life on August 16, 2024. We recommend planning to upgrade to the Blender 4.2 version before this date.</div><br><div class='highlight-note'>Support is available through our Discord community, and comprehensive documentation can be found in our wiki.</div>",
   "unofficial": {
     "githubLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/releases/tag/4.1.2.1",
     "downloadLink": "https://cdn.neoneko.xyz/catsblenderplugin/blender4.1/CatsBlenderPlugin4.1Latest.zip",
