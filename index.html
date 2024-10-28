@@ -3,151 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Cats Blender Plugin Unofficial">
-    <meta property="og:description" content="Welcome to the unofficial Cats Blender Plugin website. Find the right version for your Blender and get support for your specific Cats version.">
+    <meta name="description" content="Neoneko - Home of Cats Blender Plugin and Avatar Toolkit. Tools and resources for 3D modeling and avatar creation.">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Neoneko Website">
+    <meta property="og:description" content="Home of Cats Blender Plugin and Avatar Toolkit. Tools and resources for 3D modeling and avatar creation.">
     <meta property="og:image" content="https://neoneko.xyz/images/logo.jpg">
-    <meta property="og:url" content="https://catsblenderplugin.xyz/">
+    <meta property="og:url" content="https://neoneko.xyz">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <title>Cats Blender Plugin Unofficial</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="css/common.css" as="style">
+    <link rel="preload" href="css/mobile.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style">
+    
+    <title>Neoneko Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/mobile.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="js/mobile-menu.js" defer></script>
+    <script src="js/theme-selector.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo-link">
-                <span class="logo">Cats Blender Plugin</span>
+    <header role="banner">
+        <nav role="navigation" aria-label="Main navigation">
+            <a href="/" class="logo-link" aria-label="Neoneko Home">
+                <img src="https://neoneko.xyz/images/logo.jpg" alt="Neoneko Logo" class="logo-image" loading="lazy">
+                <div class="logo">Neoneko</div>
             </a>
-            <button id="mobile-menu-button" class="mobile-menu-button">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li class="has-submenu">
-                    <a href="#">GitHub</a>
-                    <ul class="submenu">
-                        <li><a href="https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-">Unofficial GitHub</a></li>
-                        <li><a href="https://github.com/absolute-quantum/cats-blender-plugin">Official GitHub</a></li>
+            <ul class="menu" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                <li class="has-submenu" role="none">
+                    <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">Projects</a>
+                    <ul class="submenu" role="menu" aria-label="Projects">
+                        <li role="none"><a href="https://catsblenderplugin.xyz" role="menuitem">Cats Blender Plugin</a></li>
+                        <li role="none"><a href="https://avatartoolkit.xyz" role="menuitem">Avatar Toolkit</a></li>
                     </ul>
                 </li>
-                <li><a href="https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/wiki">Unofficial Wiki</a></li>
-                <li class="theme-selector">
-                    <select id="theme-select">
-                        <option data-theme="default">Default Theme</option>
-                        <option data-theme="light">Light Theme</option>
-                        <option data-theme="dark">Dark Theme</option>
-                        <option data-theme="cyberpunk">Cyberpunk Theme</option>
-                        <option data-theme="highcontrast">High Contrast Theme</option>
-                    </select>
-                </li>            
-            </ul>
+                <li class="has-submenu" role="none">
+                    <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">Community</a>
+                    <ul class="submenu" role="menu" aria-label="Community">
+                        <li role="none"><a href="https://discord.neoneko.xyz/" role="menuitem"><i class="fab fa-discord"></i> Discord</a></li>
+                        <li role="none"><a href="https://bsky.app/profile/neoneko.xyz" role="menuitem"><i class="fa-brands fa-bluesky"></i> Bluesky</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu" role="none">
+                    <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">About</a>
+                    <ul class="submenu" role="menu" aria-label="About">
+                        <li role="none"><a href="#" role="menuitem">About Us</a></li>
+                        <li role="none"><a href="#" role="menuitem">Support Us</a></li>
+                        <li role="none"><a href="#" role="menuitem">Contact Us</a></li>
+                    </ul>
+                </li>
+                <li role="none"><a href="faq.html" role="menuitem">FAQ</a></li>
+            </ul>            
+            <div class="theme-hint">
+                <select id="theme-select" aria-label="Theme Selector" role="combobox">
+                    <option value="main-site" data-theme="main-site">Main Theme</option>
+                    <option value="light" data-theme="light">Light Theme</option>
+                    <option value="dark" data-theme="dark">Dark Theme</option>
+                    <option value="high-contrast" data-theme="high-contrast">High Contrast</option>
+                    <option value="forest" data-theme="forest">Forest Theme</option>
+                    <option value="mint" data-theme="mint">Mint Theme</option>
+                    <option value="cyberpunk" data-theme="cyberpunk">Cyberpunk Theme</option>
+                    <option value="halloween" data-theme="halloween">Halloween Theme</option>
+                </select>
+            </div>
+            <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Toggle Navigation Menu" aria-expanded="false">☰</button>
         </nav>
     </header>
 
-    <main>
-        <div class="intro-container">
-            <span class="intro">Welcome to</span>
-            <h1 class="team-name">Cats Blender Plugin</h1>
-        </div>
-        <p>This website is maintained by The Neoneko team, who maintain the Unofficial Cats Plugin. Our aim is to make it easier for you to choose the correct version of Cats for your Blender version and to get help with your specific version of Cats.</p>
-        <p>Select the Cats Blender Plugin version that best suits your needs. Please carefully read the descriptions for each version and ensure you use the appropriate support channels if you require assistance.</p>
-        
-        <div class="cats-type-selector">
-            <div class="cats-type-box">
-                <h2>Official Cats</h2>
-                <h3>Recommended for Blender 3.5 and Below</h3>
-                <p>The Official Cats plugin supports Blender versions up to 3.6. However, it may have some issues on Blender 3.6 due to outdated MMD Tools. We recommend using the Official Cats plugin on Blender 3.5 and below.</p>
-                <button id="official-selector" class="button">Select Official Cats</button>
-            </div>
-            <div class="cats-type-box">
-                <h2>Unofficial Cats</h2>
-                <h3>Recommended for Blender 3.6 and Above</h3>
-                <p>The Unofficial Cats plugin supports Blender versions 3.6 to 4.2. It features the latest MMD Tools and includes numerous fixes and improvements. This version is recommended for users of Blender 3.6 and above.</p>
-                <button id="unofficial-selector" class="button">Select Unofficial Cats</button>
-            </div>
-        </div>
-
-        <button id="back-button" class="button" style="display: none;">Back</button>
-        <div class="selector" style="display: none;">
-            <label for="version-select">Select Blender Version:</label>
-            <div class="select-wrapper">
-                <select id="version-select">
-                    <option value="">Choose a version</option>
-                </select>
-            </div>
-        </div>
-
-        <div id="loading" class="loading">
-            <div class="spinner"></div>
-        </div>
-
-        <div id="result" class="result" style="display: none;">
-            <div class="result-container">
-                <div class="description-section">
-                    <h3>Read Me:</h3>
-                    <p id="version-description"></p>
-                </div>
-                <div class="info-box">
-                    <h3>Additional Info:</h3>
-                    <div class="version-info">
-                        <p><strong>Latest Version:</strong> <span id="latest-version"></span></p>
-                        <p><strong>Release Date:</strong> <span id="release-date"></span></p>
-                        <p><strong>End of Life Date:</strong> <span id="eol-date"></span></p>
-                    </div>
-                    
-                    <h3>Download Links:</h3>
-                    <div class="button-container">
-                        <a id="github-link" href="#" target="_blank" class="info-button">GitHub</a>
-                        <a id="download-link" href="#" target="_blank" class="info-button">Download</a>
-                        <a id="archive-link" href="#" target="_blank" class="info-button">Archive</a>
-                    </div>
-                    
-                    <div class="support-links">
-                        <h3>Support Links:</h3>
-                        <div class="button-container">
-                            <a id="wiki-link" href="#" target="_blank" class="info-button">Wiki</a>
-                            <a id="discord-link" href="#" target="_blank" class="info-button">Discord</a>
-                        </div>
-                        <div id="unsupported-message" class="unsupported-message" style="display: none;">
-                            <p>This version is no longer supported. Please don't ask for help in either Discord.</p>
-                        </div>                  
-                    </div>              
-                </div>
-            </div>
-        </div>
-                            
-        <div id="error-container" style="display: none;">
-            <p id="errorMessage" class="error-message"></p>
-            <button id="retryButton" class="button">Retry</button>
-        </div>
+    <main id="main-content" role="main">
+        <!-- Add your main content here -->
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="footer-content">
-            <ul class="footer-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-">Unofficial GitHub</a></li>
-                <li><a href="https://github.com/absolute-quantum/cats-blender-plugin">Official GitHub</a></li>
+            <ul class="footer-menu" role="menu">
+                <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                <li role="none"><a href="https://catsblenderplugin.xyz" role="menuitem">Cats Blender Plugin</a></li>
+                <li role="none"><a href="https://avatartoolkit.xyz" role="menuitem">Avatar Toolkit</a></li>
+                <li role="none"><a href="#" role="menuitem">About Us</a></li>
+                <li role="none"><a href="#" role="menuitem">Support Us</a></li>
+                <li role="none"><a href="#" role="menuitem">Contact Us</a></li>
+                <li role="none"><a href="faq.html" role="menuitem">FAQ</a></li>
+            </ul>
+            <ul class="footer-menu" role="menu">
+                <li role="none"><a href="privacy.html" role="menuitem">Privacy Policy</a></li>
+                <li role="none"><a href="terms.html" role="menuitem">Terms of Service</a></li>
+            </ul>
+            <ul class="social-menu" role="menu">
+                <li role="none">
+                    <a href="https://discord.neoneko.xyz/" role="menuitem" aria-label="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="https://bsky.app/profile/neoneko.xyz" role="menuitem" aria-label="Bluesky">
+                        <i class="fa-brands fa-bluesky"></i>
+                    </a>
+                </li>
             </ul>
             <p class="footer-text">
-                Cats Blender Plugin Unofficial and Avatar Toolkit are licensed under the 
-                <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank" rel="noopener noreferrer">GPLv3 License</a>. 
-                Blender is a registered trademark of the 
-                <a href="https://www.blender.org/about/foundation/" target="_blank" rel="noopener noreferrer">Blender Foundation</a>. 
-                <a href="https://neoneko.xyz/" target="_blank" rel="noopener noreferrer">Neoneko</a> is not affiliated with the Blender Foundation. <a href="https://neoneko.xyz/" target="_blank" rel="noopener noreferrer">Neoneko</a> is not affiliated with the official Cats developers, and this website is an unofficial website. <a href="https://neoneko.xyz/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
-            </p>
+                Cats Blender Plugin Unofficial and Avatar Toolkit are licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3 License</a>.<br>
+                Blender is a registered trademark of the <a href="https://www.blender.org/about/foundation/">Blender Foundation</a>.<br>
+                Neoneko is not affiliated with the Blender Foundation.<br>
+                Copyright © 2024 <a href="https://neoneko.xyz">Neoneko</a>. All rights reserved.
+            </p>            
         </div>
-    </footer>
-
-    <script src="scripts/versionselector.js"></script>
-    <script src="scripts/themeSelector.js"></script>
-    <script src="scripts/mobile.js"></script>
-    <script src="scripts/maintenance.js"></script>
+    </footer>       
 </body>
 </html>

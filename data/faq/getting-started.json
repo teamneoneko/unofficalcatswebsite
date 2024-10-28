@@ -1,0 +1,26 @@
+{
+    "faqs": [
+      {
+        "id": 1,
+        "category": "Getting Started",
+        "question": "How do I use the markdown formatting in FAQs?",
+        "answer": "# Markdown Formatting Guide\n\n## Text Styling\nFormatted Example:\n**Bold text**, *Italic text*, ~~Strikethrough~~\n\n[raw-markdown]To create this formatting use:\n• **Bold text** using `**double asterisks**`\n• *Italic text* using `*single asterisks*`\n• ~~Strikethrough~~ using `~~tildes~~`\n\n## Headers\nFormatted Example:\n# Main Header\n## Sub Header\n### Smaller Header\n\nTo create headers use:\n# H1 using `# Text`\n## H2 using `## Text`\n### H3 using `### Text`\n\n## Lists\nFormatted Example:\n1. First item\n2. Second item\n3. Third item\n\n• Bullet point one\n• Bullet point two\n\nTo create lists use:\n1. Just type `1. Your text`\n2. Numbers auto-format\n\n• Use `•` for bullets\n\n## Special Elements\nFormatted Example:\n[info]This is an info box[/info]\n[warning]This is a warning box[/warning]\n[note]This is a note box[/note]\n\nTo create special elements use:\n`[info]This is an info box[/info]`\n`[warning]This is a warning box[/warning]`\n`[note]This is a note box[/note]`\n\n## Collapsible Sections\nFormatted Example:\n[details]Click me|Hidden content appears here[/details]\n\nTo create collapsible sections use:\n`[details]Title|Content[/details]`\n\n## Colors and Links\nFormatted Example:\n[color:red]Red text[/color]\n[color:#64ffda]Custom color[/color]\n[link]https://example.com|Click here[/link]\n\nTo create colored text and links use:\n`[color:red]Red text[/color]`\n`[color:#64ffda]Custom color[/color]`\n`[link]https://example.com|Click here[/link]`\n\n## Images\nFormatted Example:\n[image:200:200]https://neoneko.xyz/images/logo.jpg[/image]\n\nTo add images use:\n`[image]https://your-image-url[/image]`\nWith size: `[image:200:200]https://your-image-url[/image]`\n\n## Tables\nFormatted Example:\n|Header 1|Header 2|\n|Cell 1|Cell 2|\n\nTo create tables use:\n`|Header 1|Header 2|`\n`|Cell 1|Cell 2|`\n\n## Blockquotes\nFormatted Example:\n> This is a blockquote\n> It can span multiple lines\n\nTo create blockquotes use:\n`> Start each line with >`[/raw-markdown]",
+        "keywords": ["markdown", "formatting", "syntax", "guide", "documentation", "help"],
+        "version": "1.1",
+        "lastUpdated": "2024-01-25T14:00:00Z",
+        "history": [
+          {
+            "version": "1.0",
+            "date": "2024-01-25T12:00:00Z",
+            "changes": "Initial markdown formatting guide"
+          },
+          {
+            "version": "1.1",
+            "date": "2024-01-25T14:00:00Z",
+            "changes": "Added formatted examples alongside raw syntax"
+          }
+        ]
+      }
+    ]
+  }
+  
