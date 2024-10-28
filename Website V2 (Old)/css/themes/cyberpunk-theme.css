@@ -1,0 +1,174 @@
+:root {
+    --background-color: #0a0a0f;
+    --text-color: #00ff9f;
+    --header-background: #1a1a2e;
+    --menu-hover-background: #ff00ff33;
+    --menu-active-color: #ff00ff;
+    --logo-gradient-start: #00ff9f;
+    --logo-gradient-end: #00ffff;
+    --button-background: #ff00ff;
+    --button-color: #0a0a0f;
+    --button-hover-background: #00ffff;
+    --link-color: #00ffff;
+    --link-hover-color: #ff00ff;
+    --border-color: #00ff9f;
+    --footer-text-color: #7f7f7f;
+    --intro-color: #00ffff;
+    --team-name-gradient-start: #ff00ff;
+    --team-name-gradient-end: #00ffff;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--text-color);
+}
+
+header {
+    background-color: var(--header-background);
+    box-shadow: 0 0 20px #00ff9f55;
+}
+
+.logo {
+    background: linear-gradient(45deg, var(--logo-gradient-start), var(--logo-gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px var(--logo-gradient-end);
+}
+
+.menu a {
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--text-color);
+}
+
+.menu a:hover {
+    background-color: var(--menu-hover-background);
+    box-shadow: 0 0 15px var(--menu-active-color);
+}
+
+.menu a.active {
+    background-color: var(--menu-hover-background);
+    color: var(--menu-active-color);
+    box-shadow: 0 0 15px var(--menu-active-color);
+}
+
+.button {
+    background-color: var(--button-background);
+    color: var(--button-color);
+    box-shadow: 0 0 15px var(--button-background);
+}
+
+.button:hover {
+    background-color: var(--button-hover-background);
+    box-shadow: 0 0 20px var(--button-hover-background);
+}
+
+.footer-text a {
+    color: var(--link-color);
+    text-shadow: 0 0 5px var(--link-color);
+}
+
+.footer-text a:hover {
+    color: var(--link-hover-color);
+    text-shadow: 0 0 10px var(--link-hover-color);
+}
+
+#theme-select {
+    background-color: var(--header-background);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+#theme-select:hover {
+    background-color: var(--menu-hover-background);
+}
+
+.faq-category {
+    background-color: var(--header-background);
+    box-shadow: 0 0 20px #00ff9f33;
+}
+
+.faq-category h2 {
+    background-color: var(--menu-hover-background);
+    color: var(--menu-active-color);
+}
+
+.faq-category-content {
+    background-color: var(--background-color);
+}
+
+.faq-item {
+    background-color: var(--header-background);
+    border: 1px solid var(--border-color);
+}
+
+.faq-item h3 {
+    background-color: var(--menu-hover-background);
+    color: var(--text-color);
+}
+
+.faq-item p a {
+    color: var(--link-color);
+    text-shadow: 0 0 5px var(--link-color);
+}
+
+.faq-item p a:hover {
+    color: var(--link-hover-color);
+    text-shadow: 0 0 10px var(--link-hover-color);
+}
+
+.intro {
+    color: var(--intro-color);
+    text-shadow: 0 0 10px var(--intro-color);
+}
+
+.team-name {
+    background: linear-gradient(45deg, var(--team-name-gradient-start), var(--team-name-gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px var(--team-name-gradient-end);
+}
+
+.selector label {
+    color: var(--menu-active-color);
+}
+
+.info-button {
+    color: var(--menu-active-color);
+    border-color: var(--menu-active-color);
+    box-shadow: 0 0 10px var(--menu-active-color);
+}
+
+.info-button:hover {
+    background-color: var(--menu-active-color);
+    color: var(--background-color);
+    box-shadow: 0 0 15px var(--menu-active-color);
+}
+
+.version-info strong {
+    color: var(--menu-active-color);
+}
+
+#back-button {
+    background-color: var(--button-hover-background);
+    color: var(--button-color);
+    box-shadow: 0 0 15px var(--button-hover-background);
+}
+
+#back-button:hover {
+    background-color: var(--button-background);
+    box-shadow: 0 0 20px var(--button-background);
+}
+
+@media screen and (max-width: 768px) {
+    .menu a {
+      border: none;
+      padding: 0.5rem;
+    }
+    
+    .info-button {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+  }
+  

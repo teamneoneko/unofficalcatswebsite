@@ -1,155 +1,29 @@
 :root {
     --background-color: #121212;
-    --text-color: #e0e0e0;
+    --text-color: #ffffff;
     --header-background: #1e1e1e;
-    --menu-hover-background: #2c2c2c;
+    --menu-hover-background: rgba(187, 134, 252, 0.1);
     --menu-active-color: #bb86fc;
     --logo-gradient-start: #bb86fc;
-    --logo-gradient-end: #3700b3;
+    --logo-gradient-end: #7c4dff;
     --button-background: #bb86fc;
     --button-color: #121212;
-    --button-hover-background: #3700b3;
+    --button-hover-background: #9965f4;
     --link-color: #bb86fc;
-    --link-hover-color: #3700b3;
+    --link-hover-color: #9965f4;
     --border-color: #333333;
     --footer-text-color: #a0a0a0;
-    --intro-color: #bb86fc;
-    --team-name-gradient-start: #bb86fc;
-    --team-name-gradient-end: #3700b3;
 }
 
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
+.wiki-content {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-header {
-    background-color: var(--header-background);
+.faq-question:hover {
+    background: linear-gradient(45deg, var(--header-background), var(--menu-hover-background));
 }
 
-.logo {
-    background: linear-gradient(45deg, var(--logo-gradient-start), var(--logo-gradient-end));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+code {
+    background: #2d2d2d;
+    border: 1px solid var(--border-color);
 }
-
-.menu a {
-    color: var(--text-color);
-}
-
-.menu a:hover {
-    background-color: var(--menu-hover-background);
-}
-
-.menu a.active {
-    background-color: var(--menu-hover-background);
-    color: var(--menu-active-color);
-}
-
-.button {
-    background-color: var(--button-background);
-    color: var(--button-color);
-}
-
-.button:hover {
-    background-color: var(--button-hover-background);
-}
-
-.footer-text a {
-    color: var(--link-color);
-}
-
-.footer-text a:hover {
-    color: var(--link-hover-color);
-}
-
-#theme-select {
-    background-color: var(--header-background);
-    color: var(--text-color);
-    border-color: var(--border-color);
-}
-
-#theme-select:hover {
-    background-color: var(--menu-hover-background);
-}
-
-.faq-category {
-    background-color: var(--header-background);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.faq-category h2 {
-    background-color: var(--menu-hover-background);
-    color: var(--menu-active-color);
-}
-
-.faq-category-content {
-    background-color: var(--background-color);
-}
-
-.faq-item {
-    background-color: var(--header-background);
-}
-
-.faq-item h3 {
-    background-color: var(--menu-hover-background);
-    color: var(--text-color);
-}
-
-.faq-item p a {
-    color: var(--link-color);
-}
-
-.faq-item p a:hover {
-    color: var(--link-hover-color);
-}
-
-.intro {
-    color: var(--intro-color);
-}
-
-.team-name {
-    background: linear-gradient(45deg, var(--team-name-gradient-start), var(--team-name-gradient-end));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.selector label {
-    color: var(--menu-active-color);
-}
-
-.info-button {
-    color: var(--menu-active-color);
-    border-color: var(--menu-active-color);
-}
-
-.info-button:hover {
-    background-color: var(--menu-active-color);
-    color: var(--background-color);
-}
-
-.version-info strong {
-    color: var(--menu-active-color);
-}
-
-#back-button {
-    background-color: var(--button-hover-background);
-    color: var(--button-color);
-}
-
-#back-button:hover {
-    background-color: var(--button-background);
-}
-
-@media screen and (max-width: 768px) {
-    .menu a {
-      border: none;
-      padding: 0.5rem;
-    }
-    
-    .info-button {
-      width: 100%;
-      margin-bottom: 0.5rem;
-    }
-  }
-  
