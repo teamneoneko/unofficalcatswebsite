@@ -4,7 +4,7 @@
   "releaseDate": "2024-05-20",
   "eolDate": "2024-04-26",
   "archiveLink": "https://cdn.neoneko.xyz/catsblenderplugin/blender4.0/",
-  "description": "For Blender 4.0, we no longer recommend using the official Cats add-on. This is because it hasn't been updated to support the API changes introduced in Blender 4.0, and the bundled MMD Tools remain outdated. We recommend using the unofficial Cats add-on instead. However, please note that the unofficial Cats add-on for Blender 4.0 has reached its End-of-Life (EOL) status and will no longer receive updates. For Blender 4.x versions, we recommend using the unofficial Cats add-on for Blender 4.2+, which is still actively maintained. Due to the EOL status of the Blender 4.0 version, no support will be provided, and the Discord link has been removed. Please refrain from asking for help with the unofficial version in the official Cats Discord server.",
+  "description": "<div class='highlight-warning'>This version has reached End-of-Life (EOL) status and will no longer receive updates.</div><br><div class='highlight-info'>For Blender 4.x versions, we recommend using the unofficial Cats add-on for Blender 4.1, which is still actively maintained.</div><br><div class='highlight-warning'>The official Cats add-on is not recommended as it hasn't been updated to support Blender 4.0 API changes.</div><br><div class='highlight-note'>Due to EOL status, no support will be provided. Please do not ask for help in either Discord server.</div>",
   "unofficial": {
     "githubLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/releases/tag/4.0.5.2",
     "downloadLink": "https://cdn.neoneko.xyz/catsblenderplugin/Cats-Blender-Plugin-Unofficial4.0.5.2.zip"

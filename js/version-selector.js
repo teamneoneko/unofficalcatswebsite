@@ -92,7 +92,7 @@ class VersionSelector {
         this.latestVersion.textContent = '-';
         this.releaseDate.textContent = '-';
         this.eolDate.textContent = '-';
-        this.description.textContent = '';
+        this.description.innerHTML = data.description || '';
         this.resultContainer.style.display = 'none';
     }
 
@@ -118,7 +118,7 @@ class VersionSelector {
             this.latestVersion.textContent = data.latestVersion || 'N/A';
             this.releaseDate.textContent = data.releaseDate || 'N/A';
             this.eolDate.textContent = data.eolDate || 'N/A';
-            this.description.textContent = data.description || '';
+            this.description.innerHTML = data.description || '';
 
             // Update links
             const links = {

@@ -3,7 +3,7 @@
   "latestVersion": "0.19",
   "releaseDate": "2021-06-27",
   "eolDate": "Offical Cats project is no longer maintained.",
-  "description": "Blender versions 2.8 to 2.83 are significantly outdated and should generally be avoided. While the official Cats Discord server may still provide support, we recommend upgrading to a newer version of Blender. If you have a specific reason to use these versions, we've provided a link to the last known working build compatible with Blender 2.8 to 2.83. We strongly advise upgrading to a newer version of Blender unless you have a compelling reason to use these older versions.",
+  "description": "<div class='highlight-warning'>Blender versions 2.8 to 2.83 are significantly outdated and should generally be avoided.</div><br><div class='highlight-info'>While the official Cats Discord server may still provide support, we recommend upgrading to a newer version of Blender.</div><br><div class='highlight-note'>If you have a specific reason to use these versions, we've provided a link to the last known working build.</div>",
   "official": {
     "githubLink": "https://github.com/absolute-quantum/cats-blender-plugin/releases/tag/0.19.0",
     "downloadLink": "https://cdn.neoneko.xyz/catsblenderplugin/cats-blender-plugin-0-19-0.zip",
