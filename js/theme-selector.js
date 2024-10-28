@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         pumpkinContainer.style.zIndex = '-1';
         document.body.appendChild(pumpkinContainer);
 
-        const numPumpkins = 15;
+        const numPumpkins = 25;
         const pumpkinSize = 40;
         const minDistance = 70;
         const positions = [];

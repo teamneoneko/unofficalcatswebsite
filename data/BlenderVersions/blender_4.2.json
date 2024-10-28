@@ -4,7 +4,7 @@
   "releaseDate": "2024-07-29",
   "eolDate": "Not Set",
   "archiveLink": "https://cdn.neoneko.xyz/catsblenderplugin/blender4.2/",
-  "description": "Blender 4.2 is the next Blender Long Term Support (LTS) release. The unofficial Cats add-on fully supports this version. For support, please use the Unofficial Cats Discord unless it's a known issue. It's important to note that you should not ask for help with the unofficial version in the official Cats Discord server, as no assistance will be provided there. We don't recommend trying to use the Official Cats add-on for Blender 4.2, as it is severely outdated and essentially broken at this point.",
+  "description": "<div class='highlight-info'>Blender 4.2 is the next Blender Long Term Support (LTS) release, and the unofficial Cats add-on fully supports this version with enhanced features and stability improvements.</div><br>Key Features:<br>- Latest MMD Tools integration<br>- Improved model optimization<br>- Enhanced VRChat avatar support<br><br><div class='highlight-warning'>Important: The Official Cats add-on is not compatible with Blender 4.2 due to significant API changes. Using it may cause crashes or unexpected behavior.</div><br><div class='highlight-note'>For the best experience, please join our Discord community for support and check the wiki for detailed installation instructions and tutorials.</div>",
   "unofficial": {
     "githubLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/releases/tag/4.2.1.2",
     "downloadLink": "https://cdn.neoneko.xyz/catsblenderplugin/blender4.2/CatsBlenderPlugin4.2Latest.zip",
