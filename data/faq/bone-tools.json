@@ -2,7 +2,7 @@
     "faqs": [
       {
         "id": 1,
-        "category": "Features",
+        "category": "How to Use",
         "subcategory": "Bone Tools",
         "question": "What Bone Tools are available?",
         "answer": "### Generate Twist Bones\n[image]https://i.imgur.com/G7oZiMO.png[/image]\n- Creates twist bones for selected bones\n\n### Bone Parenting\n[image]https://i.imgur.com/lH8lNVa.png[/image]\n- Groups bones under root bones\n- Useful for Dynamic Bones\n- Features:\n  - Parent bones to new root\n  - Refresh bone list\n  - Automatic grouping",
