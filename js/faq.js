@@ -15,42 +15,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoriesUrl = `${baseUrl}/categories.json`;
     const faqBaseUrl = `${baseUrl}/faq`;
 
-    // Fetch FAQ data and categories from GitHub
     async function fetchFAQData() {
         try {
-            const categoriesResponse = await fetch(categoriesUrl);
-            if (!categoriesResponse.ok) {
-                throw new Error('Failed to fetch categories');
+            // Get categories and FAQ file list in parallel
+            const [categoriesResponse, faqFilesResponse] = await Promise.all([
+                fetch(categoriesUrl),
+                fetch(`${baseUrl}/faq-files.json`)
+            ]);
+    
+            if (!categoriesResponse.ok || !faqFilesResponse.ok) {
+                throw new Error('Failed to fetch required data');
             }
-            
+    
             const categoriesData = await categoriesResponse.json();
-            const categories = categoriesData.categories;
-            
-            // Fetch all category and subcategory FAQ files in parallel
-            const faqPromises = categories.map(category => {
-                const mainFileName = category.name.toLowerCase().replace(/\s+/g, '-');
-                const mainPromise = fetch(`${faqBaseUrl}/${mainFileName}.json`)
+            const faqFiles = (await faqFilesResponse.json()).faqFiles;
+    
+            // Fetch all FAQ files in parallel
+            const faqPromises = faqFiles.map(filename => 
+                fetch(`${faqBaseUrl}/${filename}.json`)
                     .then(response => response.json())
                     .catch(error => {
-                        console.warn(`Failed to load ${mainFileName}.json:`, error);
+                        console.warn(`Failed to load ${filename}.json:`, error);
                         return { faqs: [] };
-                    });
-
-                const subPromises = category.subcategories ? 
-                    category.subcategories.map(sub => {
-                        const subFileName = sub.toLowerCase().replace(/\s+/g, '-');
-                        return fetch(`${faqBaseUrl}/${subFileName}.json`)
-                            .then(response => response.json())
-                            .catch(error => {
-                                console.warn(`Failed to load ${subFileName}.json:`, error);
-                                return { faqs: [] };
-                            });
-                    }) : [];
-
-                return Promise.all([mainPromise, ...subPromises]);
-            });
+                    })
+            );
     
-            const faqResults = await Promise.all(faqPromises.flat());
+            const faqResults = await Promise.all(faqPromises);
             
             // Combine all FAQs into one array
             const combinedFaqs = faqResults.reduce((acc, result) => {
@@ -59,14 +49,59 @@ document.addEventListener('DOMContentLoaded', () => {
     
             return {
                 faqData: combinedFaqs,
-                categoriesData: categories
+                categoriesData: categoriesData.categories
             };
         } catch (error) {
             throw new Error('Failed to fetch FAQ data');
         }
     }
     
-    // Render FAQ content with enhanced formatting
+    function renderFAQItems(faqs, container) {
+        faqs.forEach(faq => {
+            const faqItem = document.createElement('div');
+            faqItem.className = 'faq-item';
+            faqItem.dataset.keywords = faq.keywords ? faq.keywords.join(',') : '';
+            
+            const question = document.createElement('h3');
+            question.className = 'faq-question';
+            question.innerHTML = `${faq.question} <span class="toggle-icon">+</span>`;
+            
+            const answer = document.createElement('div');
+            answer.className = 'faq-content hidden markdown-content';
+            const formattedContent = formatContent(faq.answer);
+            
+            const metadata = `
+                <div class="faq-metadata">
+                    <button class="version-history-btn" data-faq-id="${faq.id || ''}">
+                        <span class="version-badge">v${faq.version || '1.0'}</span>
+                        <span class="last-updated"><i class="fas fa-clock"></i> ${faq.lastUpdated ? new Date(faq.lastUpdated).toLocaleDateString() : 'N/A'}</span>
+                        <span class="history-icon"><i class="fas fa-history"></i></span>
+                    </button>
+                </div>
+            `;
+            
+            answer.innerHTML = formattedContent + metadata;
+            
+            question.addEventListener('click', () => {
+                const wasHidden = answer.classList.contains('hidden');
+                
+                document.querySelectorAll('.faq-content').forEach(content => {
+                    content.classList.add('hidden');
+                    content.previousElementSibling.querySelector('.toggle-icon').textContent = '+';
+                });
+                
+                if (wasHidden) {
+                    answer.classList.remove('hidden');
+                    question.querySelector('.toggle-icon').textContent = '-';
+                }
+            });
+            
+            faqItem.appendChild(question);
+            faqItem.appendChild(answer);
+            container.appendChild(faqItem);
+        });
+    }
+    
     function renderFAQ(faqData, categoriesData) {
         loadingDiv.style.display = 'none';
         faqContainer.innerHTML = '';
