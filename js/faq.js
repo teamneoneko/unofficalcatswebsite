@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     const faqItem = document.createElement('div');
                     faqItem.className = 'faq-item';
-                    faqItem.dataset.keywords = faq.keywords.join(',');
+                    faqItem.dataset.keywords = faq.keywords ? faq.keywords.join(',') : '';
                     
                     const question = document.createElement('h3');
                     question.className = 'faq-question';
@@ -250,13 +250,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     const metadata = `
                         <div class="faq-metadata">
-                            <button class="version-history-btn" data-faq-id="${faq.id}">
-                                <span class="version-badge">v${faq.version}</span>
-                                <span class="last-updated"><i class="fas fa-clock"></i> ${new Date(faq.lastUpdated).toLocaleDateString()}</span>
+                            <button class="version-history-btn" data-faq-id="${faq.id || ''}">
+                                <span class="version-badge">v${faq.version || '1.0'}</span>
+                                <span class="last-updated"><i class="fas fa-clock"></i> ${faq.lastUpdated ? new Date(faq.lastUpdated).toLocaleDateString() : 'N/A'}</span>
                                 <span class="history-icon"><i class="fas fa-history"></i></span>
                             </button>
                         </div>
-                    `;
+                    `;                   
                     
                     answer.innerHTML = formattedContent + metadata;
                     
@@ -314,13 +314,13 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.className = 'version-history-modal';
             modal.innerHTML = `
                 <h3>Version History</h3>
-                ${faq.history.map(h => `
+                ${faq.history ? faq.history.map(h => `
                     <div class="history-item">
                         <div class="history-version">Version ${h.version}</div>
                         <div class="history-date">${new Date(h.date).toLocaleDateString()}</div>
                         <div class="history-changes">${h.changes}</div>
                     </div>
-                `).join('')}
+                `).join('') : '<div class="history-item">No version history available</div>'}                
                 <button class="close-modal">Close</button>
             `;
             
