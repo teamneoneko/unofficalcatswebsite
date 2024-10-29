@@ -1,10 +1,11 @@
 {
     "faqs": [
       {
-        "id": 100,
-        "category": "Visemes",
-        "question": "How do I set up lip syncing (visemes)?",
-        "answer": "[image]https://i.imgur.com/SWjhe9y.png[/image]\n\n[info]Mouth visemes create realistic mouth movement when talking over microphone[/info]\n\n- Generates 15 shape keys from 3 base shapes\n- Uses A, OH, and CH mouth positions\n- Creates realistic lip sync ready for VRChat",
+        "id": 1,
+        "category": "Features",
+        "subcategory": "Visemes",
+        "question": "How do I set up Visemes (Lip Sync)?",
+        "answer": "[image]https://i.imgur.com/SWjhe9y.png[/image]\n\nVisemes create realistic mouth movements for in-game voice chat:\n- Generates 15 shape keys from 3 base shapes\n- Uses A, OH, and CH mouth positions\n- Creates realistic lip sync movement",
         "keywords": ["visemes", "lip sync", "shape keys", "mouth movement"],
         "version": "1.0",
         "lastUpdated": "2024-01-20"

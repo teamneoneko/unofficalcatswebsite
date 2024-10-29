@@ -1,29 +1,22 @@
 {
     "faqs": [
       {
-        "id": 20,
-        "category": "Optimization",
+        "id": 1,
+        "category": "Features",
+        "subcategory": "Optimization",
         "question": "How does the Texture Atlas feature work?",
-        "answer": "### Texture Atlas\n\n[image]https://i.imgur.com/Mav3P9e.png[/image]\n\n[info]Texture atlas combines multiple textures into one to drastically reduce draw calls and improve model performance[/info]\n\n#### Features:\n- Create Atlas: Combines selected materials into one texture\n- Generate Material List: Lists all materials for selection\n\n#### Useful Tips:\n- Split transparent and non-transparent textures into separate atlases\n- Keep textures under 2048x2048 for Unity (unless configured otherwise)\n- Unity can support up to 8k textures by changing settings:\n[image]https://i.imgur.com/o01T4Gb.png[/image]",
-        "keywords": ["atlas", "textures", "optimization", "materials"],
+        "answer": "### Texture Atlas\n\n[image]https://i.imgur.com/Mav3P9e.png[/image]\n\nTexture atlas combines multiple textures into one to reduce draw calls and improve model performance.\n\n#### Features:\n- Create Atlas: Combines selected materials into one texture\n- Generate Material List: Lists all materials for selection\n\n#### Tips:\n- Split transparent and non-transparent textures\n- Keep textures under 2048x2048 for Unity\n- Unity can support up to 8k textures with proper settings\n\n[image]https://i.imgur.com/o01T4Gb.png[/image]",
+        "keywords": ["optimization", "texture atlas", "materials", "unity"],
         "version": "1.0",
         "lastUpdated": "2024-01-20"
       },
       {
-        "id": 21,
-        "category": "Optimization",
-        "question": "What bone optimization tools are available?",
-        "answer": "[image]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/assets/104736380/021a9a5e-22eb-44b2-8780-924720113571[/image]\n\n### Bone Merging\n[image]https://i.imgur.com/PL8THn8.png[/image]\n\n#### Features:\n- Merge Bones: Reduces overall bone count in groups\n- Merge Weights: Transfers weights to parent bones\n- Delete Zero Weight Bones: Removes unused bones\n- Delete Constraints: Removes unused VRChat constraints\n- Duplicate Bones: Creates _L or _R duplicates\n- Connect Bones: Links bones to children",
-        "keywords": ["bones", "weights", "merging", "optimization"],
-        "version": "1.0",
-        "lastUpdated": "2024-01-20"
-      },
-      {
-        "id": 22,
-        "category": "Optimization",
-        "question": "What material and mesh optimization options are available?",
-        "answer": "[image]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/assets/104736380/a49d7ce8-9ddb-4be5-a440-8847aa1bfd4d[/image]\n\n#### Features:\n- Combine Materials: Reduces draw calls\n- Convert Textures to PNG: Improves compatibility\n- Join Meshes: Combines all or selected meshes\n- Remove Doubles: Merges duplicate geometry",
-        "keywords": ["materials", "meshes", "optimization", "textures"],
+        "id": 2,
+        "category": "Features",
+        "subcategory": "Optimization",
+        "question": "What bone optimization features are available?",
+        "answer": "### Bone Optimization Tools\n\n[image]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/assets/104736380/021a9a5e-22eb-44b2-8780-924720113571[/image]\n\n#### Features:\n- Bone Merging: Reduce overall bone count\n- Merge Weights: Combines weights to parent bones\n- Delete Zero Weight Bones: Removes unused bones\n- Delete Constraints: Removes unused VRChat constraints\n- Duplicate Bones: Creates _L/_R bone copies\n- Connect Bones: Links bones to children",
+        "keywords": ["bones", "optimization", "weights", "constraints"],
         "version": "1.0",
         "lastUpdated": "2024-01-20"
       }

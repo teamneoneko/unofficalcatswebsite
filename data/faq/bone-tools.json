@@ -1,11 +1,12 @@
 {
     "faqs": [
       {
-        "id": 90,
-        "category": "Bone Tools",
-        "question": "How do I use the bone parenting and twist bone features?",
-        "answer": "### Bone Parenting\n[image]https://i.imgur.com/lH8lNVa.png[/image]\n\n[info]Useful for Dynamic Bones where it's ideal to have one root bone with child bones[/info]\n\nFeatures:\n- To parent: Select bone groups for parenting\n- Refresh list: Rebuilds bone group cache\n- Parent bones: Creates RootBone_xyz structure\n\n### Generate Twist Bones\n[image]https://i.imgur.com/G7oZiMO.png[/image]\n\n- Generates twist bones for selected bones\n- Improves deformation and animation quality",
-        "keywords": ["bones", "parenting", "twist bones", "dynamic bones"],
+        "id": 1,
+        "category": "Features",
+        "subcategory": "Bone Tools",
+        "question": "What Bone Tools are available?",
+        "answer": "### Generate Twist Bones\n[image]https://i.imgur.com/G7oZiMO.png[/image]\n- Creates twist bones for selected bones\n\n### Bone Parenting\n[image]https://i.imgur.com/lH8lNVa.png[/image]\n- Groups bones under root bones\n- Useful for Dynamic Bones\n- Features:\n  - Parent bones to new root\n  - Refresh bone list\n  - Automatic grouping",
+        "keywords": ["bones", "twist bones", "parenting", "dynamic bones"],
         "version": "1.0",
         "lastUpdated": "2024-01-20"
       }

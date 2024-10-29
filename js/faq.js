@@ -26,18 +26,31 @@ document.addEventListener('DOMContentLoaded', () => {
             const categoriesData = await categoriesResponse.json();
             const categories = categoriesData.categories;
             
-            // Fetch all category FAQ files in parallel
+            // Fetch all category and subcategory FAQ files in parallel
             const faqPromises = categories.map(category => {
-                const fileName = category.toLowerCase().replace(/\s+/g, '-');
-                return fetch(`${faqBaseUrl}/${fileName}.json`)
+                const mainFileName = category.name.toLowerCase().replace(/\s+/g, '-');
+                const mainPromise = fetch(`${faqBaseUrl}/${mainFileName}.json`)
                     .then(response => response.json())
                     .catch(error => {
-                        console.warn(`Failed to load ${fileName}.json:`, error);
+                        console.warn(`Failed to load ${mainFileName}.json:`, error);
                         return { faqs: [] };
                     });
+
+                const subPromises = category.subcategories ? 
+                    category.subcategories.map(sub => {
+                        const subFileName = sub.toLowerCase().replace(/\s+/g, '-');
+                        return fetch(`${faqBaseUrl}/${subFileName}.json`)
+                            .then(response => response.json())
+                            .catch(error => {
+                                console.warn(`Failed to load ${subFileName}.json:`, error);
+                                return { faqs: [] };
+                            });
+                    }) : [];
+
+                return Promise.all([mainPromise, ...subPromises]);
             });
     
-            const faqResults = await Promise.all(faqPromises);
+            const faqResults = await Promise.all(faqPromises.flat());
             
             // Combine all FAQs into one array
             const combinedFaqs = faqResults.reduce((acc, result) => {
@@ -59,70 +72,67 @@ document.addEventListener('DOMContentLoaded', () => {
         faqContainer.innerHTML = '';
         categoriesList.innerHTML = '';
         
-        // Render categories in sidebar
+        // Render categories and subcategories in sidebar
         categoriesData.forEach(category => {
+            const categoryContainer = document.createElement('div');
+            categoryContainer.className = 'category-container';
+            
             const categoryLink = document.createElement('a');
-            categoryLink.href = `#${category.toLowerCase().replace(/\s+/g, '-')}`;
-            categoryLink.textContent = category;
-            categoriesList.appendChild(categoryLink);
+            categoryLink.href = `#${category.name.toLowerCase().replace(/\s+/g, '-')}`;
+            categoryLink.textContent = category.name;
+            categoryLink.className = 'category-link';
+            
+            const subcategoryList = document.createElement('div');
+            subcategoryList.className = 'subcategory-list';
+            
+            if (category.subcategories) {
+                category.subcategories.forEach(subcategory => {
+                    const subcategoryLink = document.createElement('a');
+                    subcategoryLink.href = `#${subcategory.toLowerCase().replace(/\s+/g, '-')}`;
+                    subcategoryLink.textContent = subcategory;
+                    subcategoryLink.className = 'subcategory-link';
+                    subcategoryList.appendChild(subcategoryLink);
+                });
+            }
+            
+            categoryContainer.appendChild(categoryLink);
+            categoryContainer.appendChild(subcategoryList);
+            categoriesList.appendChild(categoryContainer);
         });
     
-        // Render FAQ content by category
+        // Render FAQ content by category and subcategory
         categoriesData.forEach(category => {
-            const categoryFAQs = faqData.filter(faq => faq.category === category);
+            const categoryFAQs = faqData.filter(faq => faq.category === category.name);
             
             if (categoryFAQs.length > 0) {
                 const section = document.createElement('section');
-                section.id = category.toLowerCase().replace(/\s+/g, '-');
+                section.id = category.name.toLowerCase().replace(/\s+/g, '-');
                 section.className = 'markdown-content';
                 
                 const categoryTitle = document.createElement('h2');
-                categoryTitle.textContent = category;
+                categoryTitle.textContent = category.name;
                 section.appendChild(categoryTitle);
-    
-                categoryFAQs.forEach(faq => {
-                    const faqItem = document.createElement('div');
-                    faqItem.className = 'faq-item';
-                    faqItem.dataset.keywords = faq.keywords.join(',');
-                    
-                    const question = document.createElement('h3');
-                    question.className = 'faq-question';
-                    question.innerHTML = `${faq.question} <span class="toggle-icon">+</span>`;
-                    
-                    const answer = document.createElement('div');
-                    answer.className = 'faq-content hidden markdown-content';
-                    const formattedContent = formatContent(faq.answer);
-                    
-                    const metadata = `
-                    <div class="faq-metadata">
-                        <button class="version-history-btn" data-faq-id="${faq.id}">
-                            <span class="version-badge">v${faq.version}</span>
-                            <span class="last-updated"><i class="fas fa-clock"></i> ${new Date(faq.lastUpdated).toLocaleDateString()}</span>
-                            <span class="history-icon"><i class="fas fa-history"></i></span>
-                        </button>
-                    </div>
-                `;
-                    
-                    answer.innerHTML = formattedContent + metadata;
-                    
-                    question.addEventListener('click', () => {
-                        const wasHidden = answer.classList.contains('hidden');
-                        
-                        document.querySelectorAll('.faq-content').forEach(content => {
-                            content.classList.add('hidden');
-                            content.previousElementSibling.querySelector('.toggle-icon').textContent = '+';
-                        });
-                        
-                        if (wasHidden) {
-                            answer.classList.remove('hidden');
-                            question.querySelector('.toggle-icon').textContent = '-';
+
+                // Render main category FAQs
+                renderFAQItems(categoryFAQs, section);
+
+                // Render subcategory FAQs
+                if (category.subcategories) {
+                    category.subcategories.forEach(subcategory => {
+                        const subcategoryFAQs = faqData.filter(faq => faq.subcategory === subcategory);
+                        if (subcategoryFAQs.length > 0) {
+                            const subsection = document.createElement('section');
+                            subsection.id = subcategory.toLowerCase().replace(/\s+/g, '-');
+                            
+                            const subTitle = document.createElement('h3');
+                            subTitle.textContent = subcategory;
+                            subsection.appendChild(subTitle);
+
+                            renderFAQItems(subcategoryFAQs, subsection);
+                            section.appendChild(subsection);
                         }
                     });
-                    
-                    faqItem.appendChild(question);
-                    faqItem.appendChild(answer);
-                    section.appendChild(faqItem);
-                });
+                }
     
                 faqContainer.appendChild(section);
             }
@@ -130,7 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }    
 
     function formatContent(content) {
-        // Check if content should be displayed as raw markdown
         if (content.includes('[raw-markdown]')) {
             return content
                 .replace('[raw-markdown]', '')
@@ -140,10 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 .replace(/`(.*?)`/g, '<code>$1</code>');
         }
     
-        // Pre-process content to handle multi-line structures
         let processedContent = content;
         
-        // Handle tables
         processedContent = processedContent.replace(/(\|.*\|\n?)+/g, match => {
             const rows = match.trim().split('\n');
             return '<table>' + rows.map(row => {
@@ -152,7 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }).join('') + '</table>';
         });
     
-        // Handle ordered lists
         processedContent = processedContent.replace(/(?:^\d+\.\s+.*(?:\n|$))+/gm, match => {
             const items = match.split('\n').filter(item => item.trim());
             return '<ol>' + items.map(item => {
@@ -161,14 +167,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }).join('') + '</ol>';
         });
     
-        // Handle blockquotes
         processedContent = processedContent.replace(/(?:^>\s*.*(?:\n|$))+/gm, match => {
             const lines = match.split('\n').filter(line => line.trim());
             const content = lines.map(line => line.replace(/^>\s*/, '')).join('<br>');
             return `<blockquote>${content}</blockquote>`;
         });
     
-        // Main formatting
         return processedContent
             .replace(/\[image:(\d+):(\d+)\](.*?)\[\/image\]/g, '<img loading="lazy" src="$3" width="$1" height="$2" alt="FAQ Image">')
             .replace(/\[image\](.*?)\[\/image\]/g, '<img loading="lazy" src="$1" alt="FAQ Image">')
@@ -192,20 +196,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .replace(/\n/g, '<br>');
     }   
 
-    // Initialize with GitHub data
-    fetchFAQData()
-        .then(({ faqData: data, categoriesData: categories }) => {
-            faqData = data;
-            categoriesData = categories;
-            console.log('Data received:', { faqData, categoriesData });
-            renderFAQ(faqData, categoriesData);
-        })
-        .catch(error => {
-            loadingDiv.style.display = 'none';
-            errorContainer.style.display = 'block';
-            errorContainer.querySelector('#errorMessage').textContent = error.message;
-        });
-
     // Search functionality
     searchInput.addEventListener('input', (e) => {
         const searchTerm = e.target.value.toLowerCase();
@@ -213,28 +203,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const faqContainer = document.getElementById('faq-container');
         let totalVisibleItems = 0;
         
-        // If search is empty, show all content
         if (!searchTerm) {
             renderFAQ(faqData, categoriesData);
             return;
         }
         
-        // Clear existing content and re-render sections
         faqContainer.innerHTML = '';
         categoriesData.forEach(category => {
-            const categoryFAQs = faqData.filter(faq => faq.category === category);
+            const categoryFAQs = faqData.filter(faq => faq.category === category.name);
             const section = document.createElement('section');
-            section.id = category.toLowerCase().replace(/\s+/g, '-');
+            section.id = category.name.toLowerCase().replace(/\s+/g, '-');
             section.className = 'markdown-content';
             
             const categoryTitle = document.createElement('h2');
-            categoryTitle.textContent = category;
+            categoryTitle.textContent = category.name;
             section.appendChild(categoryTitle);
             
             let visibleItems = 0;
             
-            // Check if category matches search term
-            const categoryMatches = category.toLowerCase().includes(searchTerm);
+            const categoryMatches = category.name.toLowerCase().includes(searchTerm);
             
             categoryFAQs.forEach(faq => {
                 const text = `${faq.question} ${faq.answer}`.toLowerCase();
@@ -349,4 +336,19 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.querySelector('.close-modal').addEventListener('click', closeModal);
         }
     });
+
+    // Initialize with GitHub data
+    fetchFAQData()
+        .then(({ faqData: data, categoriesData: categories }) => {
+            faqData = data;
+            categoriesData = categories;
+            console.log('Data received:', { faqData, categoriesData });
+            renderFAQ(faqData, categoriesData);
+        })
+        .catch(error => {
+            loadingDiv.style.display = 'none';
+            errorContainer.style.display = 'block';
+            errorContainer.querySelector('#errorMessage').textContent = error.message;
+        });
 });
+

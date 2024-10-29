@@ -3,8 +3,9 @@
       {
         "id": 1,
         "category": "Requirements",
-        "question": "What are the basic requirements for Cats Blender Plugin?",
-        "answer": "- Blender 3.6 or above (run as administrator is recommended)\n- Blender 4.1 is Recommended as 4.2 is a buggy mess\n- Anything older then 3.6 is not supported and no longer works\n\n[warning]If you have custom Python installed which Blender might use, you need to have Numpy installed[/warning]\n\n[note]Though Cats seems to work on Windows Store these days no support will be given if there are any issues as the Unofficial cats does not support Windows store due to issues Windows Store versions of Blender have given in the past.[/note]",
+        "subcategory": "System Requirements",
+        "question": "What are the basic requirements for running Cats Blender Plugin?",
+        "answer": "- Blender 3.6 or above (run as administrator is recommended).\n- Blender 4.1 is Recommended as 4.2 is a buggy mess.\n- Anything older then 3.6 is not supported and no longer works.\n- If you have custom Python installed which Blender might use, you need to have Numpy installed\n\n[warning]Note to Windows Store users: Though Cats seems to work on Windows Store these days no support will be given if there are any issues as the Unofficial cats does not support Windows store due to issues Windows Store versions of Blender have given in the past.[/warning]",
         "keywords": ["requirements", "blender version", "python", "numpy", "windows store"],
         "version": "1.0",
         "lastUpdated": "2024-01-20",
@@ -12,15 +13,16 @@
           {
             "version": "1.0",
             "date": "2024-01-20",
-            "changes": "Initial documentation"
+            "changes": "Initial requirements documentation"
           }
         ]
       },
       {
         "id": 2,
         "category": "Requirements",
-        "question": "What additional plugins are required?",
-        "answer": "Some features of Cat's need additional plugins to work:\n\n- Material Combiner: [link]https://github.com/Grim-es/material-combiner-addon/|Material Combiner[/link]\n- Immersive Scaler: [link]https://github.com/triazo/immersive_scaler|Immersive Scaler[/link]",
+        "subcategory": "Additional Plugins",
+        "question": "What additional plugins are required for full functionality?",
+        "answer": "Some features of Cat's need additional plugins to work:\n\n- [link]https://github.com/Grim-es/material-combiner-addon/|Material Combiner[/link]: Required for material combining features\n- [link]https://github.com/triazo/immersive_scaler|Immersive Scaler[/link]: Required for scaling features",
         "keywords": ["plugins", "material combiner", "immersive scaler", "additional requirements"],
         "version": "1.0",
         "lastUpdated": "2024-01-20",
@@ -28,7 +30,7 @@
           {
             "version": "1.0",
             "date": "2024-01-20",
-            "changes": "Initial documentation"
+            "changes": "Initial additional plugins documentation"
           }
         ]
       }
