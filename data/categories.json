@@ -1,17 +1,40 @@
 {
   "categories": [
-    "Requirements",
-    "Version Support",
-    "Installation",
-    "Quick Access",
-    "Optimization",
-    "MMD Tools",
-    "Model Creation",
-    "Shape Keys",
-    "Eye Tracking",
-    "Bone Tools",
-    "Visemes",
-    "Translation Tools",
-    "Settings"
+    {
+      "name": "Requirements",
+      "subcategories": [
+        "System Requirements",
+        "Additional Plugins"
+      ]
+    },
+    {
+      "name": "Version Support",
+      "subcategories": [
+        "Latest Versions",
+        "End of Life",
+        "Support Policies"
+      ]
+    },
+    {
+      "name": "Installation",
+      "subcategories": [
+        "Basic Installation",
+        "Additional Plugins"
+      ]
+    },
+    {
+      "name": "Features",
+      "subcategories": [
+        "Quick Access",
+        "Optimization",
+        "MMD Tools",
+        "Model Creation",
+        "Shape Keys",
+        "Eye Tracking",
+        "Bone Tools",
+        "Visemes",
+        "Translation Tools"
+      ]
+    }
   ]
 }
