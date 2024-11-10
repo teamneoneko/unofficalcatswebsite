@@ -35,6 +35,31 @@
         "Visemes",
         "Translation Tools"
       ]
+    },
+    {
+      "name": "Common Issues",
+      "subcategories": [
+        "Missing Features",
+        "Material Combiner Issues",
+        "Crashes",
+        "Other Issues"
+      ]
+    },
+    {
+      "name": "Known Bugs",
+      "subcategories": [
+        "Blender 4.2 Bugs",
+        "Merge Armature Bugs",
+        "3rd party plugin Bugs"
+      ]
+    },
+    {
+      "name": "Tutorials and Resources",
+      "subcategories": [
+        "Legacy Decimation (Blender 4.0 and below)",
+        "YouTube Tutorials",
+        "Other Ressources"
+      ]
     }
   ]
 }

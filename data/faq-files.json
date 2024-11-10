@@ -11,6 +11,9 @@
         "shape-keys",
         "translation-tools",
         "version-support",
+        "common-issues",
+        "tutorials",
+        "known-bugs",
         "visemes"
     ]
 }

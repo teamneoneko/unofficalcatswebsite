@@ -8,11 +8,11 @@
         "answer": "The Quick Access Panel has several options for common tasks:\n\n[image]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/assets/104736380/df4cbb6c-2786-4f50-92c3-5b6b89475656[/image]\n\n### Import/Export Model\n- Imports models with optimal settings\n- Supported import types:\n  - MMD: .pmx/.pmd\n  - XNALara: .xps/.mesh/.ascii\n  - Source: .smd/.qc/.vta/.dmx\n  - VRM: .vrm\n  - FBX: .fbx\n  - DAE: .dae\n  - ZIP: .zip\n\n### Export options:\n- FBX for Unity\n- Resonite (GLTF format)\n\n### Other Quick Features:\n- Join all meshes\n- Combine Materials\n- Start Pose Mode\n- Pose to Shape Key\n- Apply as Rest Pose",
         "keywords": ["quick access", "import", "export", "pose", "materials"],
         "version": "1.0",
-        "lastUpdated": "2024-01-20",
+        "lastUpdated": "2024-11-10",
         "history": [
           {
             "version": "1.0",
-            "date": "2024-01-20",
+            "date": "2024-11-10",
             "changes": "Initial quick access features documentation"
           }
         ]

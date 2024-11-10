@@ -8,7 +8,7 @@
         "answer": "[image]https://i.imgur.com/WZJybq1.png[/image]\n[image]https://i.imgur.com/Ow8vvt1.png[/image]\n\n### Merge Armatures\n1. Use 'Fix Model' on both armatures\n2. Choose movement method:\n   - Move mesh only (uncheck 'Apply Transforms')\n   - Move entire armature (check 'Apply Transforms')\n3. Select base and merge armatures\n4. Select attachment bone if needed\n5. Click 'Merge Armatures'\n\n### Attach Mesh to Armature\n1. Position mesh\n2. Select base armature and mesh\n3. Select target bone\n4. Click 'Attach Mesh'",
         "keywords": ["model creation", "armature", "mesh", "custom model"],
         "version": "1.0",
-        "lastUpdated": "2024-01-20"
+        "lastUpdated": "2024-11-10"
       }
     ]
   }
