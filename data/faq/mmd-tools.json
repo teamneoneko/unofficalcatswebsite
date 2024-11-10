@@ -5,7 +5,7 @@
         "category": "How to Use",
         "subcategory": "MMD Tools",
         "question": "What are the MMD model fixing options?",
-        "answer": "[image]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/assets/104736380/0d74e775-8f19-4481-8407-cd1fd098b243[/image]\n\n[warning]IMPORTANT: FIX MMD MODEL SHOULD ONLY BE USED FOR NEW MMD/VRM MODELS WHICH HAVE NOT BEEN SET UP FOR UNITY, DO NOT USE THIS IF YOUR MODEL HAS ALREADY BEEN SET UP FOR UNITY (BROUGHT OF GUMROAD, BOOTH OR SOMETHING) OR IF YOU ARE CREATING YOUR OWN MODEL.[/warning]\n\n### Features:\n- Fix MMD Model:\n  - Reparents bones\n  - Removes unnecessary bones\n  - Renames and translates objects/bones\n  - Mixes weight paints\n  - Rotates hips\n  - Removes constraints\n  - Deletes unused vertex groups\n- Fix Materials\n- Combine Materials\n- Remove Rigid Bodies and Joints",
+        "answer": "[image]https://cdn.neoneko.xyz/catsblenderplugin/website/wiki/303688534-0d74e775-8f19-4481-8407-cd1fd098b243.png[/image]\n\n[warning]IMPORTANT: FIX MMD MODEL SHOULD ONLY BE USED FOR NEW MMD/VRM MODELS WHICH HAVE NOT BEEN SET UP FOR UNITY, DO NOT USE THIS IF YOUR MODEL HAS ALREADY BEEN SET UP FOR UNITY (BROUGHT OF GUMROAD, BOOTH OR SOMETHING) OR IF YOU ARE CREATING YOUR OWN MODEL.[/warning]\n\n### Features:\n- Fix MMD Model:\n  - Reparents bones\n  - Removes unnecessary bones\n  - Renames and translates objects/bones\n  - Mixes weight paints\n  - Rotates hips\n  - Removes constraints\n  - Deletes unused vertex groups\n- Fix Materials\n- Combine Materials\n- Remove Rigid Bodies and Joints",
         "keywords": ["mmd", "fix model", "pmx", "pmd", "materials"],
         "version": "1.0",
         "lastUpdated": "2024-11-10"
