@@ -5,7 +5,7 @@
             "category": "Common Issues",
             "subcategory": "Missing Features",
             "question": "Why are certain features missing from my version of Blender?",
-            "answer": "[warning]Feature Support Notice|Features are primarily maintained for the latest LTS version (Blender 4.2.x). Other versions may have limited functionality.[/warning]\n\n**Feature Availability:**\n\n1. Check our [link]https://catsblenderplugin.xyz/wiki.html#quick-access|Features Documentation[/link]\n   - Lists all features for current LTS version\n   - Shows what to expect in supported versions\n\n2. Version Compatibility:\n   - Older versions may lack newer features\n   - Non-LTS versions have limited support\n   - Priority is given to latest LTS version\n\n[note]Legacy Features|Some features from the original CATS (like decimation) have been removed due to performance issues or being obsolete. These features were either causing stability problems or were no longer necessary for current workflows.[/note]\n\n[warning]Unsupported Versions|Blender versions 2.8 to 3.5 are not supported. Please check our [link]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/wiki/Requirements|Requirements[/link] for compatible versions.[/warning]",
+            "answer": "[warning]Feature Support Notice|Features are primarily maintained for the latest LTS version (Blender 4.2.x). Other versions may have limited functionality.[/warning]\n\n**Feature Availability:**\n\n1. Check our [link]https://catsblenderplugin.xyz/wiki.html#quick-access|Features Documentation[/link]\n   - Lists all features for current LTS version\n   - Shows what to expect in supported versions\n\n2. Version Compatibility:\n   - Older versions may lack newer features\n   - Non-LTS versions have limited support\n   - Priority is given to latest LTS version\n\n[note]Legacy Features|Some features from the original CATS (like decimation) have been removed due to performance issues or being obsolete. These features were either causing stability problems or were no longer necessary for current workflows.[/note]",
             "keywords": ["features", "missing features", "version support", "legacy features", "compatibility"],
             "version": "1.0",
             "lastUpdated": "2024-01-20"
@@ -37,6 +37,36 @@
             "question": "Why does the Update Checker show incorrect version information?",
             "answer": "[details]Common Update Checker Issues|\n\n1. Using Outdated Plugin:\n• Blender 4.2: Should report version 4.2.x.x\n• Older versions reporting 0.50.0 or 3.6.4 need updating\n\n2. Version Number Format:\n• Current format: 4.2.x.x (e.g., 4.2.1.0)\n• Old format: 0.50.0, 3.6.4 (without final digit)\n\n3. VPN Issues:\n• Some VPN providers may interfere with the version checker[/details]\n\n[warning]Important Note|If using versions before 3.6.4.1 or 4.2.2.1, update your plugin first. Issues reported for outdated versions will be closed unless verified as legitimate updater problems.[/warning]\n\n[note]Cross-Version Updates|If the updater suggests a version for a different Blender version, you likely have an old plugin version. Please manually update to the correct version for your Blender installation.[/note]",
             "keywords": ["update checker", "version numbers", "updates", "vpn issues"],
+            "version": "1.0",
+            "lastUpdated": "2024-01-20"
+        },
+        {
+            "id": 5,
+            "category": "Common Issues",
+            "subcategory": "Other Issues",
+            "question": "Why can't I see Pose Mode?",
+            "answer": "[info]Pose Mode Requirements:\n\n1. You must have a model imported first\n2. The model needs a valid armature\n\nPose Mode will only appear when these conditions are met, as it's specifically for posing armatures.[/info]",
+            "keywords": ["pose mode", "Other Issues", "armature", "model requirements"],
+            "version": "1.0",
+            "lastUpdated": "2024-01-20"
+        },
+        {
+            "id": 6,
+            "category": "Common Issues",
+            "subcategory": "Other Issues",
+            "question": "Why doesn't the addon show up or gives errors after installation?",
+            "answer": "[info]To ensure proper installation:\n\n1. Verify Version Compatibility:\n   - Use our [link]https://catsblenderplugin.xyz/|Version Selector[/link] to download the correct CATS version for your Blender\n   - Each Blender version requires its specific CATS version\n\n2. Required Steps:\n   - Restart Blender after installing CATS\n   - This step is essential for all features to work correctly[/info]",
+            "keywords": ["installation", "errors", "version compatibility", "addon not showing", "troubleshooting"],
+            "version": "1.0",
+            "lastUpdated": "2024-01-20"
+        },
+        {
+            "id": 7,
+            "category": "Common Issues",
+            "subcategory": "Other Issues",
+            "question": "What are these policy violation warnings in Blender 4.2+?",
+            "answer": "[info]These warnings are expected and can be safely ignored:[/info]\n\n**Technical Background:**\n1. Blender 4.2+ introduced new Extension system standards\n2. CATS was developed before these standards existed\n3. CATS uses legacy methods for loading 3rd party addons (like MMD Tools)\n\n[note]Impact on Usage|These warnings don't affect any CATS functionality - everything works as intended.[/note]\n\n[image]https://cdn.discordapp.com/attachments/1241693487376892034/1261406760049311814/Screenshot_from_2024-07-12_20-19-25.png[/image]\n\n[details]Why This Happens|Blender 4.2+ has implemented stricter standards for addon development. While CATS remains fully functional, its method of loading third-party addons triggers these new policy warnings.[/details]",
+            "keywords": ["warnings", "policy violations", "blender 4.2", "extensions", "compatibility"],
             "version": "1.0",
             "lastUpdated": "2024-01-20"
         }
