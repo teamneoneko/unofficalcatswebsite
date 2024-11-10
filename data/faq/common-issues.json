@@ -1,0 +1,44 @@
+{
+    "faqs": [
+        {
+            "id": 1,
+            "category": "Common Issues",
+            "subcategory": "Missing Features",
+            "question": "Why are certain features missing from my version of Blender?",
+            "answer": "[info]Feature availability depends on your Blender version:[/info]\n\n• Features listed in our [link]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/wiki/Features|documentation[/link] are based on the latest LTS version (currently Blender 4.2.x)\n\n• Older or non-LTS versions may have limited functionality\n\n[details]Legacy Features|If you have features in your version that aren't in newer versions, they've been deprecated. View all legacy features [link]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/wiki/Legacy-Features|here[/link].[/details]\n\n[warning]Blender 2.8 to 3.5 Users|These versions are not supported. Please check our [link]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/wiki/Requirements|requirements[/link] for supported versions.[/warning]",
+            "keywords": ["features", "missing features", "version support", "legacy features", "compatibility"],
+            "version": "1.0",
+            "lastUpdated": "2024-01-20"
+        },
+        {
+            "id": 2,
+            "category": "Common Issues",
+            "subcategory": "Material Combiner Issues",
+            "question": "Why do my materials turn black/white when using the Fix Materials function?",
+            "answer": "[info]This typically occurs when materials don't have assigned textures. The Fix Materials function assigns a white color by default to materials without textures.[/info]\n\nTroubleshooting Steps:\n\n1. Verify you're using the recommended Blender version\n2. Ensure CATS is up to date\n3. Check that all materials have assigned textures\n\n[note]VRM Users: You can try downgrading to VRM Addon version 2.15.26:\n[link]https://github.com/saturday06/VRM-Addon-for-Blender/releases/download/2_15_26/VRM_Addon_for_Blender-2_15_26.zip|Download VRM 2.15.26[/link][/note]",
+            "keywords": ["materials", "textures", "fix materials", "black materials", "white materials", "VRM"],
+            "version": "1.0",
+            "lastUpdated": "2024-01-20"
+        },
+        {
+            "id": 3,
+            "category": "Common Issues",
+            "subcategory": "Crashes",
+            "question": "Why does Blender crash when using CATS?",
+            "answer": "To resolve crashes:\n\n1. Use the recommended Blender version (see main page or readme)\n2. Update CATS to the latest version\n3. [link]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/issues|Report issues here[/link] if problems persist\n\n[warning]Windows Store Users|The Windows Store version of Blender is NOT supported and may cause issues. Please use either:\n• Steam version\n• Official Blender website version[/warning]",
+            "keywords": ["crashes", "stability", "windows store", "blender version"],
+            "version": "1.0",
+            "lastUpdated": "2024-01-20"
+        },
+        {
+            "id": 4,
+            "category": "Common Issues",
+            "subcategory": "Other Issues",
+            "question": "Why does the Update Checker show incorrect version information?",
+            "answer": "[details]Common Update Checker Issues|\n\n1. Using Outdated Plugin:\n• Blender 4.2: Should report version 4.2.x.x\n• Older versions reporting 0.50.0 or 3.6.4 need updating\n\n2. Version Number Format:\n• Current format: 4.2.x.x (e.g., 4.2.1.0)\n• Old format: 0.50.0, 3.6.4 (without final digit)\n\n3. VPN Issues:\n• Some VPN providers may interfere with the version checker[/details]\n\n[warning]Important Note|If using versions before 3.6.4.1 or 4.2.2.1, update your plugin first. Issues reported for outdated versions will be closed unless verified as legitimate updater problems.[/warning]\n\n[note]Cross-Version Updates|If the updater suggests a version for a different Blender version, you likely have an old plugin version. Please manually update to the correct version for your Blender installation.[/note]",
+            "keywords": ["update checker", "version numbers", "updates", "vpn issues"],
+            "version": "1.0",
+            "lastUpdated": "2024-01-20"
+        }
+    ]
+}

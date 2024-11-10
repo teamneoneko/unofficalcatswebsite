@@ -55,12 +55,35 @@ document.addEventListener('DOMContentLoaded', () => {
             throw new Error('Failed to fetch FAQ data');
         }
     }
+
+    function createSlug(text) {
+        return text.toLowerCase()
+            .replace(/[^a-z0-9\s-]/g, '')
+            .replace(/\s+/g, '-');
+    }
+
+    function handleUrlHash() {
+        const hash = window.location.hash;
+        if (hash) {
+            const slug = hash.replace('#', '');
+            const faqItem = document.querySelector(`[data-slug="${slug}"]`);
+            if (faqItem) {
+                const question = faqItem.querySelector('.faq-question');
+                const answer = faqItem.querySelector('.faq-content');
+                
+                faqItem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                answer.classList.remove('hidden');
+                question.querySelector('.toggle-icon').textContent = '-';
+            }
+        }
+    }
     
     function renderFAQItems(faqs, container) {
         faqs.forEach(faq => {
             const faqItem = document.createElement('div');
             faqItem.className = 'faq-item';
-            faqItem.dataset.keywords = faq.keywords ? faq.keywords.join(',') : '';
+            const slug = createSlug(faq.question);
+            faqItem.dataset.slug = slug;
             
             const question = document.createElement('h3');
             question.className = 'faq-question';
@@ -76,6 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="version-badge">v${faq.version || '1.0'}</span>
                         <span class="last-updated"><i class="fas fa-clock"></i> ${faq.lastUpdated ? new Date(faq.lastUpdated).toLocaleDateString() : 'N/A'}</span>
                         <span class="history-icon"><i class="fas fa-history"></i></span>
+                    </button>
+                    <button class="copy-link-btn" data-slug="${slug}">
+                        <i class="fas fa-link"></i> Copy Link
                     </button>
                 </div>
             `;
@@ -100,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
             faqItem.appendChild(answer);
             container.appendChild(faqItem);
         });
-    }
+    }    
     
     function renderFAQ(faqData, categoriesData) {
         loadingDiv.style.display = 'none';
@@ -114,11 +140,14 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const categoryLink = document.createElement('a');
             categoryLink.href = `#${category.name.toLowerCase().replace(/\s+/g, '-')}`;
-            categoryLink.textContent = category.name;
             categoryLink.className = 'category-link';
+            categoryLink.innerHTML = `
+                ${category.name}
+                <span class="category-toggle"><i class="fas fa-chevron-down"></i></span>
+            `;
             
             const subcategoryList = document.createElement('div');
-            subcategoryList.className = 'subcategory-list';
+            subcategoryList.className = 'subcategory-list collapsed';
             
             if (category.subcategories) {
                 category.subcategories.forEach(subcategory => {
@@ -130,6 +159,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
             
+            categoryLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                subcategoryList.classList.toggle('collapsed');
+                categoryLink.querySelector('.category-toggle i').classList.toggle('fa-chevron-down');
+                categoryLink.querySelector('.category-toggle i').classList.toggle('fa-chevron-up');
+            });
+            
             categoryContainer.appendChild(categoryLink);
             categoryContainer.appendChild(subcategoryList);
             categoriesList.appendChild(categoryContainer);
@@ -137,42 +173,47 @@ document.addEventListener('DOMContentLoaded', () => {
     
         // Render FAQ content by category and subcategory
         categoriesData.forEach(category => {
-            const categoryFAQs = faqData.filter(faq => faq.category === category.name);
+            const section = document.createElement('section');
+            section.id = category.name.toLowerCase().replace(/\s+/g, '-');
+            section.className = 'markdown-content';
             
-            if (categoryFAQs.length > 0) {
-                const section = document.createElement('section');
-                section.id = category.name.toLowerCase().replace(/\s+/g, '-');
-                section.className = 'markdown-content';
-                
-                const categoryTitle = document.createElement('h2');
-                categoryTitle.textContent = category.name;
-                section.appendChild(categoryTitle);
-
-                // Render main category FAQs
-                renderFAQItems(categoryFAQs, section);
-
-                // Render subcategory FAQs
-                if (category.subcategories) {
-                    category.subcategories.forEach(subcategory => {
-                        const subcategoryFAQs = faqData.filter(faq => faq.subcategory === subcategory);
-                        if (subcategoryFAQs.length > 0) {
-                            const subsection = document.createElement('section');
-                            subsection.id = subcategory.toLowerCase().replace(/\s+/g, '-');
-                            
-                            const subTitle = document.createElement('h3');
-                            subTitle.textContent = subcategory;
-                            subsection.appendChild(subTitle);
-
-                            renderFAQItems(subcategoryFAQs, subsection);
-                            section.appendChild(subsection);
-                        }
-                    });
-                }
+            const categoryTitle = document.createElement('h2');
+            categoryTitle.textContent = category.name;
+            section.appendChild(categoryTitle);
     
+            // Only render FAQs without subcategories at the category level
+            const mainCategoryFAQs = faqData.filter(faq => 
+                faq.category === category.name && !faq.subcategory
+            );
+            renderFAQItems(mainCategoryFAQs, section);
+    
+            // Render subcategory FAQs
+            if (category.subcategories) {
+                category.subcategories.forEach(subcategory => {
+                    const subcategoryFAQs = faqData.filter(faq => 
+                        faq.category === category.name && 
+                        faq.subcategory === subcategory
+                    );
+                    
+                    if (subcategoryFAQs.length > 0) {
+                        const subsection = document.createElement('section');
+                        subsection.id = subcategory.toLowerCase().replace(/\s+/g, '-');
+                        
+                        const subTitle = document.createElement('h3');
+                        subTitle.textContent = subcategory;
+                        subsection.appendChild(subTitle);
+    
+                        renderFAQItems(subcategoryFAQs, subsection);
+                        section.appendChild(subsection);
+                    }
+                });
+            }
+    
+            if (mainCategoryFAQs.length > 0 || section.querySelectorAll('.faq-item').length > 0) {
                 faqContainer.appendChild(section);
             }
         });
-    }    
+    }
 
     function formatContent(content) {
         if (content.includes('[raw-markdown]')) {
@@ -252,6 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const categoryTitle = document.createElement('h2');
             categoryTitle.textContent = category.name;
+            categoryTitle.className = 'wiki-content-title';
             section.appendChild(categoryTitle);
             
             let visibleItems = 0;
@@ -372,6 +414,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.copy-link-btn')) {
+            const slug = e.target.closest('.copy-link-btn').dataset.slug;
+            const url = `${window.location.origin}${window.location.pathname}#${slug}`;
+            
+            navigator.clipboard.writeText(url).then(() => {
+                const button = e.target.closest('.copy-link-btn');
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                }, 2000);
+            });
+        }
+    });
+
     // Initialize with GitHub data
     fetchFAQData()
         .then(({ faqData: data, categoriesData: categories }) => {
@@ -379,6 +437,7 @@ document.addEventListener('DOMContentLoaded', () => {
             categoriesData = categories;
             console.log('Data received:', { faqData, categoriesData });
             renderFAQ(faqData, categoriesData);
+            handleUrlHash();
         })
         .catch(error => {
             loadingDiv.style.display = 'none';

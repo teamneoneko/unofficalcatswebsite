@@ -8,7 +8,7 @@
         "answer": "[image]https://i.imgur.com/SWjhe9y.png[/image]\n\nVisemes create realistic mouth movements for in-game voice chat:\n- Generates 15 shape keys from 3 base shapes\n- Uses A, OH, and CH mouth positions\n- Creates realistic lip sync movement",
         "keywords": ["visemes", "lip sync", "shape keys", "mouth movement"],
         "version": "1.0",
-        "lastUpdated": "2024-01-20"
+        "lastUpdated": "2024-11-10"
       }
     ]
   }

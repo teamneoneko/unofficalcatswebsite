@@ -8,7 +8,7 @@
         "answer": "### Generate Twist Bones\n[image]https://i.imgur.com/G7oZiMO.png[/image]\n- Creates twist bones for selected bones\n\n### Bone Parenting\n[image]https://i.imgur.com/lH8lNVa.png[/image]\n- Groups bones under root bones\n- Useful for Dynamic Bones\n- Features:\n  - Parent bones to new root\n  - Refresh bone list\n  - Automatic grouping",
         "keywords": ["bones", "twist bones", "parenting", "dynamic bones"],
         "version": "1.0",
-        "lastUpdated": "2024-01-20"
+        "lastUpdated": "2024-11-10"
       }
     ]
   }

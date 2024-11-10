@@ -4,6 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
     themeStylesheet.rel = 'stylesheet';
     document.head.appendChild(themeStylesheet);
 
+    // Theme version check
+    const THEME_VERSION = '2.0';
+    const savedThemeVersion = localStorage.getItem('themeVersion');
+    
+    if (!savedThemeVersion || savedThemeVersion !== THEME_VERSION) {
+        localStorage.setItem('selectedTheme', 'main-site');
+        localStorage.setItem('themeVersion', THEME_VERSION);
+    }
+
     // Theme hint animation logic
     const themeHint = document.querySelector('.theme-hint');
     if (!localStorage.getItem('themeHintSeen')) {
@@ -119,6 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedTheme) {
         setTheme(savedTheme);
     } else {
-        setTheme('halloween');
+        setTheme('main-site');
     }
 });
