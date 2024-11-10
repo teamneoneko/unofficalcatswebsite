@@ -5,7 +5,7 @@
         "category": "How to Use",
         "subcategory": "Translation Tools",
         "question": "What translation features are available?",
-        "answer": "[image]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/assets/104736380/ad61a042-7bbb-42e8-b9b8-e3b25460dc63[/image]\n\n### Features:\n- Translate from Japanese to English\n- Export translations to CSV\n- Custom CSV export location\n- Translates:\n  - Shape keys\n  - Bones\n  - Materials\n  - Meshes",
+        "answer": "[image]https://cdn.neoneko.xyz/catsblenderplugin/website/wiki/309889494-ad61a042-7bbb-42e8-b9b8-e3b25460dc63.png[/image]\n\n### Features:\n- Translate from Japanese to English\n- Export translations to CSV\n- Custom CSV export location\n- Translates:\n  - Shape keys\n  - Bones\n  - Materials\n  - Meshes",
         "keywords": ["translation", "japanese", "english", "csv", "export"],
         "version": "1.0",
         "lastUpdated": "2024-11-10"
