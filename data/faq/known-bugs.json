@@ -5,7 +5,7 @@
             "category": "Known Bugs",
             "subcategory": "Blender 4.2 Bugs",
             "question": "What are the known issues with Blender 4.2?",
-            "answer": "[warning]Blender 4.2 Stability Issues|There are significant crash issues with Blender 4.2. If you experience crashes, please downgrade to Blender 4.1 as a temporary solution.[/warning]",
+            "answer": "[warning]Blender 4.2 Stability Issues|Although Blender 4.2 has been improved in 4.2.4+ (please updgrade if you are using 4.2.1, 4.2.2 and 4.2.3) there maybe some issues still, if you do get a crash with Cats please report it as it's more likely a Cats issue now.[/warning]",
             "keywords": ["crashes", "blender 4.2", "stability", "downgrade"],
             "version": "1.0",
             "lastUpdated": "2024-01-20"
