@@ -5,7 +5,7 @@
         "category": "Requirements",
         "subcategory": "System Requirements",
         "question": "What are the basic requirements for running Cats Blender Plugin?",
-        "answer": "- Blender 3.6 or above (run as administrator is recommended).\n- Blender 4.1 is Recommended as 4.2 is a buggy mess.\n- Anything older then 3.6 is not supported and no longer works.\n- If you have custom Python installed which Blender might use, you need to have Numpy installed\n\n[warning]Note to Windows Store users: Though Cats seems to work on Windows Store these days no support will be given if there are any issues as the Unofficial cats does not support Windows store due to issues Windows Store versions of Blender have given in the past.[/warning]",
+        "answer": "- Blender 3.6 or above (run as administrator is recommended).\n- Blender 4.2 is Recommended.\n- Anything older then 3.6 is not supported and no longer works.\n- If you have custom Python installed which Blender might use, you need to have Numpy installed\n\n[warning]Note to Windows Store users: Though Cats seems to work on Windows Store these days no support will be given if there are any issues as the Unofficial cats does not support Windows store due to issues Windows Store versions of Blender have given in the past.[/warning]",
         "keywords": ["requirements", "blender version", "python", "numpy", "windows store"],
         "version": "1.0",
         "lastUpdated": "2024-11-10",
