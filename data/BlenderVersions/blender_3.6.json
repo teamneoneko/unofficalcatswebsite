@@ -7,8 +7,8 @@
   "archiveLink": "https://cdn.neoneko.xyz/catsblenderplugin/blender3.6/",
   "description": "<div class='highlight-warning'>This version has reached End-of-Life (EOL) status and will no longer receive updates.</div><br><div class='highlight-info'>Blender 3.6 LTS offers two support options: the unofficial Cats add-on (recommended) and the official Cats add-on.</div><br><div class='highlight-warning'>Known Incompatible Addons: Official Cats Blender Plugin and MMD Tools may cause conflicts as this version includes its own MMD Tools implementation.</div><br><div class='highlight-note'>The unofficial version includes several fixes not present in the official version.</div><br><div class='highlight-warning'>Important: Do not ask for help with the unofficial version in the official Cats Discord server, and vice versa for the official version in the unofficial Discord.</div>",
   "unofficial": {
-    "githubLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/releases/tag/3.6.8.2",
-    "downloadLink": "https://cdn.neoneko.xyz/catsblenderplugin/blender3.6/CatsBlenderPlugin3.6Latest.zip",
+    "githubLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/releases/tag/3.6.8.3",
+    "downloadLink": "https://cdn.neoneko.xyz/catsblenderplugin/blender3.6/CatsBlenderPlugin3.6Latest.zip"
   },
   "official": {
     "githubLink": "https://github.com/absolute-quantum/cats-blender-plugin/tree/development",
