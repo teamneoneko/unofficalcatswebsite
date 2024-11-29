@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoriesList = document.getElementById('categoriesList');
     const versionSelect = document.getElementById('versionSelect');
     
+    // Set initial version
+    versionSelect.value = 'current';
+
     // Global data storage
     let faqData = [];
     let categoriesData = [];
@@ -156,6 +159,17 @@ document.addEventListener('DOMContentLoaded', () => {
         loadingDiv.style.display = 'none';
         faqContainer.innerHTML = '';
         categoriesList.innerHTML = '';
+
+        // Add version banner
+        const versionBanner = document.createElement('div');
+        versionBanner.className = 'version-banner';
+        
+        const bannerText = versionSelect.value === 'legacy' 
+            ? "This documentation applies to Legacy Cats Blender Plugin (Versions 4.2.1.4 and 4.3.0.0 for Blender 4.2 and 4.3 or for any version of Cats which is on Blender 4.1 and below). If you're using a newer version, please switch to the current documentation using the dropdown on the left."
+            : "This documentation covers the latest Cats Blender Plugin (Version 4.2.2.0+ for Blender 4.2 and Version 4.3.1.0+ for Blender 4.3). For older versions, please switch to the legacy documentation using the dropdown on the left.";
+        
+        versionBanner.innerHTML = `<i class="fas fa-info-circle"></i> ${bannerText}`;
+        faqContainer.appendChild(versionBanner);
         
         // Render categories and subcategories in sidebar
         categoriesData.forEach(category => {
