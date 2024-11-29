@@ -1,10 +1,15 @@
-
 {
   "categories": [
     {
       "name": "Requirements",
       "subcategories": [
         "Requirements"
+      ]
+    },
+    {
+      "name": "Installation",
+      "subcategories": [
+        "Installation"
       ]
     }
   ]
