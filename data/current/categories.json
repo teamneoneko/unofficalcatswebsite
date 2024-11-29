@@ -1,64 +1,10 @@
+
 {
   "categories": [
     {
       "name": "Requirements",
       "subcategories": [
-        "System Requirements",
-        "Additional Plugins"
-      ]
-    },
-    {
-      "name": "Version Support",
-      "subcategories": [
-        "Latest Versions",
-        "End of Life",
-        "Support Policies"
-      ]
-    },
-    {
-      "name": "Installation",
-      "subcategories": [
-        "Basic Installation",
-        "Additional Plugins"
-      ]
-    },
-    {
-      "name": "How to Use",
-      "subcategories": [
-        "Quick Access",
-        "Optimization",
-        "MMD Tools",
-        "Model Creation",
-        "Shape Keys",
-        "Eye Tracking",
-        "Bone Tools",
-        "Visemes",
-        "Translation Tools"
-      ]
-    },
-    {
-      "name": "Common Issues",
-      "subcategories": [
-        "Missing Features",
-        "Material Combiner Issues",
-        "Crashes",
-        "Other Issues"
-      ]
-    },
-    {
-      "name": "Known Bugs",
-      "subcategories": [
-        "Blender 4.2 Bugs",
-        "Merge Armature Bugs",
-        "3rd party plugin Bugs"
-      ]
-    },
-    {
-      "name": "Tutorials and Resources",
-      "subcategories": [
-        "Legacy Decimation (Blender 4.0 and below)",
-        "YouTube Tutorials",
-        "Other Ressources"
+        "Requirements"
       ]
     }
   ]

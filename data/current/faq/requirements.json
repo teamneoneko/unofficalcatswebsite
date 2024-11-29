@@ -1,39 +1,21 @@
 {
     "faqs": [
-      {
-        "id": 1,
-        "category": "Requirements",
-        "subcategory": "System Requirements",
-        "question": "What are the basic requirements for running Cats Blender Plugin?",
-        "answer": "- Blender 3.6 or above (run as administrator is recommended).\n- Blender 4.1 is Recommended as 4.2 is a buggy mess.\n- Anything older then 3.6 is not supported and no longer works.\n- If you have custom Python installed which Blender might use, you need to have Numpy installed\n\n[warning]Note to Windows Store users: Though Cats seems to work on Windows Store these days no support will be given if there are any issues as the Unofficial cats does not support Windows store due to issues Windows Store versions of Blender have given in the past.[/warning]",
-        "keywords": ["requirements", "blender version", "python", "numpy", "windows store"],
-        "version": "1.0",
-        "lastUpdated": "2024-11-10",
-        "history": [
-          {
+        {
+            "id": 1,
+            "category": "Requirements",
+            "subcategory": "Requirements",
+            "question": "What are the requirements for Cats Blender Plugin?",
+            "answer": "### Required Software\n- Blender 4.2 LTS and above\n  - Blender 4.2 LTS is the current recommended version\n- Python package requirements:\n  - If you have custom Python installed which Blender might use, you need to have Numpy installed\n\n[warning]### Windows Store Users\nThough Cats seems to work on Windows Store these days, no support will be given if there are any issues. The Unofficial Cats does not support Windows Store due to issues Windows Store versions of Blender have given in the past.[/warning]\n\n[note]### Steam Users\nSome Steam users have reported issues that were resolved by downloading Blender directly from blender.org instead. If you experience problems with the Steam version, please try using the official download from the Blender website.[/note]\n\n### Recommended Setup\n- Download Blender directly from [link]https://www.blender.org/download/|blender.org[/link]\n- Use the LTS (Long Term Support) version for best stability",
+            "keywords": ["requirements", "blender version", "windows store", "steam", "numpy"],
             "version": "1.0",
-            "date": "2024-11-10",
-            "changes": "Initial requirements documentation"
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "category": "Requirements",
-        "subcategory": "Additional Plugins",
-        "question": "What additional plugins are required for full functionality?",
-        "answer": "Some features of Cat's need additional plugins to work:\n\n- [link]https://github.com/Grim-es/material-combiner-addon/|Material Combiner[/link]: Required for material combining features\n- [link]https://github.com/triazo/immersive_scaler|Immersive Scaler[/link]: Required for scaling features",
-        "keywords": ["plugins", "material combiner", "immersive scaler", "additional requirements"],
-        "version": "1.0",
-        "lastUpdated": "2024-11-10",
-        "history": [
-          {
-            "version": "1.0",
-            "date": "2024-11-10",
-            "changes": "Initial additional plugins documentation"
-          }
-        ]
-      }
+            "lastUpdated": "2024-01-20",
+            "history": [
+                {
+                    "version": "1.0",
+                    "date": "2024-01-20",
+                    "changes": "Initial requirements documentation for new Cats version"
+                }
+            ]
+        }
     ]
-  }
-  
+}
