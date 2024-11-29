@@ -5,17 +5,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const errorContainer = document.getElementById('error-container');
     const searchInput = document.getElementById('faqSearch');
     const categoriesList = document.getElementById('categoriesList');
+    const versionSelect = document.getElementById('versionSelect');
     
     // Global data storage
     let faqData = [];
     let categoriesData = [];
 
-    // GitHub URLs
-    const baseUrl = 'https://raw.githubusercontent.com/teamneoneko/unofficalcatswebsite/main/data';
-    const categoriesUrl = `${baseUrl}/categories.json`;
-    const faqBaseUrl = `${baseUrl}/faq`;
-
+    // GitHub URLs and version handling
+    const getBaseUrl = (version) => `https://raw.githubusercontent.com/teamneoneko/unofficalcatswebsite/main/data/${version}`;
+    
     async function fetchFAQData() {
+        const version = versionSelect.value;
+        const baseUrl = getBaseUrl(version);
+        const categoriesUrl = `${baseUrl}/categories.json`;
+        const faqBaseUrl = `${baseUrl}/faq`;
+
         try {
             // Get categories and FAQ file list in parallel
             const [categoriesResponse, faqFilesResponse] = await Promise.all([
@@ -55,6 +59,26 @@ document.addEventListener('DOMContentLoaded', () => {
             throw new Error('Failed to fetch FAQ data');
         }
     }
+
+    // Version change handler
+    versionSelect.addEventListener('change', () => {
+        loadingDiv.style.display = 'block';
+        faqContainer.innerHTML = '';
+        searchInput.value = ''; // Clear search when switching versions
+        
+        fetchFAQData()
+            .then(({ faqData: data, categoriesData: categories }) => {
+                faqData = data;
+                categoriesData = categories;
+                renderFAQ(faqData, categoriesData);
+                handleUrlHash();
+            })
+            .catch(error => {
+                loadingDiv.style.display = 'none';
+                errorContainer.style.display = 'block';
+                errorContainer.querySelector('#errorMessage').textContent = error.message;
+            });
+    });
 
     function createSlug(text) {
         return text.toLowerCase()
@@ -445,4 +469,3 @@ document.addEventListener('DOMContentLoaded', () => {
             errorContainer.querySelector('#errorMessage').textContent = error.message;
         });
 });
-
