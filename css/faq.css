@@ -364,6 +364,17 @@
     transform: translateY(-2px);
 }
 
+.version-select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--background-color);
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 1280px) {
     .wiki-container {

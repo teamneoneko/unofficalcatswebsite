@@ -1,0 +1,38 @@
+{
+  "faqs": [
+    {
+      "id": 1,
+      "category": "Installation",
+      "subcategory": "Basic Installation",
+      "question": "How do I install Cats Blender Plugin (Blender 4.2+)?",
+      "answer": "[warning]Note to steam users: If you are having crashing issues on Blender 4.2 with Cats, please use blender.org version, I am unsure why but the steam version is causes some issues for some users.[/warning]\n\n1. Download the plugin for your version of blender: [link]https://catsblenderplugin.xyz/|Cats Blender Plugin[/link]\n\n[note]The releases page will contain different versions of the plugin for different versions of blender, ensure you download the correct one for your version of blender.[/note]\n\n[warning]Important: Do NOT extract the downloaded zip! You will need the zip file during installation![/warning]\n\n2. Install the addon in blender:\n   - In Blender 4.2+ go to Edit > Preferences > Add-ons > Top Right Down arrow > Install From Disk.\n   - You MUST restart blender first for all functions to work.\n\n[image]https://i.imgur.com/0QLsmt9.png[/image]\n[image]https://i.imgur.com/5WJTv84.png[/image]\n\nIf installed correctly you should see cat's in your 3D View on your side bar (This appears when pressing the N Key on your keyboard).\n\n[image]https://i.imgur.com/NK57oHJ.png[/image]",
+      "keywords": ["installation", "setup", "plugin install", "addon install", "blender 4.2"],
+      "version": "1.0",
+      "lastUpdated": "2024-11-10",
+      "history": [
+        {
+          "version": "1.0",
+          "date": "2024-11-10",
+          "changes": "Initial installation guide for Blender 4.2+"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Installation",
+      "subcategory": "Basic Installation",
+      "question": "How do I install Cats Blender Plugin (Blender 3.6 and older)?",
+      "answer": "1. Download the plugin for your version of blender: [link]https://catsblenderplugin.xyz/|Cats Blender Plugin[/link]\n\n[note]The releases page will contain different versions of the plugin for different versions of blender, ensure you download the correct one for your version of blender.[/note]\n\n[warning]Important: Do NOT extract the downloaded zip! You will need the zip file during installation![/warning]\n\n2. Install the addon in blender:\n   - In Blender 3.6+ go to Edit > Preferences > Add-ons. Also you don't need to save the user settings there.\n   - You may need to restart blender first for all functions to work.\n\n[warning]Note to Windows Store users: Though Cats seems to work on Windows Store these days no support will be given if there are any issues as the Unofficial cats does not support Windows store due to issues Windows Store versions of Blender have given in the past.[/warning]\n\n[warning]**IMPORTANT:** If you have uninstalled the Official Cats version and then Installed our Unofficial version please ensure you restart blender or you will get errors. This is because the Official Cats does not disable itself correctly unto you restart blender.[/warning]\n\nDevelopment Versions:\n- You can find the development version for Blender 3.6 [link]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/tree/blender-36-dev|here[/link].\n- You can find the development version for Blender 4.1 [link]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/tree/blender-41-dev|here[/link].\n- You can find the development version for Blender 4.2 [link]https://github.com/Yusarina/Cats-Blender-Plugin-Unofficial-/tree/blender-42-dev|here[/link].\n\n[image]https://i.imgur.com/LsEDL6q.gif[/image]\n\nIf installed correctly you should see cat's in your 3D View on your side bar (This appears when pressing the N Key on your keyboard).\n\n[image]https://i.imgur.com/WPoLbwK.png[/image]\n\n[details]Additional Plugins|To install Material Combiner or Immersive Scaler, just repeat the steps above but instead find that zip files for these plugins.[/details]",
+      "keywords": ["installation", "setup", "plugin install", "addon install", "blender 3.6", "older versions", "windows store", "development versions"],
+      "version": "1.0",
+      "lastUpdated": "2024-11-10",
+      "history": [
+        {
+          "version": "1.0",
+          "date": "2024-11-10",
+          "changes": "Initial installation guide for Blender 3.6 and older versions"
+        }
+      ]
+    }
+  ]
+}

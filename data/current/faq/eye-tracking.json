@@ -1,0 +1,15 @@
+{
+    "faqs": [
+      {
+        "id": 1,
+        "category": "How to Use",
+        "subcategory": "Eye Tracking",
+        "question": "How do I set up Eye Tracking?",
+        "answer": "[image]https://cdn.neoneko.xyz/catsblenderplugin/website/wiki/309888194-23d4bdcb-9266-4320-805b-3803f9af819b.png[/image]\n\n### VRChat SDK3 Eye Tracking:\n[image]https://cdn.neoneko.xyz/catsblenderplugin/website/wiki/309888244-fec7cc47-a4ff-44cf-91ad-94a51937f73f.png[/image]\n\nRotates eye bones for proper VRChat tracking setup.\n\n### Legacy Eye Tracking:\n[image]https://cdn.neoneko.xyz/catsblenderplugin/website/wiki/309888307-32c6b7d7-3df1-429a-a315-8fe858ad09f0.png[/image]\n\nOptions:\n- Disable Eye Blinking\n- Disable Eye Movement\n- Adjust Eye Movement Speed",
+        "keywords": ["eye tracking", "vrchat", "blinking", "movement"],
+        "version": "1.0",
+        "lastUpdated": "2024-11-10"
+      }
+    ]
+  }
+  

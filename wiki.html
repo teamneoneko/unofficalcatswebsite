@@ -85,8 +85,12 @@
         <div class="wiki-container">
             <aside class="wiki-sidebar" role="complementary">
                 <div class="wiki-search">
+                    <select id="versionSelect" class="version-select" aria-label="Plugin Version">
+                        <option value="legacy">Old Cats (4.3.0.0, 4.2.1.4 and Blender 4.1 and below)</option>
+                        <option value="current">New Cats (4.2.2.0, 4.3.1.0 and above)</option>
+                    </select>
                     <input type="text" placeholder="Search FAQ..." id="faqSearch" aria-label="Search FAQ">
-                </div>
+                </div>                
                 <nav class="wiki-nav" aria-label="FAQ Categories">
                     <div id="categoriesList" role="list"></div>
                 </nav>
