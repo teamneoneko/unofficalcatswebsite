@@ -4,6 +4,8 @@
         "installation",
         "interface",
         "optimization",
-        "version-support"
+        "version-support",
+        "custom-model",
+        "mmd-options"
     ]
 }
