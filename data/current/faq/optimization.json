@@ -1,0 +1,55 @@
+{
+    "faqs": [
+        {
+            "id": 8,
+            "category": "Interface",
+            "subcategory": "Optimzation",
+            "question": "How do I use the Atlas tab in the Optimization Panel?",
+            "answer": "### Atlas Tab Overview\nThe Atlas tab helps you create and optimize texture atlases for your avatars.\n\n[image]PLACEHOLDER_ATLAS_TAB[/image]\n\n### Important Note\n- For PBR/Normal maps, use Tuxedo Blender Plugin instead\n\n### Material Combiner Integration\nThe Atlas tab integrates with Shotariya's Material Combiner (SMC) and provides different states:\n\n**When SMC is not installed:**\n- You'll see installation instructions\n- A direct link to download SMC\n\n**When SMC is disabled:**\n- Option to enable SMC directly from the panel\n\n**When SMC is outdated:**\n- Notification about required updates\n- Link to get the latest version\n\n**When SMC is properly installed:**\n- Full SMC interface integration\n- Direct access to all atlas creation tools\n\n[note]The Material Combiner (SMC) is essential for atlas creation. The panel will automatically detect its status and guide you through any required setup.[/note]",
+            "keywords": ["atlas", "texture", "material combiner", "SMC", "textures", "optimization"],
+            "version": "1.0",
+            "lastUpdated": "2024-01-20",
+            "history": [
+                {
+                    "version": "1.0",
+                    "date": "2024-01-20",
+                    "changes": "Initial Atlas tab documentation"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "category": "Interface",
+            "subcategory": "Optimzation",
+            "question": "How do I use the Material tab in the Optimization Panel?",
+            "answer": "### Material Tab Overview\nThe Material tab provides tools for optimizing materials and meshes.\n\n[image]PLACEHOLDER_MATERIAL_TAB[/image]\n\n### Material Operations\n**Combine Materials**\n- Merges multiple materials into a single material\n- Helps reduce draw calls and improve performance\n\n**Convert All to PNG**\n- Converts all textures to PNG format\n- Ensures texture compatibility\n\n### Mesh Operations\n**Join Meshes**\n- Join All: Combines all meshes in the scene\n- Join Selected: Merges only selected meshes\n\n### Cleanup Tools\n**Remove Doubles**\n- Eliminates duplicate vertices\n- Adjustable threshold setting\n- Helps reduce vertex count and fix mesh issues\n\n[note]Always save your work before performing material or mesh operations as these changes cannot be undone.[/note]",
+            "keywords": ["material", "mesh", "combine", "join", "png", "cleanup", "optimization"],
+            "version": "1.0",
+            "lastUpdated": "2024-01-20",
+            "history": [
+                {
+                    "version": "1.0",
+                    "date": "2024-01-20",
+                    "changes": "Initial Material tab documentation"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "category": "Interface",
+            "subcategory": "Optimzation",
+            "question": "How do I use the Bone Merging tab in the Optimization Panel?",
+            "answer": "### Bone Merging Tab Overview\nThe Bone Merging tab offers comprehensive tools for optimizing armature and weight configurations.\n\n[image]PLACEHOLDER_BONE_MERGING_TAB[/image]\n\n### Main Settings\n**Merge Options**\n- Merge Mesh: Available when multiple meshes exist\n- Merge Bone: Control which bones to merge\n- Merge Ratio: Adjust merging threshold\n\n### Actions\n- Refresh Root: Update root bone references\n- Bone Merge: Execute the merging process\n\n### Weight Management\n**Merge Weights**\n- Merge All: Combine weight groups across meshes\n- Merge to Active: Transfer weights to active object\n\n### Additional Options\n- Keep Merged Bones: Retain merged bones after operation\n- Merge Visible Meshes Only: Process only visible objects\n\n### Cleanup Tools\n**Delete Operations**\n- Remove Zero Weight Bones: Delete unused bones\n- Remove Constraints: Clear bone constraints\n- Remove Zero Weight Groups: Clean up empty weight groups\n- Option to keep twist bones during cleanup\n\n### Extra Operations\n- Duplicate Bones: Create copies of selected bones\n- Connect Bones: Create connections between bones\n\n[warning]These operations modify your armature structure. Make a backup before proceeding.[/warning]",
+            "keywords": ["bone", "merging", "weights", "armature", "cleanup", "optimization"],
+            "version": "1.0",
+            "lastUpdated": "2024-01-20",
+            "history": [
+                {
+                    "version": "1.0",
+                    "date": "2024-01-20",
+                    "changes": "Initial Bone Merging tab documentation"
+                }
+            ]
+        }
+    ]
+}
