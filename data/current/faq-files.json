@@ -2,6 +2,7 @@
     "faqFiles": [
         "requirements",
         "installation",
+        "interface",
         "version-support"
     ]
 }
