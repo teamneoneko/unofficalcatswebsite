@@ -1,6 +1,7 @@
 {
     "faqFiles": [
         "requirements",
-        "installation"
+        "installation",
+        "version-support"
     ]
 }

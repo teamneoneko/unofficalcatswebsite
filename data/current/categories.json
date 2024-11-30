@@ -3,13 +3,22 @@
     {
       "name": "Requirements",
       "subcategories": [
-        "Requirements"
+        "Requirements",
+        "Optional Requirements"
       ]
     },
     {
       "name": "Installation",
       "subcategories": [
         "Installation"
+      ]
+    },
+    {
+      "name": "Version Support",
+      "subcategories": [
+        "Latest Versions",
+        "End of Life",
+        "Support Policies"
       ]
     }
   ]

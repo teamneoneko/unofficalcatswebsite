@@ -16,6 +16,23 @@
                     "changes": "Initial requirements documentation for new Cats version"
                 }
             ]
+        },
+        {
+            "id": 2,
+            "category": "Requirements",
+            "subcategory": "Optional Requirements",
+            "question": "What additional plugins are needed for Cats features?",
+            "answer": "### Optional Plugins\nSome features in Cats require additional plugins to work:\n\n- Material Combiner: Required for material combining features\n  - [link]https://github.com/Grim-es/material-combiner-addon/|Download Material Combiner[/link]\n\n- Immersive Scaler: Required for scaling features\n  - [link]https://github.com/triazo/immersive_scaler|Download Immersive Scaler[/link]",
+            "keywords": ["plugins", "addons", "material combiner", "immersive scaler", "optional requirements"],
+            "version": "1.0",
+            "lastUpdated": "2024-01-20",
+            "history": [
+                {
+                    "version": "1.0",
+                    "date": "2024-01-20",
+                    "changes": "Initial additional plugins documentation"
+                }
+            ]
         }
     ]
 }
