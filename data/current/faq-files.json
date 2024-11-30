@@ -7,6 +7,8 @@
         "version-support",
         "custom-model",
         "mmd-options",
-        "other-options"
+        "other-options",
+        "visemes",
+        "bones-root"
     ]
 }
