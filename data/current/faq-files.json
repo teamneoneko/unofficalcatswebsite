@@ -9,6 +9,13 @@
         "mmd-options",
         "other-options",
         "visemes",
-        "bones-root"
+        "bones-root",
+        "scale",
+        "Eye Tracking",
+        "settings",
+        "missing-features",
+        "material-combiner",
+        "other-issues",
+        "resources"
     ]
 }

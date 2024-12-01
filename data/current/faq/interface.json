@@ -1,21 +1,21 @@
 {
     "faqs": [
-        {
-            "id": 6,
-            "category": "Interface",
-            "subcategory": "Quick Access Panel",
-            "question": "What is the Quick Access Panel and how do I use it?",
-            "answer": "### Overview\nThe Quick Access Panel is your primary hub for essential Cats Blender Plugin functions. It provides quick access to the most commonly used features and important information.\n\n[image]https://cdn.neoneko.xyz/catsblenderplugin/website/wikicurrent/quickaccess1.png[/image]\n\n### Key Features\n\n **Update Notifications**\nAt the top of the panel, you'll see notifications about available updates for the plugin. This helps you stay current with the latest features and fixes.\n\n **Version Compatibility**\nThe panel displays important warnings about Blender version compatibility:\n- Notifications for older Blender versions (below 4.2)\n- Warnings for newer versions (above 4.3)\n- Alpha version notifications\n\n **Main Actions**\n\n**Import/Export Section**\n- Import Any Model: Quickly import various 3D model formats\n- Export Button: Available when you have armatures in your scene\n- Models Menu: Access additional import/export options\n\n[image]https://cdn.neoneko.xyz/catsblenderplugin/website/wikicurrent/quickaccess2.png[/image]\n\n**Armature Selection**\n- When multiple armatures are present, easily switch between them using the dropdown menu\n\n**Quick Tools**\n- Combine Materials: Merge multiple materials into one for better optimization\n- Join Meshes: Combine multiple mesh objects into a single mesh\n\n[image]https://cdn.neoneko.xyz/catsblenderplugin/website/wikicurrent/quickaccess3.png[/image]\n\n#### Pose Mode Controls\n- Start Pose Mode: Enter pose mode with or without resetting the pose\n- Stop Pose Mode: Exit pose mode with options to keep or reset the current pose\n- When in pose mode:\n  - Create Shape Key from Pose: Convert the current pose into a shape key\n  - Apply as Rest Pose: Set the current pose as the default pose\n\n[note]The Quick Access Panel adapts its interface based on your current selection and Blender's state, showing only relevant options for your current task.[/note]",
-            "keywords": ["quick access", "interface", "panel", "tools", "import", "export", "pose mode", "materials", "meshes"],
+      {
+        "id": 1,
+        "category": "How to Use",
+        "subcategory": "Quick Access",
+        "question": "What features are available in the Quick Access panel?",
+        "answer": "The Quick Access Panel has several options for common tasks:\n\n[image]https://cdn.neoneko.xyz/catsblenderplugin/website/wiki/300861911-df4cbb6c-2786-4f50-92c3-5b6b89475656.png[/image]\n\nVersion Compatibility\nThe panel displays important warnings about Blender version compatibility:\n• Notifications for older Blender versions (below 4.2)\n• Warnings for newer versions (above 4.3)\n• Alpha version notifications\n\nUnder normal circumstances you should not see this notifcation.\n\n### Import/Export Model\n- Imports models with optimal settings\n- Supported import types:\n  - MMD: .pmx/.pmd\n  - XNALara: .xps/.mesh/.ascii\n  - Source: .smd/.qc/.vta/.dmx\n  - VRM: .vrm\n  - FBX: .fbx\n  - DAE: .dae\n  - ZIP: .zip\n\n### Export options:\n- FBX for Unity\n- Resonite (GLTF format)\n\n### Other Quick Features:\n- Join all meshes\n- Combine Materials\n- Start Pose Mode\n- Pose to Shape Key\n- Apply as Rest Pose\n\n**Pose Mode Controls**\n• Start Pose Mode: Enter pose mode with or without resetting the pose\n• Stop Pose Mode: Exit pose mode with options to keep or reset the current pose\n• When in pose mode:\n- Create Shape Key from Pose: Convert the current pose into a shape key\n- Apply as Rest Pose: Set the current pose as the default pose",
+        "keywords": ["quick access", "import", "export", "pose", "materials"],
+        "version": "1.0",
+        "lastUpdated": "2024-11-30",
+        "history": [
+          {
             "version": "1.0",
-            "lastUpdated": "2024-01-20",
-            "history": [
-                {
-                    "version": "1.0",
-                    "date": "2024-01-20",
-                    "changes": "Initial Quick Access Panel documentation"
-                }
-            ]
-        }
+            "date": "2024-11-30",
+            "changes": "Initial quick access features documentation"
+          }
+        ]
+      }
     ]
-}
+  }

@@ -22,7 +22,24 @@
         "MMD Options",
         "Other Options",
         "Visemes",
-        "Bones Parenting"
+        "Bones Parenting",
+        "Immersive Scaler",
+        "eye-tracking",
+        "Settings"
+      ]
+    },
+    {
+      "name": "Common Issues",
+      "subcategories": [
+        "Missing Features",
+        "Material Combiner",
+        "Other Issues"
+      ]
+    },
+    {
+      "name": "Other Resources",
+      "subcategories": [
+        "Resources"
       ]
     },
     {
