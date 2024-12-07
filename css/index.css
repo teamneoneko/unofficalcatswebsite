@@ -466,6 +466,37 @@
     color: #ff6b6b;
 }
 
+.feature-box {
+    background: var(--header-background);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.feature-content h2 {
+    color: var(--menu-active-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.feature-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.feature-content .button {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+}
+
+
 /* Responsive adjustments for smaller screens */
 @media screen and (max-width: 1400px) {
     .content {
