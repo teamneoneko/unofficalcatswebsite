@@ -5,15 +5,37 @@
             "category": "Other Resources",
             "subcategory": "Resources",
             "question": "What official documentation and references are available?",
-            "answer": "[details]Official Documentation|• [link]https://developer.oculus.com/documentation/unreal/audio-ovrlipsync-viseme-reference/|Official Oculus viseme reference[/link]\n - Complete reference guide for Oculus viseme implementation\n - Essential resource for understanding viseme configurations\n - Includes detailed specifications for lip sync animations[/details]",
+            "answer": "[details]Official Documentation|• [Official Oculus viseme reference](https://developer.oculus.com/documentation/unreal/audio-ovrlipsync-viseme-reference/)\n - Complete reference guide for Oculus viseme implementation\n - Essential resource for understanding viseme configurations\n - Includes detailed specifications for lip sync animations[/details]",
             "keywords": ["documentation", "resources", "oculus", "visemes", "reference", "lip sync"],
-            "version": "1.0",
-            "lastUpdated": "2024-11-30",
+            "version": "1.1",
+            "lastUpdated": "2024-12-13",
             "history": [
+                {
+                    "version": "1.1",
+                    "date": "2024-12-13",
+                    "changes": "Fixed documentation links formatting"
+                },
                 {
                     "version": "1.0",
                     "date": "2024-11-30",
                     "changes": "Initial documentation resources entry"
+                }
+            ]
+        },
+        {
+            "id": 26,
+            "category": "Other Resources",
+            "subcategory": "Video Tutorials",
+            "question": "VRoid to VRChat Tutorial 2024 (Quest Compatible)",
+            "answer": "[details]Video Tutorial|[image:560:315]https://img.youtube.com/vi/lxL5TxNc6MA/0.jpg[/image]\n\n[link]https://youtu.be/lxL5TxNc6MA|Watch on YouTube[/link]\n\nThis comprehensive tutorial shows you how to convert your VRoid model for VRChat with Quest compatibility.[/details]",
+            "version": "1.0",
+            "lastUpdated": "2024-01-20",
+            "keywords": ["vroid", "vrchat", "quest", "tutorial", "video"],
+            "history": [
+                {
+                    "version": "1.0",
+                    "date": "2024-01-20",
+                    "changes": "Added VRoid to VRChat video tutorial"
                 }
             ]
         }

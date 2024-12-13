@@ -14,6 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let faqData = [];
     let categoriesData = [];
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const versionParam = urlParams.get('version');
+    if (versionParam) {
+        versionSelect.value = versionParam;
+    }
+
     // GitHub URLs and version handling
     const getBaseUrl = (version) => `https://raw.githubusercontent.com/teamneoneko/unofficalcatswebsite/main/data/${version}`;
     
@@ -455,7 +461,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click', (e) => {
         if (e.target.closest('.copy-link-btn')) {
             const slug = e.target.closest('.copy-link-btn').dataset.slug;
-            const url = `${window.location.origin}${window.location.pathname}#${slug}`;
+            const version = document.getElementById('versionSelect').value;
+            const url = `${window.location.origin}${window.location.pathname}?version=${version}#${slug}`;
             
             navigator.clipboard.writeText(url).then(() => {
                 const button = e.target.closest('.copy-link-btn');
@@ -467,7 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
-
+    
     // Initialize with GitHub data
     fetchFAQData()
         .then(({ faqData: data, categoriesData: categories }) => {
