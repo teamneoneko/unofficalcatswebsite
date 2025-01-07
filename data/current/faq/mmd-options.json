@@ -1,19 +1,24 @@
 {
     "faqs": [
-        {
-            "id": 12,
-            "category": "Interface",
-            "subcategory": "MMD Options",
-            "question": "How do I use the MMD Options Panel?",
-            "answer": "[warning]The MMD Options panel is specifically designed for MMD, VRM, and GMod models. While it may work with other model types, it will likely cause issues with non-supported armature structures. The Fix Model system is not a universal one-click solution and was never intended as such. Note that Rigify armatures are not compatible with these tools.[/warning]\n\n### MMD Options Overview\nThe MMD Options panel provides specialized tools for handling MMD (MikuMikuDance) models, converting them for use in other 3D platforms while maintaining model integrity.\n\n[image]https://cdn.neoneko.xyz/catsblenderplugin/website/wikicurrent/mmd-options1.png[/image]\n\n### Fix Model Section\n**Fix Armature Button**\n- Comprehensive armature optimization\n- Removes MMD-specific unused bones\n- Fixes hierarchy issues\n- Optimizes weight distributions\n- Maintains animation compatibility\n\n**Model Settings (Advanced Options)**\n- Keep End Bones: \n  - Preserves bones at hierarchy endpoints\n  - Important for certain animations\n  - Maintains model structure integrity\n\n- Keep Upper Chest: \n  - Retains upper chest bone movement\n  - Essential for detailed upper body animations\n  - Preserves breathing animations\n\n- Keep/Fix Twist Bones:\n  - Maintains smooth limb deformations\n  - Optimizes twist bone behavior\n  - Improves animation quality\n\n- Join Meshes:\n  - Combines separate mesh parts\n  - Optimizes model topology\n  - Reduces draw calls\n\n- Connect Bones:\n  - Creates visual bone connections\n  - Improves armature visualization\n  - Helps with weight painting\n\n- Remove Zero Weight:\n  - Cleans vertex groups without influence\n  - Optimizes mesh data\n  - Reduces file size\n\n- Remove Rigidbodies/Joints:\n  - Removes MMD physics components\n  - Prepares model for other platforms\n  - Cleans up unnecessary constraints\n\n### Material Operations\n**Combine Materials Button**\n- Smart material merging system\n- Preserves texture properties\n- Optimizes render calls\n- Maintains material effects\n- Improves performance\n\n**Material Fix Information**\n- Explains material conversion process\n- Details texture handling\n- Guides through optimization steps\n\n**Fix Materials Button**\n- Converts MMD-specific materials\n- Fixes texture references\n- Ensures shader compatibility\n- Optimizes material settings\n- Prepares for platform-specific use\n\n### Rigidbodies Section\n**Remove Rigidbodies and Joints**\n- Manual cleanup of physics components\n- Removes:\n  - MMD rigid bodies\n  - Physics joints\n  - Dynamic bone settings\n  - Unused constraints\n- Optimizes model for static use\n- Prepares for custom physics systems\n\n### Best Practices\n1. Always start with Fix Armature\n2. Review model settings before applying\n3. Handle materials after armature fixes\n4. Clean up physics components last\n5. Test animations after each major change\n\n[note]The order of operations matters. Following the panel's layout from top to bottom ensures the most effective optimization process.[/note]\n\n[warning]These tools make permanent changes to your model's structure. Create a backup of your original MMD model before starting the optimization process.[/warning]",
-            "keywords": ["MMD", "model fixing", "rigidbodies", "materials", "armature", "optimization", "physics", "MikuMikuDance", "bones", "weights", "mesh", "textures"],
-            "version": "1.0",
-            "lastUpdated": "2024-11-30",
-            "history": [
+            {
+                "id": 1,
+                "category": "How to Use",
+                "subcategory": "MMD Tools",
+                "question": "What are the MMD model fixing options?",
+                "answer": "[image]https://cdn.neoneko.xyz/catsblenderplugin/website/wiki/303688534-0d74e775-8f19-4481-8407-cd1fd098b243.png[/image]\n\n[warning]IMPORTANT: FIX MMD MODEL SHOULD ONLY BE USED FOR NEW MMD/VRM MODELS WHICH HAVE NOT BEEN SET UP FOR UNITY, DO NOT USE THIS IF YOUR MODEL HAS ALREADY BEEN SET UP FOR UNITY (BROUGHT OF GUMROAD, BOOTH OR SOMETHING) OR IF YOU ARE CREATING YOUR OWN MODEL.[/warning]\n\n### Features:\n- Fix MMD Model:\n  - Reparents bones\n  - Removes unnecessary bones\n  - Renames and translates objects/bones\n  - Mixes weight paints\n  - Rotates hips\n  - Removes constraints\n  - Deletes unused vertex groups\n- Fixed Materials (Deprecated):\n  This feature has been removed. Materials should be set up directly in Unity instead of embedding them in the FBX file. Embedded materials increase file size and memory usage in both Unity and VRChat, which is not recommended for performance optimization. The previous material fixes were specific to older VRChat requirements and are no longer necessary for current workflows.\n- Combine Materials\n- Remove Rigid Bodies and Joints",
+                "keywords": ["mmd", "fix model", "pmx", "pmd", "materials", "deprecated"],
+                "version": "1.1",
+                "lastUpdated": "2025-01-07",
+                "history": [
                 {
                     "version": "1.0",
-                    "date": "2024-11-30",
-                    "changes": "Initial MMD Options Panel documentation"
+                    "date": "2024-11-10",
+                    "changes": "Initial MMD tools documentation"
+                },
+                {
+                    "version": "1.1",
+                    "date": "2025-01-07",
+                    "changes": "Updated materials section to reflect deprecation"
                 }
             ]
         }
