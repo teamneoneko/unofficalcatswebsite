@@ -89,7 +89,7 @@
             "id": 26,
             "category": "Common Issues",
             "subcategory": "Other Issues",
-            "question": "Why does eye tracking malfunction after using Material Combiner?",
+            "question": "Why does eye tracking look werid after using Material Combiner?",
             "answer": "### Material Combiner and Eye Tracking Interaction\n\nWhen Material Combiner is used after setting up visemes and eye tracking, shape keys can become misaligned or malfunction. \n\n### Solution\nCombine your materials **before** setting up:\n- Eye tracking\n- Visemes\n- Other facial features\n\n[note]This issue only affects legacy eye tracking setup.[/note]\n\n[warning]Material Combiner is a third-party addon, and while this interaction appears to be related to how Blender handles shape keys during material operations rather than a specific addon issue, unexpected behaviors can occur when using multiple addons together.[/warning]",
             "keywords": ["eye tracking", "material combiner", "shape keys", "visemes", "materials", "legacy"],
             "version": "1.0",
