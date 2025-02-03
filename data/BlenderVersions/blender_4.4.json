@@ -1,0 +1,15 @@
+{
+  "version": "4.4",
+  "latestVersion": "4.4.0.0 Beta",
+  "releaseDate": "2025-02-03",
+  "eolDate": "Not Set",
+  "developmentStatus": "Beta",
+  "archiveLink": "https://cdn.neoneko.xyz/catsblenderplugin/blender4.4/",
+  "description": "<div class='highlight-warning'>This version of CATS is in Beta, please report any issues. This version of CATS is for a Beta version of Blender, and there will be issues.</div><br><div class='highlight-warning'>Known Incompatible Addons: Official Cats Blender Plugin and MMD Tools may cause conflicts as this version includes its own MMD Tools implementation.</div><br><div class='highlight-note'>For support, please use the Unofficial Cats Discord for known issues.</div><br><div class='highlight-warning'>Do not ask for help with the unofficial version in the official Cats Discord server.</div>",
+  "unofficial": {
+    "githubLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/releases/tag/4.4.0.0",
+    "downloadLink": "https://cdn.neoneko.xyz/catsblenderplugin/blender4.4/CatsBlenderPlugin4.4Latest.zip",
+    "wikiLink": "wiki.html",
+    "discordLink": "https://discord.catsblenderplugin.xyz/"
+  }
+}
