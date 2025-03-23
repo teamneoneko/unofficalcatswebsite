@@ -1,13 +1,13 @@
 {
   "version": "4.3",
-  "latestVersion": "4.3.1.5",
-  "releaseDate": "2025-02-03",
+  "latestVersion": "4.3.2.0",
+  "releaseDate": "2025-03-23",
   "eolDate": "Not Set",
   "developmentStatus": "Stable",
   "archiveLink": "https://cdn.neoneko.xyz/catsblenderplugin/blender4.3/",
   "description": "<div class='highlight-warning'>Known Incompatible Addons: Official Cats Blender Plugin and MMD Tools may cause conflicts as this version includes its own MMD Tools implementation.</div><br><div class='highlight-note'>For support, please use the Unofficial Cats Discord for known issues.</div><br><div class='highlight-warning'>Do not ask for help with the unofficial version in the official Cats Discord server.</div>",
   "unofficial": {
-    "githubLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/releases/tag/4.3.1.5",
+    "githubLink": "https://github.com/unofficalcats/Cats-Blender-Plugin-Unofficial-/releases/tag/4.3.2.0",
     "downloadLink": "https://cdn.neoneko.xyz/catsblenderplugin/blender4.3/CatsBlenderPlugin4.3Latest.zip",
     "wikiLink": "wiki.html",
     "discordLink": "https://discord.catsblenderplugin.xyz/"
