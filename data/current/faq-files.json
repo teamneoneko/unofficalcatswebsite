@@ -16,6 +16,7 @@
         "missing-features",
         "material-combiner",
         "other-issues",
-        "resources"
+        "resources",
+        "upgrade-guide"
     ]
 }
