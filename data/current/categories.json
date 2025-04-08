@@ -50,6 +50,14 @@
         "End of Life",
         "Support Policies"
       ]
+    },
+    {
+      "name": "Upgrade Guide",
+      "subcategories": [
+        "Blender Migration",
+        "Add-on Installation",
+        "Workflow Changes"
+      ]
     }
   ]
 }
